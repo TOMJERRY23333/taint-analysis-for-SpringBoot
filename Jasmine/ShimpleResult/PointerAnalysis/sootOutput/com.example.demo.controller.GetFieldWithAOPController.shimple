@@ -1,0 +1,181 @@
+public class com.example.demo.controller.GetFieldWithAOPController extends java.lang.Object
+{
+    private com.example.demo.service.impl.GetFieldWithAOPServiceImpl getFieldServiceWithAOPImpl;
+
+    public void <init>()
+    {
+        com.example.demo.controller.GetFieldWithAOPController this;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl getfieldwithaopserviceimpl;
+
+        this := @this: com.example.demo.controller.GetFieldWithAOPController;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        getfieldwithaopserviceimpl = new com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB;
+
+        specialinvoke getfieldwithaopserviceimpl.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB: void <init>()>();
+
+        this.<com.example.demo.controller.GetFieldWithAOPController: com.example.demo.service.impl.GetFieldWithAOPServiceImpl getFieldServiceWithAOPImpl> = getfieldwithaopserviceimpl;
+
+        return;
+    }
+
+    public void getField1()
+    {
+        com.example.demo.controller.GetFieldWithAOPController this;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl $stack2;
+        java.lang.String str;
+        java.io.PrintStream $stack3;
+
+        this := @this: com.example.demo.controller.GetFieldWithAOPController;
+
+        $stack2 = this.<com.example.demo.controller.GetFieldWithAOPController: com.example.demo.service.impl.GetFieldWithAOPServiceImpl getFieldServiceWithAOPImpl>;
+
+        str = $stack2.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.lang.String str>;
+
+        $stack3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack3.<java.io.PrintStream: void println(java.lang.String)>(str);
+
+        return;
+    }
+
+    public void getField2()
+    {
+        com.example.demo.controller.GetFieldWithAOPController this;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl $stack2;
+        java.lang.String str;
+        java.io.PrintStream $stack4;
+
+        this := @this: com.example.demo.controller.GetFieldWithAOPController;
+
+        $stack2 = this.<com.example.demo.controller.GetFieldWithAOPController: com.example.demo.service.impl.GetFieldWithAOPServiceImpl getFieldServiceWithAOPImpl>;
+
+        str = virtualinvoke $stack2.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.lang.String getStr()>();
+
+        $stack4 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack4.<java.io.PrintStream: void println(java.lang.String)>(str);
+
+        return;
+    }
+
+    public void getField3()
+    {
+        com.example.demo.controller.GetFieldWithAOPController this;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl $stack2;
+        java.lang.String str;
+        java.io.PrintStream $stack4;
+
+        this := @this: com.example.demo.controller.GetFieldWithAOPController;
+
+        $stack2 = this.<com.example.demo.controller.GetFieldWithAOPController: com.example.demo.service.impl.GetFieldWithAOPServiceImpl getFieldServiceWithAOPImpl>;
+
+        str = virtualinvoke $stack2.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.lang.String getFinalStr()>();
+
+        $stack4 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack4.<java.io.PrintStream: void println(java.lang.String)>(str);
+
+        return;
+    }
+
+    public void getField4()
+    {
+        com.example.demo.controller.GetFieldWithAOPController this;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl $stack3;
+        java.time.ZoneId zoneId;
+        java.time.ZonedDateTime $stack4;
+        java.lang.String dt;
+        java.io.PrintStream $stack6;
+
+        this := @this: com.example.demo.controller.GetFieldWithAOPController;
+
+        $stack3 = this.<com.example.demo.controller.GetFieldWithAOPController: com.example.demo.service.impl.GetFieldWithAOPServiceImpl getFieldServiceWithAOPImpl>;
+
+        zoneId = $stack3.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.time.ZoneId zoneId>;
+
+        $stack4 = staticinvoke <java.time.ZonedDateTime: java.time.ZonedDateTime now(java.time.ZoneId)>(zoneId);
+
+        dt = virtualinvoke $stack4.<java.time.ZonedDateTime: java.lang.String toString()>();
+
+        $stack6 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack6.<java.io.PrintStream: void println(java.lang.String)>(dt);
+
+        return;
+    }
+
+    public void getField5()
+    {
+        com.example.demo.controller.GetFieldWithAOPController this;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl $stack3;
+        java.time.ZoneId zoneId;
+        java.time.ZonedDateTime $stack5;
+        java.lang.String dt;
+        java.io.PrintStream $stack7;
+
+        this := @this: com.example.demo.controller.GetFieldWithAOPController;
+
+        $stack3 = this.<com.example.demo.controller.GetFieldWithAOPController: com.example.demo.service.impl.GetFieldWithAOPServiceImpl getFieldServiceWithAOPImpl>;
+
+        zoneId = virtualinvoke $stack3.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.time.ZoneId getZoneId()>();
+
+        $stack5 = staticinvoke <java.time.ZonedDateTime: java.time.ZonedDateTime now(java.time.ZoneId)>(zoneId);
+
+        dt = virtualinvoke $stack5.<java.time.ZonedDateTime: java.lang.String toString()>();
+
+        $stack7 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack7.<java.io.PrintStream: void println(java.lang.String)>(dt);
+
+        return;
+    }
+
+    public void getField6()
+    {
+        com.example.demo.controller.GetFieldWithAOPController this;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl $stack3;
+        java.time.ZoneId zoneId;
+        java.time.ZonedDateTime $stack5;
+        java.lang.String dt;
+        java.io.PrintStream $stack7;
+
+        this := @this: com.example.demo.controller.GetFieldWithAOPController;
+
+        $stack3 = this.<com.example.demo.controller.GetFieldWithAOPController: com.example.demo.service.impl.GetFieldWithAOPServiceImpl getFieldServiceWithAOPImpl>;
+
+        zoneId = virtualinvoke $stack3.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.time.ZoneId getFinalZoneId()>();
+
+        $stack5 = staticinvoke <java.time.ZonedDateTime: java.time.ZonedDateTime now(java.time.ZoneId)>(zoneId);
+
+        dt = virtualinvoke $stack5.<java.time.ZonedDateTime: java.lang.String toString()>();
+
+        $stack7 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack7.<java.io.PrintStream: void println(java.lang.String)>(dt);
+
+        return;
+    }
+
+    public void callEntry_synthetic()
+    {
+        com.example.demo.controller.GetFieldWithAOPController this;
+
+        this := @this: com.example.demo.controller.GetFieldWithAOPController;
+
+        specialinvoke this.<com.example.demo.controller.GetFieldWithAOPController: void getField1()>();
+
+        specialinvoke this.<com.example.demo.controller.GetFieldWithAOPController: void getField2()>();
+
+        specialinvoke this.<com.example.demo.controller.GetFieldWithAOPController: void getField3()>();
+
+        specialinvoke this.<com.example.demo.controller.GetFieldWithAOPController: void getField4()>();
+
+        specialinvoke this.<com.example.demo.controller.GetFieldWithAOPController: void getField5()>();
+
+        specialinvoke this.<com.example.demo.controller.GetFieldWithAOPController: void getField6()>();
+
+        return;
+    }
+}

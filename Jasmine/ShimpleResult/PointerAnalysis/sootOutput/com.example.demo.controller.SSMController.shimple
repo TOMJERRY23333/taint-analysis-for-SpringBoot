@@ -1,0 +1,77 @@
+public class com.example.demo.controller.SSMController extends java.lang.Object
+{
+    private static final org.slf4j.Logger LOGGER;
+    private com.example.demo.service.SSMService SSMService;
+
+    public void <init>()
+    {
+        com.example.demo.controller.SSMController this;
+        com.example.demo.service.SSMService ssmservice;
+
+        this := @this: com.example.demo.controller.SSMController;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        ssmservice = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.SSMServiceImpl getSSMServiceImpl()>();
+
+        this.<com.example.demo.controller.SSMController: com.example.demo.service.SSMService SSMService> = ssmservice;
+
+        return;
+    }
+
+    private void saveUserMessage(javax.servlet.http.HttpServletRequest)
+    {
+        javax.servlet.http.HttpServletRequest request;
+        java.lang.String uname, password, id, $stack9;
+        java.lang.Integer age;
+        com.example.demo.controller.SSMController this;
+        com.example.demo.service.SSMService $stack11;
+
+        this := @this: com.example.demo.controller.SSMController;
+
+        request := @parameter0: javax.servlet.http.HttpServletRequest;
+
+        uname = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("uname");
+
+        password = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("password");
+
+        id = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("id");
+
+        $stack9 = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("age");
+
+        age = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>($stack9);
+
+        $stack11 = this.<com.example.demo.controller.SSMController: com.example.demo.service.SSMService SSMService>;
+
+        interfaceinvoke $stack11.<com.example.demo.service.SSMService: void saveUser(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>(uname, password, id, age);
+
+        return;
+    }
+
+    static void <clinit>()
+    {
+        org.slf4j.Logger $stack0;
+
+        $stack0 = staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class "Lcom/example/demo/controller/SSMController;");
+
+        <com.example.demo.controller.SSMController: org.slf4j.Logger LOGGER> = $stack0;
+
+        return;
+    }
+
+    public void callEntry_synthetic()
+    {
+        com.example.demo.controller.SSMController this;
+        javax.servlet.http.HttpServletRequest saveUserMessageHttpServletRequest;
+
+        this := @this: com.example.demo.controller.SSMController;
+
+        saveUserMessageHttpServletRequest = new synthetic.method.HttpServletRequestImpl;
+
+        specialinvoke saveUserMessageHttpServletRequest.<synthetic.method.HttpServletRequestImpl: void <init>()>();
+
+        specialinvoke this.<com.example.demo.controller.SSMController: void saveUserMessage(javax.servlet.http.HttpServletRequest)>(saveUserMessageHttpServletRequest);
+
+        return;
+    }
+}

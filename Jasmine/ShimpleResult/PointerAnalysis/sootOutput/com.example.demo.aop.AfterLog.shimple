@@ -1,0 +1,57 @@
+public class com.example.demo.aop.AfterLog extends java.lang.Object implements org.springframework.aop.AfterReturningAdvice
+{
+
+    public void <init>()
+    {
+        com.example.demo.aop.AfterLog this;
+
+        this := @this: com.example.demo.aop.AfterLog;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void afterReturning(java.lang.Object, java.lang.reflect.Method, java.lang.Object[], java.lang.Object) throws java.lang.Throwable
+    {
+        java.lang.StringBuilder $stack5, $stack7, $stack9, $stack10, $stack11;
+        java.io.PrintStream $stack6;
+        java.lang.reflect.Method method;
+        java.lang.String $stack8, $stack12;
+        java.lang.Object o, o1;
+        com.example.demo.aop.AfterLog this;
+        java.lang.Object[] objects;
+
+        this := @this: com.example.demo.aop.AfterLog;
+
+        o := @parameter0: java.lang.Object;
+
+        method := @parameter1: java.lang.reflect.Method;
+
+        objects := @parameter2: java.lang.Object[];
+
+        o1 := @parameter3: java.lang.Object;
+
+        $stack6 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack5 = new java.lang.StringBuilder;
+
+        specialinvoke $stack5.<java.lang.StringBuilder: void <init>()>();
+
+        $stack7 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\u6267\u884c\u4e86");
+
+        $stack8 = virtualinvoke method.<java.lang.reflect.Method: java.lang.String getName()>();
+
+        $stack9 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack8);
+
+        $stack10 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\u8fd4\u56de\u7684\u7ed3\u679c\u4e3a\uff1a");
+
+        $stack11 = virtualinvoke $stack10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(o);
+
+        $stack12 = virtualinvoke $stack11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack6.<java.io.PrintStream: void println(java.lang.String)>($stack12);
+
+        return;
+    }
+}

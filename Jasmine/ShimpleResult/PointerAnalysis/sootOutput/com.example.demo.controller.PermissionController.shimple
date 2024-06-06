@@ -1,0 +1,114 @@
+public class com.example.demo.controller.PermissionController extends java.lang.Object
+{
+    com.example.demo.service.PermissionService permissionService;
+
+    public void <init>()
+    {
+        com.example.demo.controller.PermissionController this;
+        com.example.demo.service.PermissionService permissionservice;
+
+        this := @this: com.example.demo.controller.PermissionController;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        permissionservice = new com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB;
+
+        specialinvoke permissionservice.<com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB: void <init>()>();
+
+        this.<com.example.demo.controller.PermissionController: com.example.demo.service.PermissionService permissionService> = permissionservice;
+
+        return;
+    }
+
+    public void perm1(javax.servlet.http.HttpServletRequest)
+    {
+        javax.servlet.http.HttpServletRequest request;
+        java.lang.String auth;
+        com.example.demo.controller.PermissionController this;
+        com.example.demo.service.PermissionService $stack4, $stack5;
+
+        this := @this: com.example.demo.controller.PermissionController;
+
+        request := @parameter0: javax.servlet.http.HttpServletRequest;
+
+        auth = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("auth");
+
+        $stack4 = this.<com.example.demo.controller.PermissionController: com.example.demo.service.PermissionService permissionService>;
+
+        interfaceinvoke $stack4.<com.example.demo.service.PermissionService: void permissionAdmin(java.lang.String)>(auth);
+
+        $stack5 = this.<com.example.demo.controller.PermissionController: com.example.demo.service.PermissionService permissionService>;
+
+        interfaceinvoke $stack5.<com.example.demo.service.PermissionService: void permissionUser(java.lang.String)>(auth);
+
+        return;
+    }
+
+    public void perm2(javax.servlet.http.HttpServletRequest)
+    {
+        javax.servlet.http.HttpServletRequest request;
+        java.lang.String auth;
+        com.example.demo.controller.PermissionController this;
+        com.example.demo.service.PermissionService $stack4;
+
+        this := @this: com.example.demo.controller.PermissionController;
+
+        request := @parameter0: javax.servlet.http.HttpServletRequest;
+
+        auth = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("auth");
+
+        $stack4 = this.<com.example.demo.controller.PermissionController: com.example.demo.service.PermissionService permissionService>;
+
+        interfaceinvoke $stack4.<com.example.demo.service.PermissionService: void accessSuccess(java.lang.String)>(auth);
+
+        return;
+    }
+
+    public void perm3(javax.servlet.http.HttpServletRequest)
+    {
+        javax.servlet.http.HttpServletRequest request;
+        java.lang.String auth;
+        com.example.demo.controller.PermissionController this;
+        com.example.demo.service.PermissionService $stack4;
+
+        this := @this: com.example.demo.controller.PermissionController;
+
+        request := @parameter0: javax.servlet.http.HttpServletRequest;
+
+        auth = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("auth");
+
+        $stack4 = this.<com.example.demo.controller.PermissionController: com.example.demo.service.PermissionService permissionService>;
+
+        interfaceinvoke $stack4.<com.example.demo.service.PermissionService: void accessFail(java.lang.String)>(auth);
+
+        return;
+    }
+
+    public void callEntry_synthetic()
+    {
+        com.example.demo.controller.PermissionController this;
+        javax.servlet.http.HttpServletRequest perm1HttpServletRequest, perm2HttpServletRequest, perm3HttpServletRequest;
+
+        this := @this: com.example.demo.controller.PermissionController;
+
+        perm1HttpServletRequest = new synthetic.method.HttpServletRequestImpl;
+
+        specialinvoke perm1HttpServletRequest.<synthetic.method.HttpServletRequestImpl: void <init>()>();
+
+        specialinvoke this.<com.example.demo.controller.PermissionController: void perm1(javax.servlet.http.HttpServletRequest)>(perm1HttpServletRequest);
+
+        perm2HttpServletRequest = new synthetic.method.HttpServletRequestImpl;
+
+        specialinvoke perm2HttpServletRequest.<synthetic.method.HttpServletRequestImpl: void <init>()>();
+
+        specialinvoke this.<com.example.demo.controller.PermissionController: void perm2(javax.servlet.http.HttpServletRequest)>(perm2HttpServletRequest);
+
+        perm3HttpServletRequest = new synthetic.method.HttpServletRequestImpl;
+
+        specialinvoke perm3HttpServletRequest.<synthetic.method.HttpServletRequestImpl: void <init>()>();
+
+        specialinvoke this.<com.example.demo.controller.PermissionController: void perm3(javax.servlet.http.HttpServletRequest)>(perm3HttpServletRequest);
+
+        return;
+    }
+}

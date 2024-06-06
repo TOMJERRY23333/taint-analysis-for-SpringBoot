@@ -1,0 +1,11 @@
+public interface  com.example.demo.service.EntryPointService extends java.lang.Object
+{
+
+    public abstract void invokeMethod1();
+
+    public abstract void invokeMethod2();
+
+    public abstract void invokeMethod3();
+
+    public abstract void invokeMethod4();
+}

@@ -1,0 +1,99 @@
+public class com.example.demo.service.impl.PermissionServiceImpl extends com.baomidou.mybatisplus.extension.service.impl.ServiceImpl implements com.example.demo.service.PermissionService
+{
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.PermissionServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.PermissionServiceImpl;
+
+        specialinvoke this.<com.baomidou.mybatisplus.extension.service.impl.ServiceImpl: void <init>()>();
+
+        return;
+    }
+
+    public void accessSuccess(java.lang.String)
+    {
+        java.io.PrintStream $stack2;
+        com.example.demo.service.impl.PermissionServiceImpl this;
+        java.lang.String auth;
+
+        this := @this: com.example.demo.service.impl.PermissionServiceImpl;
+
+        auth := @parameter0: java.lang.String;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>("accessSuccess()  \u901a\u8fc7this\u76f4\u63a5\u8c03\u7528");
+
+        virtualinvoke this.<com.example.demo.service.impl.PermissionServiceImpl: void permissionAdmin(java.lang.String)>(auth);
+
+        virtualinvoke this.<com.example.demo.service.impl.PermissionServiceImpl: void permissionUser(java.lang.String)>(auth);
+
+        return;
+    }
+
+    public void accessFail(java.lang.String)
+    {
+        java.io.PrintStream $stack2;
+        java.lang.Object $stack3, $stack5;
+        java.lang.String auth;
+        com.example.demo.service.impl.PermissionServiceImpl $stack4, $stack6, this;
+
+        this := @this: com.example.demo.service.impl.PermissionServiceImpl;
+
+        auth := @parameter0: java.lang.String;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>("accessFail()  \u901a\u8fc7\u4ee3\u7406\u5bf9\u8c61\u8c03\u7528");
+
+        $stack3 = staticinvoke <org.springframework.aop.framework.AopContext: java.lang.Object currentProxy()>();
+
+        $stack4 = (com.example.demo.service.impl.PermissionServiceImpl) $stack3;
+
+        virtualinvoke $stack4.<com.example.demo.service.impl.PermissionServiceImpl: void permissionAdmin(java.lang.String)>(auth);
+
+        $stack5 = staticinvoke <org.springframework.aop.framework.AopContext: java.lang.Object currentProxy()>();
+
+        $stack6 = (com.example.demo.service.impl.PermissionServiceImpl) $stack5;
+
+        virtualinvoke $stack6.<com.example.demo.service.impl.PermissionServiceImpl: void permissionUser(java.lang.String)>(auth);
+
+        return;
+    }
+
+    public void permissionAdmin(java.lang.String)
+    {
+        java.io.PrintStream $stack2;
+        com.example.demo.service.impl.PermissionServiceImpl this;
+        java.lang.String auth;
+
+        this := @this: com.example.demo.service.impl.PermissionServiceImpl;
+
+        auth := @parameter0: java.lang.String;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>("permissionInvalid()\uff0cadmin\u8bbf\u95ee\u3002");
+
+        return;
+    }
+
+    public void permissionUser(java.lang.String)
+    {
+        java.io.PrintStream $stack2;
+        com.example.demo.service.impl.PermissionServiceImpl this;
+        java.lang.String auth;
+
+        this := @this: com.example.demo.service.impl.PermissionServiceImpl;
+
+        auth := @parameter0: java.lang.String;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>("permissionValid()\uff0cuser\u8bbf\u95ee\u3002");
+
+        return;
+    }
+}

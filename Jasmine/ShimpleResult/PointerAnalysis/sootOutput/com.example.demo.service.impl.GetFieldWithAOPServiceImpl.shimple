@@ -1,0 +1,110 @@
+public class com.example.demo.service.impl.GetFieldWithAOPServiceImpl extends java.lang.Object implements com.example.demo.service.GetFieldService
+{
+    public java.lang.String str;
+    public final java.time.ZoneId zoneId;
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl this;
+        java.time.ZoneId $stack1, $stack12;
+        java.io.PrintStream $stack2, $stack4, $stack10;
+        java.lang.StringBuilder $stack3, $stack5, $stack7, $stack9, $stack11, $stack13;
+        java.lang.String $stack6, $stack8, $stack14;
+
+        this := @this: com.example.demo.service.impl.GetFieldWithAOPServiceImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.lang.String str> = "GetFieldWithAOPServiceImpl_global_str";
+
+        $stack1 = staticinvoke <java.time.ZoneId: java.time.ZoneId systemDefault()>();
+
+        this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.time.ZoneId zoneId> = $stack1;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>("GetFieldWithAOPServiceImpl: init...");
+
+        $stack4 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack3 = new java.lang.StringBuilder;
+
+        specialinvoke $stack3.<java.lang.StringBuilder: void <init>()>();
+
+        $stack5 = virtualinvoke $stack3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("GetFieldWithAOPServiceImpl: str = ");
+
+        $stack6 = this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.lang.String str>;
+
+        $stack7 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack6);
+
+        $stack8 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack4.<java.io.PrintStream: void println(java.lang.String)>($stack8);
+
+        $stack10 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack9 = new java.lang.StringBuilder;
+
+        specialinvoke $stack9.<java.lang.StringBuilder: void <init>()>();
+
+        $stack11 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("GetFieldWithAOPServiceImpl: zoneId = ");
+
+        $stack12 = this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.time.ZoneId zoneId>;
+
+        $stack13 = virtualinvoke $stack11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack12);
+
+        $stack14 = virtualinvoke $stack13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack10.<java.io.PrintStream: void println(java.lang.String)>($stack14);
+
+        return;
+    }
+
+    public java.lang.String getStr()
+    {
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl this;
+        java.lang.String $stack1;
+
+        this := @this: com.example.demo.service.impl.GetFieldWithAOPServiceImpl;
+
+        $stack1 = this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.lang.String str>;
+
+        return $stack1;
+    }
+
+    public final java.lang.String getFinalStr()
+    {
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl this;
+        java.lang.String $stack1;
+
+        this := @this: com.example.demo.service.impl.GetFieldWithAOPServiceImpl;
+
+        $stack1 = this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.lang.String str>;
+
+        return $stack1;
+    }
+
+    public java.time.ZoneId getZoneId()
+    {
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl this;
+        java.time.ZoneId $stack1;
+
+        this := @this: com.example.demo.service.impl.GetFieldWithAOPServiceImpl;
+
+        $stack1 = this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.time.ZoneId zoneId>;
+
+        return $stack1;
+    }
+
+    public final java.time.ZoneId getFinalZoneId()
+    {
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl this;
+        java.time.ZoneId $stack1;
+
+        this := @this: com.example.demo.service.impl.GetFieldWithAOPServiceImpl;
+
+        $stack1 = this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.time.ZoneId zoneId>;
+
+        return $stack1;
+    }
+}

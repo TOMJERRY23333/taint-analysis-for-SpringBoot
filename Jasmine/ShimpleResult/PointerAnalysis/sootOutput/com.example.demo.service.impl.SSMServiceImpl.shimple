@@ -1,0 +1,70 @@
+public class com.example.demo.service.impl.SSMServiceImpl extends java.lang.Object implements com.example.demo.service.SSMService
+{
+    private com.example.demo.mapper.UserMapper userMapper;
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.SSMServiceImpl this;
+        com.example.demo.mapper.UserMapper usermapper;
+
+        this := @this: com.example.demo.service.impl.SSMServiceImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        usermapper = staticinvoke <synthetic.method.SingletonFactory: synthetic.method.UserMapperImpl getUserMapperImpl()>();
+
+        this.<com.example.demo.service.impl.SSMServiceImpl: com.example.demo.mapper.UserMapper userMapper> = usermapper;
+
+        return;
+    }
+
+    public void saveUser(java.lang.String, java.lang.String, java.lang.String, java.lang.Integer)
+    {
+        com.example.demo.model.User $stack7, user, $stack11;
+        java.lang.String id, uname, password, $stack12, $stack15;
+        java.lang.Integer age, $stack10;
+        com.example.demo.service.impl.SSMServiceImpl this;
+        com.example.demo.mapper.UserMapper $stack8, $stack17;
+        int $stack9, idOldInt, $stack14;
+
+        this := @this: com.example.demo.service.impl.SSMServiceImpl;
+
+        uname := @parameter0: java.lang.String;
+
+        password := @parameter1: java.lang.String;
+
+        id := @parameter2: java.lang.String;
+
+        age := @parameter3: java.lang.Integer;
+
+        $stack7 = new com.example.demo.model.User;
+
+        specialinvoke $stack7.<com.example.demo.model.User: void <init>(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>(id, uname, age, password);
+
+        user = $stack7;
+
+        $stack8 = this.<com.example.demo.service.impl.SSMServiceImpl: com.example.demo.mapper.UserMapper userMapper>;
+
+        $stack9 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>(id);
+
+        $stack10 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($stack9);
+
+        $stack11 = interfaceinvoke $stack8.<com.example.demo.mapper.UserMapper: com.example.demo.model.User selectLastId(java.lang.Integer)>($stack10);
+
+        $stack12 = virtualinvoke $stack11.<com.example.demo.model.User: java.lang.String getId()>();
+
+        idOldInt = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($stack12);
+
+        $stack14 = idOldInt + 1;
+
+        $stack15 = staticinvoke <java.lang.String: java.lang.String valueOf(int)>($stack14);
+
+        virtualinvoke user.<com.example.demo.model.User: com.example.demo.model.User setId(java.lang.String)>($stack15);
+
+        $stack17 = this.<com.example.demo.service.impl.SSMServiceImpl: com.example.demo.mapper.UserMapper userMapper>;
+
+        interfaceinvoke $stack17.<com.example.demo.mapper.UserMapper: int insert(com.example.demo.model.User)>(user);
+
+        return;
+    }
+}

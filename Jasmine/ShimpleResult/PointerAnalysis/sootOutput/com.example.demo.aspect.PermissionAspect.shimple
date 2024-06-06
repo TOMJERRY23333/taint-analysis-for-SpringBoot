@@ -1,0 +1,335 @@
+public class com.example.demo.aspect.PermissionAspect extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.example.demo.aspect.PermissionAspect this;
+
+        this := @this: com.example.demo.aspect.PermissionAspect;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void doSome()
+    {
+        com.example.demo.aspect.PermissionAspect this;
+
+        this := @this: com.example.demo.aspect.PermissionAspect;
+
+        return;
+    }
+
+    public java.lang.Object aroundMethod(org.aspectj.lang.ProceedingJoinPoint)
+    {
+        org.aspectj.lang.ProceedingJoinPoint pdj;
+        org.aspectj.lang.Signature $stack7;
+        org.aspectj.lang.reflect.MethodSignature sign;
+        java.lang.reflect.Method method;
+        java.lang.'annotation'.Annotation $stack9;
+        com.example.demo.'annotation'.Permission permission;
+        java.lang.StringBuilder $stack10, $stack12, $stack13;
+        java.io.PrintStream $stack11, $stack23;
+        java.lang.String $stack14, $stack15;
+        java.lang.Object[] $stack16, $stack20;
+        java.lang.Object $stack17, $stack21, result, result_1, result_2, result_3, result_4;
+        boolean $stack18, $stack22;
+        java.lang.Throwable $stack25, e;
+        com.example.demo.aspect.PermissionAspect this;
+
+        this := @this: com.example.demo.aspect.PermissionAspect;
+
+        pdj := @parameter0: org.aspectj.lang.ProceedingJoinPoint;
+
+        $stack7 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: org.aspectj.lang.Signature getSignature()>();
+
+        sign = (org.aspectj.lang.reflect.MethodSignature) $stack7;
+
+        method = interfaceinvoke sign.<org.aspectj.lang.reflect.MethodSignature: java.lang.reflect.Method getMethod()>();
+
+        $stack9 = virtualinvoke method.<java.lang.reflect.Method: java.lang.'annotation'.Annotation getAnnotation(java.lang.Class)>(class "Lcom/example/demo/annotation/Permission;");
+
+        permission = (com.example.demo.'annotation'.Permission) $stack9;
+
+        $stack11 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack10 = new java.lang.StringBuilder;
+
+        specialinvoke $stack10.<java.lang.StringBuilder: void <init>()>();
+
+        $stack12 = virtualinvoke $stack10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("method = ");
+
+        $stack13 = virtualinvoke $stack12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(method);
+
+        $stack14 = virtualinvoke $stack13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack11.<java.io.PrintStream: void println(java.lang.String)>($stack14);
+
+(0)     result = null;
+
+     label1:
+        $stack15 = interfaceinvoke permission.<com.example.demo.'annotation'.Permission: java.lang.String auth()>();
+
+        $stack16 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object[] getArgs()>();
+
+        $stack17 = $stack16[0];
+
+        $stack18 = virtualinvoke $stack15.<java.lang.String: boolean equals(java.lang.Object)>($stack17);
+
+        if $stack18 != 0 goto label2;
+
+        $stack20 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object[] getArgs()>();
+
+        $stack21 = $stack20[0];
+
+        $stack22 = virtualinvoke $stack21.<java.lang.Object: boolean equals(java.lang.Object)>("admin");
+
+        if $stack22 == 0 goto label3;
+
+     label2:
+(1)     result_1 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed()>();
+
+(2)     goto label4;
+
+     label3:
+        $stack23 = <java.lang.System: java.io.PrintStream out>;
+
+(3)     virtualinvoke $stack23.<java.io.PrintStream: void println(java.lang.String)>("\u65e0\u6cd5\u8bbf\u95ee\u8be5\u65b9\u6cd5\uff0c\u65e0\u6743\u9650");
+
+     label4:
+        result_2 = Phi(result_1 #2, result #3);
+
+(4)     goto label6;
+
+     label5:
+        $stack25 := @caughtexception;
+
+        result_3 = Phi(result #0, result_1 #1);
+
+        e = $stack25;
+
+(5)     virtualinvoke e.<java.lang.Throwable: void printStackTrace()>();
+
+     label6:
+        result_4 = Phi(result_2 #4, result_3 #5);
+
+        return result_4;
+
+        catch java.lang.Throwable from label1 to label4 with label5;
+    }
+
+    public java.lang.Object aroundMethod_permissionAdmin(org.aspectj.lang.ProceedingJoinPoint, java.lang.String, com.example.demo.service.impl.PermissionServiceImpl)
+    {
+        org.aspectj.lang.ProceedingJoinPoint pdj;
+        org.aspectj.lang.Signature $stack7;
+        org.aspectj.lang.reflect.MethodSignature sign;
+        java.lang.reflect.Method method;
+        java.lang.'annotation'.Annotation $stack9;
+        com.example.demo.'annotation'.Permission permission;
+        java.lang.StringBuilder $stack10, $stack12, $stack13;
+        java.io.PrintStream $stack11, $stack23;
+        java.lang.String $stack14, $stack15, param1;
+        java.lang.Object[] $stack16, $stack20;
+        java.lang.Object $stack17, $stack21, result, result_1, result_2, result_3, result_4;
+        boolean $stack18, $stack22;
+        java.lang.Throwable $stack25, e;
+        com.example.demo.aspect.PermissionAspect this;
+        com.example.demo.service.impl.PermissionServiceImpl param2;
+
+        this := @this: com.example.demo.aspect.PermissionAspect;
+
+        pdj := @parameter0: org.aspectj.lang.ProceedingJoinPoint;
+
+        param1 := @parameter1: java.lang.String;
+
+        param2 := @parameter2: com.example.demo.service.impl.PermissionServiceImpl;
+
+        $stack7 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: org.aspectj.lang.Signature getSignature()>();
+
+        sign = (org.aspectj.lang.reflect.MethodSignature) $stack7;
+
+        method = interfaceinvoke sign.<org.aspectj.lang.reflect.MethodSignature: java.lang.reflect.Method getMethod()>();
+
+        $stack9 = virtualinvoke method.<java.lang.reflect.Method: java.lang.'annotation'.Annotation getAnnotation(java.lang.Class)>(class "Lcom/example/demo/annotation/Permission;");
+
+        permission = (com.example.demo.'annotation'.Permission) $stack9;
+
+        $stack11 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack10 = new java.lang.StringBuilder;
+
+        specialinvoke $stack10.<java.lang.StringBuilder: void <init>()>();
+
+        $stack12 = virtualinvoke $stack10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("method = ");
+
+        $stack13 = virtualinvoke $stack12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(method);
+
+        $stack14 = virtualinvoke $stack13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack11.<java.io.PrintStream: void println(java.lang.String)>($stack14);
+
+(0)     result = null;
+
+     label1:
+        $stack15 = interfaceinvoke permission.<com.example.demo.'annotation'.Permission: java.lang.String auth()>();
+
+        $stack16 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object[] getArgs()>();
+
+        $stack17 = $stack16[0];
+
+        $stack18 = virtualinvoke $stack15.<java.lang.String: boolean equals(java.lang.Object)>($stack17);
+
+        if $stack18 != 0 goto label2;
+
+        virtualinvoke param2.<com.example.demo.service.impl.PermissionServiceImpl: void permissionAdmin(java.lang.String)>(param1);
+
+        $stack20 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object[] getArgs()>();
+
+        $stack21 = $stack20[0];
+
+        $stack22 = virtualinvoke $stack21.<java.lang.Object: boolean equals(java.lang.Object)>("admin");
+
+        if $stack22 == 0 goto label3;
+
+     label2:
+(1)     result_1 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed()>();
+
+        virtualinvoke param2.<com.example.demo.service.impl.PermissionServiceImpl: void permissionAdmin(java.lang.String)>(param1);
+
+(2)     goto label4;
+
+     label3:
+        $stack23 = <java.lang.System: java.io.PrintStream out>;
+
+(3)     virtualinvoke $stack23.<java.io.PrintStream: void println(java.lang.String)>("\u65e0\u6cd5\u8bbf\u95ee\u8be5\u65b9\u6cd5\uff0c\u65e0\u6743\u9650");
+
+     label4:
+        result_2 = Phi(result_1 #2, result #3);
+
+(4)     goto label6;
+
+     label5:
+        $stack25 := @caughtexception;
+
+        result_3 = Phi(result #0, result_1 #1);
+
+        e = $stack25;
+
+(5)     virtualinvoke e.<java.lang.Throwable: void printStackTrace()>();
+
+     label6:
+        result_4 = Phi(result_2 #4, result_3 #5);
+
+        return result_4;
+
+        catch java.lang.Throwable from label1 to label4 with label5;
+    }
+
+    public java.lang.Object aroundMethod_permissionUser(org.aspectj.lang.ProceedingJoinPoint, java.lang.String, com.example.demo.service.impl.PermissionServiceImpl)
+    {
+        org.aspectj.lang.ProceedingJoinPoint pdj;
+        org.aspectj.lang.Signature $stack7;
+        org.aspectj.lang.reflect.MethodSignature sign;
+        java.lang.reflect.Method method;
+        java.lang.'annotation'.Annotation $stack9;
+        com.example.demo.'annotation'.Permission permission;
+        java.lang.StringBuilder $stack10, $stack12, $stack13;
+        java.io.PrintStream $stack11, $stack23;
+        java.lang.String $stack14, $stack15, param1;
+        java.lang.Object[] $stack16, $stack20;
+        java.lang.Object $stack17, $stack21, result, result_1, result_2, result_3, result_4;
+        boolean $stack18, $stack22;
+        java.lang.Throwable $stack25, e;
+        com.example.demo.aspect.PermissionAspect this;
+        com.example.demo.service.impl.PermissionServiceImpl param2;
+
+        this := @this: com.example.demo.aspect.PermissionAspect;
+
+        pdj := @parameter0: org.aspectj.lang.ProceedingJoinPoint;
+
+        param1 := @parameter1: java.lang.String;
+
+        param2 := @parameter2: com.example.demo.service.impl.PermissionServiceImpl;
+
+        $stack7 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: org.aspectj.lang.Signature getSignature()>();
+
+        sign = (org.aspectj.lang.reflect.MethodSignature) $stack7;
+
+        method = interfaceinvoke sign.<org.aspectj.lang.reflect.MethodSignature: java.lang.reflect.Method getMethod()>();
+
+        $stack9 = virtualinvoke method.<java.lang.reflect.Method: java.lang.'annotation'.Annotation getAnnotation(java.lang.Class)>(class "Lcom/example/demo/annotation/Permission;");
+
+        permission = (com.example.demo.'annotation'.Permission) $stack9;
+
+        $stack11 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack10 = new java.lang.StringBuilder;
+
+        specialinvoke $stack10.<java.lang.StringBuilder: void <init>()>();
+
+        $stack12 = virtualinvoke $stack10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("method = ");
+
+        $stack13 = virtualinvoke $stack12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(method);
+
+        $stack14 = virtualinvoke $stack13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack11.<java.io.PrintStream: void println(java.lang.String)>($stack14);
+
+(0)     result = null;
+
+     label1:
+        $stack15 = interfaceinvoke permission.<com.example.demo.'annotation'.Permission: java.lang.String auth()>();
+
+        $stack16 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object[] getArgs()>();
+
+        $stack17 = $stack16[0];
+
+        $stack18 = virtualinvoke $stack15.<java.lang.String: boolean equals(java.lang.Object)>($stack17);
+
+        if $stack18 != 0 goto label2;
+
+        virtualinvoke param2.<com.example.demo.service.impl.PermissionServiceImpl: void permissionUser(java.lang.String)>(param1);
+
+        $stack20 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object[] getArgs()>();
+
+        $stack21 = $stack20[0];
+
+        $stack22 = virtualinvoke $stack21.<java.lang.Object: boolean equals(java.lang.Object)>("admin");
+
+        if $stack22 == 0 goto label3;
+
+     label2:
+(1)     result_1 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed()>();
+
+        virtualinvoke param2.<com.example.demo.service.impl.PermissionServiceImpl: void permissionUser(java.lang.String)>(param1);
+
+(2)     goto label4;
+
+     label3:
+        $stack23 = <java.lang.System: java.io.PrintStream out>;
+
+(3)     virtualinvoke $stack23.<java.io.PrintStream: void println(java.lang.String)>("\u65e0\u6cd5\u8bbf\u95ee\u8be5\u65b9\u6cd5\uff0c\u65e0\u6743\u9650");
+
+     label4:
+        result_2 = Phi(result_1 #2, result #3);
+
+(4)     goto label6;
+
+     label5:
+        $stack25 := @caughtexception;
+
+        result_3 = Phi(result #0, result_1 #1);
+
+        e = $stack25;
+
+(5)     virtualinvoke e.<java.lang.Throwable: void printStackTrace()>();
+
+     label6:
+        result_4 = Phi(result_2 #4, result_3 #5);
+
+        return result_4;
+
+        catch java.lang.Throwable from label1 to label4 with label5;
+    }
+}

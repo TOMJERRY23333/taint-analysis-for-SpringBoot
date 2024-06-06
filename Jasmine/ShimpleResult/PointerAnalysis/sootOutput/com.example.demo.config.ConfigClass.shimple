@@ -1,0 +1,14 @@
+public class com.example.demo.config.ConfigClass extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.example.demo.config.ConfigClass this;
+
+        this := @this: com.example.demo.config.ConfigClass;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

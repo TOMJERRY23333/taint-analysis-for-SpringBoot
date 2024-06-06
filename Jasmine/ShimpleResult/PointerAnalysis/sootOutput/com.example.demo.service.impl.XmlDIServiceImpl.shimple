@@ -1,0 +1,28 @@
+public class com.example.demo.service.impl.XmlDIServiceImpl extends java.lang.Object implements com.example.demo.service.XmlDIService
+{
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.XmlDIServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.XmlDIServiceImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void xmlDITest()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.service.impl.XmlDIServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.XmlDIServiceImpl;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("test XML Di");
+
+        return;
+    }
+}

@@ -1,0 +1,28 @@
+public class com.example.demo.aspect.GetFieldAspect extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.example.demo.aspect.GetFieldAspect this;
+
+        this := @this: com.example.demo.aspect.GetFieldAspect;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void doAccessCheck()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.aspect.GetFieldAspect this;
+
+        this := @this: com.example.demo.aspect.GetFieldAspect;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("----- getFieldAspect doAccessCheck -----");
+
+        return;
+    }
+}

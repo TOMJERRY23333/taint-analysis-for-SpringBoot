@@ -1,0 +1,5 @@
+public annotation interface  com.example.demo.'annotation'.Permission extends java.lang.Object implements java.lang.'annotation'.Annotation
+{
+
+    public abstract java.lang.String auth();
+}

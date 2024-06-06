@@ -1,0 +1,58 @@
+public class com.example.demo.config.StudentConfig extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.example.demo.config.StudentConfig this;
+
+        this := @this: com.example.demo.config.StudentConfig;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public com.example.demo.model.Student getStudent()
+    {
+        com.example.demo.model.Student $stack2, student;
+        com.example.demo.config.StudentConfig this;
+
+        this := @this: com.example.demo.config.StudentConfig;
+
+        $stack2 = new com.example.demo.model.Student;
+
+        specialinvoke $stack2.<com.example.demo.model.Student: void <init>()>();
+
+        student = $stack2;
+
+        virtualinvoke student.<com.example.demo.model.Student: void setName(java.lang.String)>("zhangsan");
+
+        virtualinvoke student.<com.example.demo.model.Student: void setAge(int)>(25);
+
+        virtualinvoke student.<com.example.demo.model.Student: void setGender(java.lang.String)>("male");
+
+        return student;
+    }
+
+    public com.example.demo.model.Student getStudent_prototype()
+    {
+        com.example.demo.model.Student $stack2, student;
+        com.example.demo.config.StudentConfig this;
+
+        this := @this: com.example.demo.config.StudentConfig;
+
+        $stack2 = new com.example.demo.model.Student;
+
+        specialinvoke $stack2.<com.example.demo.model.Student: void <init>()>();
+
+        student = $stack2;
+
+        virtualinvoke student.<com.example.demo.model.Student: void setName(java.lang.String)>("lisi");
+
+        virtualinvoke student.<com.example.demo.model.Student: void setAge(int)>(22);
+
+        virtualinvoke student.<com.example.demo.model.Student: void setGender(java.lang.String)>("male");
+
+        return student;
+    }
+}

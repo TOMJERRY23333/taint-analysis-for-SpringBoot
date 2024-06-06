@@ -1,0 +1,3 @@
+public interface  com.example.demo.service.GetFieldService extends java.lang.Object
+{
+}

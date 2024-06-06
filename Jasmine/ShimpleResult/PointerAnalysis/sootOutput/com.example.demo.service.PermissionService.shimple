@@ -1,0 +1,11 @@
+public interface  com.example.demo.service.PermissionService extends java.lang.Object implements com.baomidou.mybatisplus.extension.service.IService
+{
+
+    public abstract void accessSuccess(java.lang.String);
+
+    public abstract void accessFail(java.lang.String);
+
+    public abstract void permissionUser(java.lang.String);
+
+    public abstract void permissionAdmin(java.lang.String);
+}

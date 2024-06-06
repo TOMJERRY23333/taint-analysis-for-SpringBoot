@@ -1,0 +1,9 @@
+public interface  com.example.demo.service.AOPService extends java.lang.Object
+{
+
+    public abstract void testAOPAnno1();
+
+    public abstract java.lang.String testAOPAnno2(java.lang.String);
+
+    public abstract void testAOPAPI3();
+}

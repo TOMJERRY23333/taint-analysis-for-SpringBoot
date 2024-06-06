@@ -1,0 +1,33 @@
+public class com.example.demo.model.XmlBaseBean extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.example.demo.model.XmlBaseBean this;
+        java.io.PrintStream $stack1;
+
+        this := @this: com.example.demo.model.XmlBaseBean;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("xmlBaseBean constructor");
+
+        return;
+    }
+
+    public void doBaseThing()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.model.XmlBaseBean this;
+
+        this := @this: com.example.demo.model.XmlBaseBean;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("let\'s go!");
+
+        return;
+    }
+}

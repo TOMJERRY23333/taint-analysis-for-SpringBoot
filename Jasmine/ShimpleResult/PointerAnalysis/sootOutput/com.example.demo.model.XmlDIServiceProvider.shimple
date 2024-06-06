@@ -1,0 +1,41 @@
+public class com.example.demo.model.XmlDIServiceProvider extends java.lang.Object
+{
+    private com.example.demo.service.XmlDIService xmlDIService;
+
+    public void <init>()
+    {
+        com.example.demo.model.XmlDIServiceProvider this;
+
+        this := @this: com.example.demo.model.XmlDIServiceProvider;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public com.example.demo.service.XmlDIService getXmlDIService()
+    {
+        com.example.demo.model.XmlDIServiceProvider this;
+        com.example.demo.service.XmlDIService $stack1;
+
+        this := @this: com.example.demo.model.XmlDIServiceProvider;
+
+        $stack1 = this.<com.example.demo.model.XmlDIServiceProvider: com.example.demo.service.XmlDIService xmlDIService>;
+
+        return $stack1;
+    }
+
+    public void setXmlDIService(com.example.demo.service.XmlDIService)
+    {
+        com.example.demo.model.XmlDIServiceProvider this;
+        com.example.demo.service.XmlDIService xmlDIService;
+
+        this := @this: com.example.demo.model.XmlDIServiceProvider;
+
+        xmlDIService := @parameter0: com.example.demo.service.XmlDIService;
+
+        this.<com.example.demo.model.XmlDIServiceProvider: com.example.demo.service.XmlDIService xmlDIService> = xmlDIService;
+
+        return;
+    }
+}

@@ -1,0 +1,66 @@
+public class com.example.demo.service.impl.InfoLeakServiceImpl$$SpringCGLIB extends com.example.demo.service.impl.InfoLeakServiceImpl
+{
+    com.example.demo.service.impl.InfoLeakServiceImpl target;
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.InfoLeakServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.InfoLeakServiceImpl infoleakserviceimpl;
+
+        this := @this: com.example.demo.service.impl.InfoLeakServiceImpl$$SpringCGLIB;
+
+        specialinvoke this.<com.example.demo.service.impl.InfoLeakServiceImpl: void <init>()>();
+
+        infoleakserviceimpl = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.InfoLeakServiceImpl getInfoLeakServiceImpl()>();
+
+        this.<com.example.demo.service.impl.InfoLeakServiceImpl$$SpringCGLIB: com.example.demo.service.impl.InfoLeakServiceImpl target> = infoleakserviceimpl;
+
+        return;
+    }
+
+    public void infoLeakMethod(java.lang.String, java.lang.String, java.lang.String)
+    {
+        java.lang.String token, password, id;
+        com.example.demo.service.impl.InfoLeakServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.InfoLeakServiceImpl localTarget;
+        synthetic.method.ProceedingJoinPointImpl ProceedingJoinPointImpl;
+        java.lang.Object[] paramArray;
+        com.example.demo.aspect.InfoLeakAspect infoleakaspect;
+
+        infoleakaspect = new com.example.demo.aspect.InfoLeakAspect;
+
+        specialinvoke infoleakaspect.<com.example.demo.aspect.InfoLeakAspect: void <init>()>();
+
+        token := @parameter0: java.lang.String;
+
+        password := @parameter1: java.lang.String;
+
+        id := @parameter2: java.lang.String;
+
+        this := @this: com.example.demo.service.impl.InfoLeakServiceImpl$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.service.impl.InfoLeakServiceImpl$$SpringCGLIB: com.example.demo.service.impl.InfoLeakServiceImpl target>;
+
+        ProceedingJoinPointImpl = new synthetic.method.ProceedingJoinPointImpl;
+
+        specialinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void <init>()>();
+
+        paramArray = newarray (java.lang.Object)[3];
+
+        paramArray[0] = token;
+
+        paramArray[1] = password;
+
+        paramArray[2] = id;
+
+        virtualinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void setArgs_synthetic(java.lang.Object[])>(paramArray);
+
+        virtualinvoke infoleakaspect.<com.example.demo.aspect.InfoLeakAspect: java.lang.Object aroundMethod_infoLeakMethod(org.aspectj.lang.ProceedingJoinPoint,java.lang.String,java.lang.String,java.lang.String,com.example.demo.service.impl.InfoLeakServiceImpl)>(ProceedingJoinPointImpl, token, password, id, localTarget);
+
+        virtualinvoke infoleakaspect.<com.example.demo.aspect.InfoLeakAspect: void doAfter(org.aspectj.lang.JoinPoint)>(ProceedingJoinPointImpl);
+
+        virtualinvoke infoleakaspect.<com.example.demo.aspect.InfoLeakAspect: void afterReturning(org.aspectj.lang.JoinPoint,java.lang.Object)>(ProceedingJoinPointImpl, null);
+
+        return;
+    }
+}

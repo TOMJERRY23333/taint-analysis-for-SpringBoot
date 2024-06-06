@@ -1,0 +1,154 @@
+public class com.example.demo.model.AopXmlTestBean extends java.lang.Object
+{
+    private java.lang.Integer id;
+    private java.lang.String name;
+
+    public java.lang.Integer getId()
+    {
+        com.example.demo.model.AopXmlTestBean this;
+        java.lang.Integer $stack1;
+
+        this := @this: com.example.demo.model.AopXmlTestBean;
+
+        $stack1 = this.<com.example.demo.model.AopXmlTestBean: java.lang.Integer id>;
+
+        return $stack1;
+    }
+
+    public void setId(java.lang.Integer)
+    {
+        com.example.demo.model.AopXmlTestBean this;
+        java.lang.Integer id;
+
+        this := @this: com.example.demo.model.AopXmlTestBean;
+
+        id := @parameter0: java.lang.Integer;
+
+        this.<com.example.demo.model.AopXmlTestBean: java.lang.Integer id> = id;
+
+        return;
+    }
+
+    public java.lang.String getName()
+    {
+        com.example.demo.model.AopXmlTestBean this;
+        java.lang.String $stack1;
+
+        this := @this: com.example.demo.model.AopXmlTestBean;
+
+        $stack1 = this.<com.example.demo.model.AopXmlTestBean: java.lang.String name>;
+
+        return $stack1;
+    }
+
+    public void setName(java.lang.String)
+    {
+        com.example.demo.model.AopXmlTestBean this;
+        java.lang.String name;
+
+        this := @this: com.example.demo.model.AopXmlTestBean;
+
+        name := @parameter0: java.lang.String;
+
+        this.<com.example.demo.model.AopXmlTestBean: java.lang.String name> = name;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.example.demo.model.AopXmlTestBean this;
+
+        this := @this: com.example.demo.model.AopXmlTestBean;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void <init>(java.lang.Integer, java.lang.String)
+    {
+        com.example.demo.model.AopXmlTestBean this;
+        java.lang.Integer id;
+        java.lang.String name;
+
+        this := @this: com.example.demo.model.AopXmlTestBean;
+
+        id := @parameter0: java.lang.Integer;
+
+        name := @parameter1: java.lang.String;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        this.<com.example.demo.model.AopXmlTestBean: java.lang.Integer id> = id;
+
+        this.<com.example.demo.model.AopXmlTestBean: java.lang.String name> = name;
+
+        return;
+    }
+
+    public java.lang.String toString()
+    {
+        java.lang.StringBuilder $stack1, $stack2, $stack4, $stack5, $stack7, $stack8, $stack9;
+        com.example.demo.model.AopXmlTestBean this;
+        java.lang.Integer $stack3;
+        java.lang.String $stack6, $stack10;
+
+        this := @this: com.example.demo.model.AopXmlTestBean;
+
+        $stack1 = new java.lang.StringBuilder;
+
+        specialinvoke $stack1.<java.lang.StringBuilder: void <init>()>();
+
+        $stack2 = virtualinvoke $stack1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("AopXmlTestBean{id=");
+
+        $stack3 = this.<com.example.demo.model.AopXmlTestBean: java.lang.Integer id>;
+
+        $stack4 = virtualinvoke $stack2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack3);
+
+        $stack5 = virtualinvoke $stack4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", name=\'");
+
+        $stack6 = this.<com.example.demo.model.AopXmlTestBean: java.lang.String name>;
+
+        $stack7 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack6);
+
+        $stack8 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $stack9 = virtualinvoke $stack8.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(125);
+
+        $stack10 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $stack10;
+    }
+
+    public void doSomething()
+    {
+        java.lang.StringBuilder $stack1, $stack5, $stack6;
+        java.io.PrintStream $stack2;
+        java.lang.Class $stack3;
+        java.lang.String $stack4, $stack7;
+        com.example.demo.model.AopXmlTestBean this;
+
+        this := @this: com.example.demo.model.AopXmlTestBean;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack1 = new java.lang.StringBuilder;
+
+        specialinvoke $stack1.<java.lang.StringBuilder: void <init>()>();
+
+        $stack3 = class "Lcom/example/demo/model/AopXmlTestBean;";
+
+        $stack4 = virtualinvoke $stack3.<java.lang.Class: java.lang.String getName()>();
+
+        $stack5 = virtualinvoke $stack1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack4);
+
+        $stack6 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(":->doSomething");
+
+        $stack7 = virtualinvoke $stack6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>($stack7);
+
+        return;
+    }
+}

@@ -1,0 +1,40 @@
+public class com.example.demo.aspect.EntryPointAspect extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.example.demo.aspect.EntryPointAspect this;
+
+        this := @this: com.example.demo.aspect.EntryPointAspect;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void log()
+    {
+        com.example.demo.aspect.EntryPointAspect this;
+
+        this := @this: com.example.demo.aspect.EntryPointAspect;
+
+        return;
+    }
+
+    public void doBefore(org.aspectj.lang.JoinPoint)
+    {
+        java.io.PrintStream $stack2;
+        com.example.demo.aspect.EntryPointAspect this;
+        org.aspectj.lang.JoinPoint joinPoint;
+
+        this := @this: com.example.demo.aspect.EntryPointAspect;
+
+        joinPoint := @parameter0: org.aspectj.lang.JoinPoint;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>("----- entryPointAspect doBefore -----");
+
+        return;
+    }
+}

@@ -1,0 +1,128 @@
+public class com.example.demo.controller.AOPController extends java.lang.Object
+{
+    private com.example.demo.service.AOPService aopService;
+    private com.example.demo.model.AopXmlTestBean aopXmlTestBean;
+
+    public void <init>()
+    {
+        com.example.demo.controller.AOPController this;
+        com.example.demo.service.AOPService aopservice;
+        com.example.demo.model.AopXmlTestBean aopxmltestbean;
+
+        this := @this: com.example.demo.controller.AOPController;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        aopservice = new com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB;
+
+        specialinvoke aopservice.<com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB: void <init>()>();
+
+        this.<com.example.demo.controller.AOPController: com.example.demo.service.AOPService aopService> = aopservice;
+
+        aopxmltestbean = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.model.AopXmlTestBean getAopXmlTestBean()>();
+
+        this.<com.example.demo.controller.AOPController: com.example.demo.model.AopXmlTestBean aopXmlTestBean> = aopxmltestbean;
+
+        return;
+    }
+
+    public void aop1()
+    {
+        com.example.demo.controller.AOPController this;
+        com.example.demo.service.AOPService $stack1;
+
+        this := @this: com.example.demo.controller.AOPController;
+
+        $stack1 = this.<com.example.demo.controller.AOPController: com.example.demo.service.AOPService aopService>;
+
+        interfaceinvoke $stack1.<com.example.demo.service.AOPService: void testAOPAnno1()>();
+
+        return;
+    }
+
+    public void aop2(javax.servlet.http.HttpServletRequest)
+    {
+        javax.servlet.http.HttpServletRequest request;
+        java.lang.String token, $stack8, $stack10;
+        java.lang.StringBuilder $stack4, $stack6, $stack9;
+        java.io.PrintStream $stack5;
+        com.example.demo.controller.AOPController this;
+        com.example.demo.service.AOPService $stack7;
+
+        this := @this: com.example.demo.controller.AOPController;
+
+        request := @parameter0: javax.servlet.http.HttpServletRequest;
+
+        token = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("token");
+
+        $stack5 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack4 = new java.lang.StringBuilder;
+
+        specialinvoke $stack4.<java.lang.StringBuilder: void <init>()>();
+
+        $stack6 = virtualinvoke $stack4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("AOPController.aop2 get return Value: ");
+
+        $stack7 = this.<com.example.demo.controller.AOPController: com.example.demo.service.AOPService aopService>;
+
+        $stack8 = interfaceinvoke $stack7.<com.example.demo.service.AOPService: java.lang.String testAOPAnno2(java.lang.String)>(token);
+
+        $stack9 = virtualinvoke $stack6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack8);
+
+        $stack10 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack5.<java.io.PrintStream: void println(java.lang.String)>($stack10);
+
+        return;
+    }
+
+    public void aop3()
+    {
+        com.example.demo.controller.AOPController this;
+        com.example.demo.service.AOPService $stack1;
+
+        this := @this: com.example.demo.controller.AOPController;
+
+        $stack1 = this.<com.example.demo.controller.AOPController: com.example.demo.service.AOPService aopService>;
+
+        interfaceinvoke $stack1.<com.example.demo.service.AOPService: void testAOPAPI3()>();
+
+        return;
+    }
+
+    public void aop4()
+    {
+        com.example.demo.controller.AOPController this;
+        com.example.demo.model.AopXmlTestBean $stack1;
+
+        this := @this: com.example.demo.controller.AOPController;
+
+        $stack1 = this.<com.example.demo.controller.AOPController: com.example.demo.model.AopXmlTestBean aopXmlTestBean>;
+
+        virtualinvoke $stack1.<com.example.demo.model.AopXmlTestBean: void doSomething()>();
+
+        return;
+    }
+
+    public void callEntry_synthetic()
+    {
+        com.example.demo.controller.AOPController this;
+        javax.servlet.http.HttpServletRequest aop2HttpServletRequest;
+
+        this := @this: com.example.demo.controller.AOPController;
+
+        specialinvoke this.<com.example.demo.controller.AOPController: void aop1()>();
+
+        aop2HttpServletRequest = new synthetic.method.HttpServletRequestImpl;
+
+        specialinvoke aop2HttpServletRequest.<synthetic.method.HttpServletRequestImpl: void <init>()>();
+
+        specialinvoke this.<com.example.demo.controller.AOPController: void aop2(javax.servlet.http.HttpServletRequest)>(aop2HttpServletRequest);
+
+        specialinvoke this.<com.example.demo.controller.AOPController: void aop3()>();
+
+        specialinvoke this.<com.example.demo.controller.AOPController: void aop4()>();
+
+        return;
+    }
+}

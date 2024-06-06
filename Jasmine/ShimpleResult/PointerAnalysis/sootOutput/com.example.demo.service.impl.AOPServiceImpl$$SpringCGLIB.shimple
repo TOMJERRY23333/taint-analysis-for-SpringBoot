@@ -1,0 +1,105 @@
+public class com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB extends com.example.demo.service.impl.AOPServiceImpl
+{
+    com.example.demo.service.impl.AOPServiceImpl target;
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.AOPServiceImpl aopserviceimpl;
+
+        this := @this: com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB;
+
+        specialinvoke this.<com.example.demo.service.impl.AOPServiceImpl: void <init>()>();
+
+        aopserviceimpl = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.AOPServiceImpl getAOPServiceImpl()>();
+
+        this.<com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB: com.example.demo.service.impl.AOPServiceImpl target> = aopserviceimpl;
+
+        return;
+    }
+
+    public void testAOPAnno1()
+    {
+        com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.AOPServiceImpl localTarget;
+        synthetic.method.ProceedingJoinPointImpl ProceedingJoinPointImpl;
+        java.lang.Object[] paramArray;
+        com.example.demo.aspect.AOPAspectA aopaspecta;
+
+        aopaspecta = new com.example.demo.aspect.AOPAspectA;
+
+        specialinvoke aopaspecta.<com.example.demo.aspect.AOPAspectA: void <init>()>();
+
+        this := @this: com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB: com.example.demo.service.impl.AOPServiceImpl target>;
+
+        ProceedingJoinPointImpl = new synthetic.method.ProceedingJoinPointImpl;
+
+        specialinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void <init>()>();
+
+        paramArray = newarray (java.lang.Object)[0];
+
+        virtualinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void setArgs_synthetic(java.lang.Object[])>(paramArray);
+
+        virtualinvoke aopaspecta.<com.example.demo.aspect.AOPAspectA: java.lang.Object aroundMethod_testAOPAnno1(org.aspectj.lang.ProceedingJoinPoint,com.example.demo.service.impl.AOPServiceImpl)>(ProceedingJoinPointImpl, localTarget);
+
+        virtualinvoke aopaspecta.<com.example.demo.aspect.AOPAspectA: void doAfter(org.aspectj.lang.JoinPoint)>(ProceedingJoinPointImpl);
+
+        virtualinvoke aopaspecta.<com.example.demo.aspect.AOPAspectA: void afterReturning(org.aspectj.lang.JoinPoint,java.lang.Object)>(ProceedingJoinPointImpl, null);
+
+        return;
+    }
+
+    public java.lang.String testAOPAnno2(java.lang.String)
+    {
+        java.lang.String parameter, returnRef;
+        com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.AOPServiceImpl localTarget;
+        synthetic.method.ProceedingJoinPointImpl ProceedingJoinPointImpl;
+        java.lang.Object[] paramArray;
+        com.example.demo.aspect.AOPAspectA aopaspecta;
+
+        aopaspecta = new com.example.demo.aspect.AOPAspectA;
+
+        specialinvoke aopaspecta.<com.example.demo.aspect.AOPAspectA: void <init>()>();
+
+        parameter := @parameter0: java.lang.String;
+
+        this := @this: com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB: com.example.demo.service.impl.AOPServiceImpl target>;
+
+        ProceedingJoinPointImpl = new synthetic.method.ProceedingJoinPointImpl;
+
+        specialinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void <init>()>();
+
+        paramArray = newarray (java.lang.Object)[1];
+
+        paramArray[0] = parameter;
+
+        virtualinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void setArgs_synthetic(java.lang.Object[])>(paramArray);
+
+        returnRef = virtualinvoke aopaspecta.<com.example.demo.aspect.AOPAspectA: java.lang.Object aroundMethod_testAOPAnno2(org.aspectj.lang.ProceedingJoinPoint,java.lang.String,com.example.demo.service.impl.AOPServiceImpl)>(ProceedingJoinPointImpl, parameter, localTarget);
+
+        virtualinvoke aopaspecta.<com.example.demo.aspect.AOPAspectA: void doAfter(org.aspectj.lang.JoinPoint)>(ProceedingJoinPointImpl);
+
+        virtualinvoke aopaspecta.<com.example.demo.aspect.AOPAspectA: void afterReturning(org.aspectj.lang.JoinPoint,java.lang.Object)>(ProceedingJoinPointImpl, null);
+
+        return returnRef;
+    }
+
+    public void testAOPAPI3()
+    {
+        com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.AOPServiceImpl localTarget;
+
+        this := @this: com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.service.impl.AOPServiceImpl$$SpringCGLIB: com.example.demo.service.impl.AOPServiceImpl target>;
+
+        virtualinvoke localTarget.<com.example.demo.service.impl.AOPServiceImpl: void testAOPAPI3()>();
+
+        return;
+    }
+}

@@ -1,0 +1,24 @@
+optionsFile: null
+printHelp: false
+classPath:
+- java-benchmarks/favorites-web-1.0.0/BOOT-INF/lib/spring-context-support-5.1.4.RELEASE.jar
+- java-benchmarks/favorites-web-1.0.0/BOOT-INF/lib/spring-boot-autoconfigure-2.1.2.RELEASE.jar
+appClassPath:
+- java-benchmarks/favorites-web-1.0.0/BOOT-INF/classes
+mainClass: com.favorites.FavoritesApplication
+inputClasses: []
+javaVersion: 8
+prependJVM: false
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: REACHABLE
+nativeModel: true
+planFile: null
+analyses:
+  pta: cs:ci;taint-config:config/common/favorites-web-taint-config.yml;
+onlyGenPlan: false
+keepResult:
+- $KEEP-ALL

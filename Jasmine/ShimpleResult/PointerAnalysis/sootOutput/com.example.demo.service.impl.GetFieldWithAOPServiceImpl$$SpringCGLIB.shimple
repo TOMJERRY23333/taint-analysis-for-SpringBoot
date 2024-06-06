@@ -1,0 +1,84 @@
+public class com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB extends com.example.demo.service.impl.GetFieldWithAOPServiceImpl
+{
+    com.example.demo.service.impl.GetFieldWithAOPServiceImpl target;
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl getfieldwithaopserviceimpl;
+
+        this := @this: com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB;
+
+        specialinvoke this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: void <init>()>();
+
+        getfieldwithaopserviceimpl = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.GetFieldWithAOPServiceImpl getGetFieldWithAOPServiceImpl()>();
+
+        this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB: com.example.demo.service.impl.GetFieldWithAOPServiceImpl target> = getfieldwithaopserviceimpl;
+
+        return;
+    }
+
+    public java.lang.String getStr()
+    {
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB this;
+        java.lang.String returnRef;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl localTarget;
+        synthetic.method.ProceedingJoinPointImpl ProceedingJoinPointImpl;
+        java.lang.Object[] paramArray;
+        com.example.demo.aspect.GetFieldAspect getfieldaspect;
+
+        getfieldaspect = new com.example.demo.aspect.GetFieldAspect;
+
+        specialinvoke getfieldaspect.<com.example.demo.aspect.GetFieldAspect: void <init>()>();
+
+        this := @this: com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB: com.example.demo.service.impl.GetFieldWithAOPServiceImpl target>;
+
+        ProceedingJoinPointImpl = new synthetic.method.ProceedingJoinPointImpl;
+
+        specialinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void <init>()>();
+
+        paramArray = newarray (java.lang.Object)[0];
+
+        virtualinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void setArgs_synthetic(java.lang.Object[])>(paramArray);
+
+        virtualinvoke getfieldaspect.<com.example.demo.aspect.GetFieldAspect: void doAccessCheck()>();
+
+        returnRef = virtualinvoke localTarget.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.lang.String getStr()>();
+
+        return returnRef;
+    }
+
+    public java.time.ZoneId getZoneId()
+    {
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB this;
+        java.time.ZoneId returnRef;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl localTarget;
+        synthetic.method.ProceedingJoinPointImpl ProceedingJoinPointImpl;
+        java.lang.Object[] paramArray;
+        com.example.demo.aspect.GetFieldAspect getfieldaspect;
+
+        getfieldaspect = new com.example.demo.aspect.GetFieldAspect;
+
+        specialinvoke getfieldaspect.<com.example.demo.aspect.GetFieldAspect: void <init>()>();
+
+        this := @this: com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl$$SpringCGLIB: com.example.demo.service.impl.GetFieldWithAOPServiceImpl target>;
+
+        ProceedingJoinPointImpl = new synthetic.method.ProceedingJoinPointImpl;
+
+        specialinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void <init>()>();
+
+        paramArray = newarray (java.lang.Object)[0];
+
+        virtualinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void setArgs_synthetic(java.lang.Object[])>(paramArray);
+
+        virtualinvoke getfieldaspect.<com.example.demo.aspect.GetFieldAspect: void doAccessCheck()>();
+
+        returnRef = virtualinvoke localTarget.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: java.time.ZoneId getZoneId()>();
+
+        return returnRef;
+    }
+}

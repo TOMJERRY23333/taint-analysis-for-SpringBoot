@@ -1,0 +1,28 @@
+public class com.example.demo.service.impl.SingletonDIServiceAImpl extends java.lang.Object implements com.example.demo.service.SingletonDIServiceA
+{
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.SingletonDIServiceAImpl this;
+
+        this := @this: com.example.demo.service.impl.SingletonDIServiceAImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void print()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.service.impl.SingletonDIServiceAImpl this;
+
+        this := @this: com.example.demo.service.impl.SingletonDIServiceAImpl;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("SingletonDIServiceAImpl.print()");
+
+        return;
+    }
+}

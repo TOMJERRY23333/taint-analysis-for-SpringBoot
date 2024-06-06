@@ -1,0 +1,420 @@
+public class com.example.demo.controller.SingletonDIController extends java.lang.Object
+{
+    private com.example.demo.service.SingletonDIServiceA singletonDIServiceA_1;
+    private com.example.demo.service.SingletonDIServiceA singletonDIServiceA_2;
+    private com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_1_1;
+    private com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_1_2;
+    private com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_2_1;
+    private com.example.demo.model.Student student1;
+    private com.example.demo.model.Student student2;
+    private com.example.demo.model.AopXmlTestBean aopXmlTestBean1;
+    private com.example.demo.model.AopXmlTestBean aopXmlTestBean2;
+    private com.example.demo.model.XmlDIServiceProvider xmlDIServiceProvider1;
+    private com.example.demo.model.XmlDIServiceProvider xmlDIServiceProvider2;
+
+    public void <init>()
+    {
+        com.example.demo.controller.SingletonDIController this;
+        com.example.demo.service.SingletonDIServiceA singletondiservicea, singletondiservicea_1;
+        com.example.demo.service.SingletonDIServiceB singletondiserviceb, singletondiserviceb_1, singletondiserviceb_2;
+        com.example.demo.model.Student student, student_1;
+        com.example.demo.model.AopXmlTestBean aopxmltestbean, aopxmltestbean_1;
+        com.example.demo.model.XmlDIServiceProvider xmldiserviceprovider, xmldiserviceprovider_1;
+
+        this := @this: com.example.demo.controller.SingletonDIController;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        singletondiservicea = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.SingletonDIServiceAImpl getSingletonDIServiceAImpl()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceA singletonDIServiceA_1> = singletondiservicea;
+
+        singletondiservicea_1 = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.SingletonDIServiceAImpl getSingletonDIServiceAImpl()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceA singletonDIServiceA_2> = singletondiservicea_1;
+
+        singletondiserviceb = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.SingletonDIServiceBImpl getSingletonDIServiceBImpl()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_1_1> = singletondiserviceb;
+
+        singletondiserviceb_1 = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.SingletonDIServiceBImpl getSingletonDIServiceBImpl()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_1_2> = singletondiserviceb_1;
+
+        singletondiserviceb_2 = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.SingletonDIServiceBImpl getSingletonDIServiceBImpl()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_2_1> = singletondiserviceb_2;
+
+        student = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.model.Student getStudent()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.Student student1> = student;
+
+        student_1 = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.model.Student getStudent()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.Student student2> = student_1;
+
+        aopxmltestbean = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.model.AopXmlTestBean getAopXmlTestBean()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.AopXmlTestBean aopXmlTestBean1> = aopxmltestbean;
+
+        aopxmltestbean_1 = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.model.AopXmlTestBean getAopXmlTestBean()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.AopXmlTestBean aopXmlTestBean2> = aopxmltestbean_1;
+
+        xmldiserviceprovider = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.model.XmlDIServiceProvider getXmlDIServiceProvider()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.XmlDIServiceProvider xmlDIServiceProvider1> = xmldiserviceprovider;
+
+        xmldiserviceprovider_1 = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.model.XmlDIServiceProvider getXmlDIServiceProvider()>();
+
+        this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.XmlDIServiceProvider xmlDIServiceProvider2> = xmldiserviceprovider_1;
+
+        return;
+    }
+
+    public void singleton1()
+    {
+        com.example.demo.controller.SingletonDIController this;
+        com.example.demo.service.SingletonDIServiceA $stack1, $stack2, $stack3, $stack4;
+        java.io.PrintStream $stack5;
+        boolean $stack6, $stack6_1, $stack6_2;
+
+        this := @this: com.example.demo.controller.SingletonDIController;
+
+        $stack1 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceA singletonDIServiceA_1>;
+
+        interfaceinvoke $stack1.<com.example.demo.service.SingletonDIServiceA: void print()>();
+
+        $stack2 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceA singletonDIServiceA_2>;
+
+        interfaceinvoke $stack2.<com.example.demo.service.SingletonDIServiceA: void print()>();
+
+        $stack5 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack4 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceA singletonDIServiceA_1>;
+
+        $stack3 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceA singletonDIServiceA_2>;
+
+        if $stack4 != $stack3 goto label1;
+
+        $stack6 = 1;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack6_1 = 0;
+
+     label2:
+        $stack6_2 = Phi($stack6 #0, $stack6_1 #1);
+
+        virtualinvoke $stack5.<java.io.PrintStream: void println(boolean)>($stack6_2);
+
+        return;
+    }
+
+    public void singleton2()
+    {
+        com.example.demo.controller.SingletonDIController this;
+        com.example.demo.service.SingletonDIServiceB $stack1, $stack2, $stack3, $stack4;
+        java.io.PrintStream $stack5;
+        boolean $stack6, $stack6_1, $stack6_2;
+
+        this := @this: com.example.demo.controller.SingletonDIController;
+
+        $stack1 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_1_1>;
+
+        interfaceinvoke $stack1.<com.example.demo.service.SingletonDIServiceB: void print()>();
+
+        $stack2 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_1_2>;
+
+        interfaceinvoke $stack2.<com.example.demo.service.SingletonDIServiceB: void print()>();
+
+        $stack5 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack4 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_1_1>;
+
+        $stack3 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_1_2>;
+
+        if $stack4 != $stack3 goto label1;
+
+        $stack6 = 1;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack6_1 = 0;
+
+     label2:
+        $stack6_2 = Phi($stack6 #0, $stack6_1 #1);
+
+        virtualinvoke $stack5.<java.io.PrintStream: void println(boolean)>($stack6_2);
+
+        return;
+    }
+
+    public void singleton3()
+    {
+        com.example.demo.controller.SingletonDIController this;
+        com.example.demo.service.SingletonDIServiceB $stack1, $stack2, $stack3, $stack4;
+        java.io.PrintStream $stack5;
+        boolean $stack6, $stack6_1, $stack6_2;
+
+        this := @this: com.example.demo.controller.SingletonDIController;
+
+        $stack1 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_1_1>;
+
+        interfaceinvoke $stack1.<com.example.demo.service.SingletonDIServiceB: void print()>();
+
+        $stack2 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_2_1>;
+
+        interfaceinvoke $stack2.<com.example.demo.service.SingletonDIServiceB: void print()>();
+
+        $stack5 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack4 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_1_1>;
+
+        $stack3 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.service.SingletonDIServiceB singletonDIServiceBName_2_1>;
+
+        if $stack4 != $stack3 goto label1;
+
+        $stack6 = 1;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack6_1 = 0;
+
+     label2:
+        $stack6_2 = Phi($stack6 #0, $stack6_1 #1);
+
+        virtualinvoke $stack5.<java.io.PrintStream: void println(boolean)>($stack6_2);
+
+        return;
+    }
+
+    public void singleton4()
+    {
+        java.lang.StringBuilder $stack1, $stack3, $stack5, $stack7, $stack9, $stack11;
+        java.io.PrintStream $stack2, $stack8, $stack15;
+        com.example.demo.controller.SingletonDIController this;
+        com.example.demo.model.Student $stack4, $stack10, $stack13, $stack14;
+        java.lang.String $stack6, $stack12;
+        boolean $stack16, $stack16_1, $stack16_2;
+
+        this := @this: com.example.demo.controller.SingletonDIController;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack1 = new java.lang.StringBuilder;
+
+        specialinvoke $stack1.<java.lang.StringBuilder: void <init>()>();
+
+        $stack3 = virtualinvoke $stack1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("student1 = ");
+
+        $stack4 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.Student student1>;
+
+        $stack5 = virtualinvoke $stack3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack4);
+
+        $stack6 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>($stack6);
+
+        $stack8 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack7 = new java.lang.StringBuilder;
+
+        specialinvoke $stack7.<java.lang.StringBuilder: void <init>()>();
+
+        $stack9 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("student2 = ");
+
+        $stack10 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.Student student2>;
+
+        $stack11 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack10);
+
+        $stack12 = virtualinvoke $stack11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack8.<java.io.PrintStream: void println(java.lang.String)>($stack12);
+
+        $stack15 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack14 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.Student student1>;
+
+        $stack13 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.Student student2>;
+
+        if $stack14 != $stack13 goto label1;
+
+        $stack16 = 1;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack16_1 = 0;
+
+     label2:
+        $stack16_2 = Phi($stack16 #0, $stack16_1 #1);
+
+        virtualinvoke $stack15.<java.io.PrintStream: void println(boolean)>($stack16_2);
+
+        return;
+    }
+
+    public void singleton5()
+    {
+        java.lang.StringBuilder $stack1, $stack3, $stack5, $stack7, $stack9, $stack11;
+        java.io.PrintStream $stack2, $stack8, $stack15;
+        com.example.demo.controller.SingletonDIController this;
+        com.example.demo.model.AopXmlTestBean $stack4, $stack10, $stack13, $stack14;
+        java.lang.String $stack6, $stack12;
+        boolean $stack16, $stack16_1, $stack16_2;
+
+        this := @this: com.example.demo.controller.SingletonDIController;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack1 = new java.lang.StringBuilder;
+
+        specialinvoke $stack1.<java.lang.StringBuilder: void <init>()>();
+
+        $stack3 = virtualinvoke $stack1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("aopXmlTestBean1 = ");
+
+        $stack4 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.AopXmlTestBean aopXmlTestBean1>;
+
+        $stack5 = virtualinvoke $stack3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack4);
+
+        $stack6 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>($stack6);
+
+        $stack8 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack7 = new java.lang.StringBuilder;
+
+        specialinvoke $stack7.<java.lang.StringBuilder: void <init>()>();
+
+        $stack9 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("aopXmlTestBean2 = ");
+
+        $stack10 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.AopXmlTestBean aopXmlTestBean2>;
+
+        $stack11 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack10);
+
+        $stack12 = virtualinvoke $stack11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack8.<java.io.PrintStream: void println(java.lang.String)>($stack12);
+
+        $stack15 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack14 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.AopXmlTestBean aopXmlTestBean1>;
+
+        $stack13 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.AopXmlTestBean aopXmlTestBean2>;
+
+        if $stack14 != $stack13 goto label1;
+
+        $stack16 = 1;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack16_1 = 0;
+
+     label2:
+        $stack16_2 = Phi($stack16 #0, $stack16_1 #1);
+
+        virtualinvoke $stack15.<java.io.PrintStream: void println(boolean)>($stack16_2);
+
+        return;
+    }
+
+    public void singleton6()
+    {
+        com.example.demo.controller.SingletonDIController this;
+        com.example.demo.model.XmlDIServiceProvider $stack1, $stack6, $stack12, $stack15, $stack16;
+        com.example.demo.service.XmlDIService $stack2;
+        java.lang.StringBuilder $stack3, $stack5, $stack7, $stack9, $stack11, $stack13;
+        java.io.PrintStream $stack4, $stack10, $stack17;
+        java.lang.String $stack8, $stack14;
+        boolean $stack18, $stack18_1, $stack18_2;
+
+        this := @this: com.example.demo.controller.SingletonDIController;
+
+        $stack1 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.XmlDIServiceProvider xmlDIServiceProvider1>;
+
+        $stack2 = virtualinvoke $stack1.<com.example.demo.model.XmlDIServiceProvider: com.example.demo.service.XmlDIService getXmlDIService()>();
+
+        interfaceinvoke $stack2.<com.example.demo.service.XmlDIService: void xmlDITest()>();
+
+        $stack4 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack3 = new java.lang.StringBuilder;
+
+        specialinvoke $stack3.<java.lang.StringBuilder: void <init>()>();
+
+        $stack5 = virtualinvoke $stack3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("xmlDIServiceProvider1 = ");
+
+        $stack6 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.XmlDIServiceProvider xmlDIServiceProvider1>;
+
+        $stack7 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack6);
+
+        $stack8 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack4.<java.io.PrintStream: void println(java.lang.String)>($stack8);
+
+        $stack10 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack9 = new java.lang.StringBuilder;
+
+        specialinvoke $stack9.<java.lang.StringBuilder: void <init>()>();
+
+        $stack11 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("xmlDIServiceProvider2 = ");
+
+        $stack12 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.XmlDIServiceProvider xmlDIServiceProvider2>;
+
+        $stack13 = virtualinvoke $stack11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack12);
+
+        $stack14 = virtualinvoke $stack13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack10.<java.io.PrintStream: void println(java.lang.String)>($stack14);
+
+        $stack17 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack16 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.XmlDIServiceProvider xmlDIServiceProvider1>;
+
+        $stack15 = this.<com.example.demo.controller.SingletonDIController: com.example.demo.model.XmlDIServiceProvider xmlDIServiceProvider2>;
+
+        if $stack16 != $stack15 goto label1;
+
+        $stack18 = 1;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack18_1 = 0;
+
+     label2:
+        $stack18_2 = Phi($stack18 #0, $stack18_1 #1);
+
+        virtualinvoke $stack17.<java.io.PrintStream: void println(boolean)>($stack18_2);
+
+        return;
+    }
+
+    public void callEntry_synthetic()
+    {
+        com.example.demo.controller.SingletonDIController this;
+
+        this := @this: com.example.demo.controller.SingletonDIController;
+
+        specialinvoke this.<com.example.demo.controller.SingletonDIController: void singleton1()>();
+
+        specialinvoke this.<com.example.demo.controller.SingletonDIController: void singleton2()>();
+
+        specialinvoke this.<com.example.demo.controller.SingletonDIController: void singleton3()>();
+
+        specialinvoke this.<com.example.demo.controller.SingletonDIController: void singleton4()>();
+
+        specialinvoke this.<com.example.demo.controller.SingletonDIController: void singleton5()>();
+
+        specialinvoke this.<com.example.demo.controller.SingletonDIController: void singleton6()>();
+
+        return;
+    }
+}

@@ -1,0 +1,306 @@
+public class com.example.demo.aspect.InfoLeakAspect extends java.lang.Object
+{
+    private static final org.slf4j.Logger LOGGER;
+
+    public void <init>()
+    {
+        com.example.demo.aspect.InfoLeakAspect this;
+
+        this := @this: com.example.demo.aspect.InfoLeakAspect;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void webLog1()
+    {
+        com.example.demo.aspect.InfoLeakAspect this;
+
+        this := @this: com.example.demo.aspect.InfoLeakAspect;
+
+        return;
+    }
+
+    public java.lang.Object aroundMethod(org.aspectj.lang.ProceedingJoinPoint)
+    {
+        java.lang.StringBuilder $stack4, $stack6, $stack9, $stack12, $stack14, $stack15;
+        java.io.PrintStream $stack5, $stack13;
+        org.aspectj.lang.ProceedingJoinPoint pdj;
+        java.lang.Object[] $stack7;
+        java.util.List $stack8;
+        java.lang.String $stack10, $stack16;
+        java.lang.Throwable $stack17, e;
+        com.example.demo.aspect.InfoLeakAspect this;
+        java.lang.Object result, result_1, result_2, result_3;
+
+        this := @this: com.example.demo.aspect.InfoLeakAspect;
+
+        pdj := @parameter0: org.aspectj.lang.ProceedingJoinPoint;
+
+        result = null;
+
+        $stack5 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack4 = new java.lang.StringBuilder;
+
+        specialinvoke $stack4.<java.lang.StringBuilder: void <init>()>();
+
+        $stack6 = virtualinvoke $stack4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("InfoLeakAspect @Around get parameter: ");
+
+        $stack7 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object[] getArgs()>();
+
+        $stack8 = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($stack7);
+
+        $stack9 = virtualinvoke $stack6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack8);
+
+        $stack10 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+(0)     virtualinvoke $stack5.<java.io.PrintStream: void println(java.lang.String)>($stack10);
+
+     label1:
+(1)     result_1 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed()>();
+
+        $stack13 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack12 = new java.lang.StringBuilder;
+
+        specialinvoke $stack12.<java.lang.StringBuilder: void <init>()>();
+
+        $stack14 = virtualinvoke $stack12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("InfoLeakAspect @Around get result: ");
+
+        $stack15 = virtualinvoke $stack14.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(result_1);
+
+        $stack16 = virtualinvoke $stack15.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack13.<java.io.PrintStream: void println(java.lang.String)>($stack16);
+
+     label2:
+(2)     goto label4;
+
+     label3:
+        $stack17 := @caughtexception;
+
+        result_2 = Phi(result #0, result_1 #1);
+
+        e = $stack17;
+
+(3)     virtualinvoke e.<java.lang.Throwable: void printStackTrace()>();
+
+     label4:
+        result_3 = Phi(result_1 #2, result_2 #3);
+
+        return result_3;
+
+        catch java.lang.Throwable from label1 to label2 with label3;
+    }
+
+    public void doBefore(org.aspectj.lang.JoinPoint)
+    {
+        org.aspectj.lang.JoinPoint joinPoint;
+        java.lang.Object[] $stack3;
+        java.util.List args;
+        java.lang.StringBuilder $stack5, $stack7, $stack8;
+        java.io.PrintStream $stack6;
+        java.lang.String $stack9;
+        com.example.demo.aspect.InfoLeakAspect this;
+
+        this := @this: com.example.demo.aspect.InfoLeakAspect;
+
+        joinPoint := @parameter0: org.aspectj.lang.JoinPoint;
+
+        $stack3 = interfaceinvoke joinPoint.<org.aspectj.lang.JoinPoint: java.lang.Object[] getArgs()>();
+
+        args = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($stack3);
+
+        $stack6 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack5 = new java.lang.StringBuilder;
+
+        specialinvoke $stack5.<java.lang.StringBuilder: void <init>()>();
+
+        $stack7 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("InfoLeakAspect @Before get parameter: ");
+
+        $stack8 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(args);
+
+        $stack9 = virtualinvoke $stack8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack6.<java.io.PrintStream: void println(java.lang.String)>($stack9);
+
+        return;
+    }
+
+    public void doAfter(org.aspectj.lang.JoinPoint)
+    {
+        org.aspectj.lang.JoinPoint joinPoint;
+        java.lang.Object[] $stack3;
+        java.util.List args;
+        java.lang.StringBuilder $stack5, $stack7, $stack8;
+        java.io.PrintStream $stack6;
+        java.lang.String $stack9;
+        com.example.demo.aspect.InfoLeakAspect this;
+
+        this := @this: com.example.demo.aspect.InfoLeakAspect;
+
+        joinPoint := @parameter0: org.aspectj.lang.JoinPoint;
+
+        $stack3 = interfaceinvoke joinPoint.<org.aspectj.lang.JoinPoint: java.lang.Object[] getArgs()>();
+
+        args = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($stack3);
+
+        $stack6 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack5 = new java.lang.StringBuilder;
+
+        specialinvoke $stack5.<java.lang.StringBuilder: void <init>()>();
+
+        $stack7 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("InfoLeakAspect @After get parameter: ");
+
+        $stack8 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(args);
+
+        $stack9 = virtualinvoke $stack8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack6.<java.io.PrintStream: void println(java.lang.String)>($stack9);
+
+        return;
+    }
+
+    public void afterReturning(org.aspectj.lang.JoinPoint, java.lang.Object)
+    {
+        org.aspectj.lang.JoinPoint point;
+        java.lang.Object[] $stack4;
+        java.util.List args;
+        java.lang.StringBuilder $stack6, $stack8, $stack9, $stack10, $stack11;
+        java.io.PrintStream $stack7;
+        java.lang.Object result;
+        java.lang.String $stack12;
+        com.example.demo.aspect.InfoLeakAspect this;
+
+        this := @this: com.example.demo.aspect.InfoLeakAspect;
+
+        point := @parameter0: org.aspectj.lang.JoinPoint;
+
+        result := @parameter1: java.lang.Object;
+
+        $stack4 = interfaceinvoke point.<org.aspectj.lang.JoinPoint: java.lang.Object[] getArgs()>();
+
+        args = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($stack4);
+
+        $stack7 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack6 = new java.lang.StringBuilder;
+
+        specialinvoke $stack6.<java.lang.StringBuilder: void <init>()>();
+
+        $stack8 = virtualinvoke $stack6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("InfoLeakAspect @AfterReturning get parameter:");
+
+        $stack9 = virtualinvoke $stack8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(args);
+
+        $stack10 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" and result: ");
+
+        $stack11 = virtualinvoke $stack10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(result);
+
+        $stack12 = virtualinvoke $stack11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack7.<java.io.PrintStream: void println(java.lang.String)>($stack12);
+
+        return;
+    }
+
+    static void <clinit>()
+    {
+        org.slf4j.Logger $stack0;
+
+        $stack0 = staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class "Lcom/example/demo/aspect/InfoLeakAspect;");
+
+        <com.example.demo.aspect.InfoLeakAspect: org.slf4j.Logger LOGGER> = $stack0;
+
+        return;
+    }
+
+    public java.lang.Object aroundMethod_infoLeakMethod(org.aspectj.lang.ProceedingJoinPoint, java.lang.String, java.lang.String, java.lang.String, com.example.demo.service.impl.InfoLeakServiceImpl)
+    {
+        java.lang.StringBuilder $stack4, $stack6, $stack9, $stack12, $stack14, $stack15;
+        java.io.PrintStream $stack5, $stack13;
+        org.aspectj.lang.ProceedingJoinPoint pdj;
+        java.lang.Object[] $stack7;
+        java.util.List $stack8;
+        java.lang.String $stack10, $stack16, param3, param2, param1;
+        java.lang.Throwable $stack17, e;
+        com.example.demo.aspect.InfoLeakAspect this;
+        java.lang.Object result, result_1, result_2, result_3;
+        com.example.demo.service.impl.InfoLeakServiceImpl param4;
+
+        this := @this: com.example.demo.aspect.InfoLeakAspect;
+
+        pdj := @parameter0: org.aspectj.lang.ProceedingJoinPoint;
+
+        param1 := @parameter1: java.lang.String;
+
+        param2 := @parameter2: java.lang.String;
+
+        param3 := @parameter3: java.lang.String;
+
+        param4 := @parameter4: com.example.demo.service.impl.InfoLeakServiceImpl;
+
+        result = null;
+
+        $stack5 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack4 = new java.lang.StringBuilder;
+
+        specialinvoke $stack4.<java.lang.StringBuilder: void <init>()>();
+
+        $stack6 = virtualinvoke $stack4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("InfoLeakAspect @Around get parameter: ");
+
+        $stack7 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object[] getArgs()>();
+
+        $stack8 = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($stack7);
+
+        $stack9 = virtualinvoke $stack6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack8);
+
+        $stack10 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+(0)     virtualinvoke $stack5.<java.io.PrintStream: void println(java.lang.String)>($stack10);
+
+     label1:
+        specialinvoke this.<com.example.demo.aspect.InfoLeakAspect: void doBefore(org.aspectj.lang.JoinPoint)>(pdj);
+
+(1)     result_1 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed()>();
+
+        virtualinvoke param4.<com.example.demo.service.impl.InfoLeakServiceImpl: void infoLeakMethod(java.lang.String,java.lang.String,java.lang.String)>(param1, param2, param3);
+
+        $stack13 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack12 = new java.lang.StringBuilder;
+
+        specialinvoke $stack12.<java.lang.StringBuilder: void <init>()>();
+
+        $stack14 = virtualinvoke $stack12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("InfoLeakAspect @Around get result: ");
+
+        $stack15 = virtualinvoke $stack14.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(result_1);
+
+        $stack16 = virtualinvoke $stack15.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack13.<java.io.PrintStream: void println(java.lang.String)>($stack16);
+
+     label2:
+(2)     goto label4;
+
+     label3:
+        $stack17 := @caughtexception;
+
+        result_2 = Phi(result #0, result_1 #1);
+
+        e = $stack17;
+
+(3)     virtualinvoke e.<java.lang.Throwable: void printStackTrace()>();
+
+     label4:
+        result_3 = Phi(result_1 #2, result_2 #3);
+
+        return result_3;
+
+        catch java.lang.Throwable from label1 to label2 with label3;
+    }
+}

@@ -1,0 +1,412 @@
+public class com.example.demo.model.User extends java.lang.Object implements java.io.Serializable
+{
+    private static final long serialVersionUID;
+    private java.lang.String id;
+    private java.lang.String name;
+    private java.lang.Integer age;
+    private java.lang.String password;
+
+    public java.lang.String getId()
+    {
+        com.example.demo.model.User this;
+        java.lang.String $stack1;
+
+        this := @this: com.example.demo.model.User;
+
+        $stack1 = this.<com.example.demo.model.User: java.lang.String id>;
+
+        return $stack1;
+    }
+
+    public java.lang.String getName()
+    {
+        com.example.demo.model.User this;
+        java.lang.String $stack1;
+
+        this := @this: com.example.demo.model.User;
+
+        $stack1 = this.<com.example.demo.model.User: java.lang.String name>;
+
+        return $stack1;
+    }
+
+    public java.lang.Integer getAge()
+    {
+        com.example.demo.model.User this;
+        java.lang.Integer $stack1;
+
+        this := @this: com.example.demo.model.User;
+
+        $stack1 = this.<com.example.demo.model.User: java.lang.Integer age>;
+
+        return $stack1;
+    }
+
+    public java.lang.String getPassword()
+    {
+        com.example.demo.model.User this;
+        java.lang.String $stack1;
+
+        this := @this: com.example.demo.model.User;
+
+        $stack1 = this.<com.example.demo.model.User: java.lang.String password>;
+
+        return $stack1;
+    }
+
+    public com.example.demo.model.User setId(java.lang.String)
+    {
+        com.example.demo.model.User this;
+        java.lang.String id;
+
+        this := @this: com.example.demo.model.User;
+
+        id := @parameter0: java.lang.String;
+
+        this.<com.example.demo.model.User: java.lang.String id> = id;
+
+        return this;
+    }
+
+    public com.example.demo.model.User setName(java.lang.String)
+    {
+        com.example.demo.model.User this;
+        java.lang.String name;
+
+        this := @this: com.example.demo.model.User;
+
+        name := @parameter0: java.lang.String;
+
+        this.<com.example.demo.model.User: java.lang.String name> = name;
+
+        return this;
+    }
+
+    public com.example.demo.model.User setAge(java.lang.Integer)
+    {
+        com.example.demo.model.User this;
+        java.lang.Integer age;
+
+        this := @this: com.example.demo.model.User;
+
+        age := @parameter0: java.lang.Integer;
+
+        this.<com.example.demo.model.User: java.lang.Integer age> = age;
+
+        return this;
+    }
+
+    public com.example.demo.model.User setPassword(java.lang.String)
+    {
+        com.example.demo.model.User this;
+        java.lang.String password;
+
+        this := @this: com.example.demo.model.User;
+
+        password := @parameter0: java.lang.String;
+
+        this.<com.example.demo.model.User: java.lang.String password> = password;
+
+        return this;
+    }
+
+    public java.lang.String toString()
+    {
+        java.lang.StringBuilder $stack1, $stack2, $stack4, $stack5, $stack7, $stack8, $stack10, $stack11, $stack13, $stack14;
+        com.example.demo.model.User this;
+        java.lang.String $stack3, $stack6, $stack12, $stack15;
+        java.lang.Integer $stack9;
+
+        this := @this: com.example.demo.model.User;
+
+        $stack1 = new java.lang.StringBuilder;
+
+        specialinvoke $stack1.<java.lang.StringBuilder: void <init>()>();
+
+        $stack2 = virtualinvoke $stack1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("User(id=");
+
+        $stack3 = virtualinvoke this.<com.example.demo.model.User: java.lang.String getId()>();
+
+        $stack4 = virtualinvoke $stack2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack3);
+
+        $stack5 = virtualinvoke $stack4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", name=");
+
+        $stack6 = virtualinvoke this.<com.example.demo.model.User: java.lang.String getName()>();
+
+        $stack7 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack6);
+
+        $stack8 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", age=");
+
+        $stack9 = virtualinvoke this.<com.example.demo.model.User: java.lang.Integer getAge()>();
+
+        $stack10 = virtualinvoke $stack8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack9);
+
+        $stack11 = virtualinvoke $stack10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", password=");
+
+        $stack12 = virtualinvoke this.<com.example.demo.model.User: java.lang.String getPassword()>();
+
+        $stack13 = virtualinvoke $stack11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack12);
+
+        $stack14 = virtualinvoke $stack13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(")");
+
+        $stack15 = virtualinvoke $stack14.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $stack15;
+    }
+
+    public void <init>(java.lang.String, java.lang.String, java.lang.Integer, java.lang.String)
+    {
+        com.example.demo.model.User this;
+        java.lang.String id, name, password;
+        java.lang.Integer age;
+
+        this := @this: com.example.demo.model.User;
+
+        id := @parameter0: java.lang.String;
+
+        name := @parameter1: java.lang.String;
+
+        age := @parameter2: java.lang.Integer;
+
+        password := @parameter3: java.lang.String;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        this.<com.example.demo.model.User: java.lang.String id> = id;
+
+        this.<com.example.demo.model.User: java.lang.String name> = name;
+
+        this.<com.example.demo.model.User: java.lang.Integer age> = age;
+
+        this.<com.example.demo.model.User: java.lang.String password> = password;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.example.demo.model.User this;
+
+        this := @this: com.example.demo.model.User;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public boolean equals(java.lang.Object)
+    {
+        java.lang.Object o;
+        com.example.demo.model.User this, other;
+        boolean $stack11, $stack12, $stack15, $stack18, $stack21, $stack24;
+        java.lang.Integer this$age, other$age;
+        java.lang.String this$id, other$id, this$name, other$name, this$password, other$password;
+
+        this := @this: com.example.demo.model.User;
+
+        o := @parameter0: java.lang.Object;
+
+        if o != this goto label01;
+
+        return 1;
+
+     label01:
+        $stack11 = o instanceof com.example.demo.model.User;
+
+        if $stack11 != 0 goto label02;
+
+        return 0;
+
+     label02:
+        other = (com.example.demo.model.User) o;
+
+        $stack12 = virtualinvoke other.<com.example.demo.model.User: boolean canEqual(java.lang.Object)>(this);
+
+        if $stack12 != 0 goto label03;
+
+        return 0;
+
+     label03:
+        this$age = virtualinvoke this.<com.example.demo.model.User: java.lang.Integer getAge()>();
+
+        other$age = virtualinvoke other.<com.example.demo.model.User: java.lang.Integer getAge()>();
+
+        if this$age != null goto label04;
+
+        if other$age == null goto label06;
+
+        goto label05;
+
+     label04:
+        $stack15 = virtualinvoke this$age.<java.lang.Object: boolean equals(java.lang.Object)>(other$age);
+
+        if $stack15 != 0 goto label06;
+
+     label05:
+        return 0;
+
+     label06:
+        this$id = virtualinvoke this.<com.example.demo.model.User: java.lang.String getId()>();
+
+        other$id = virtualinvoke other.<com.example.demo.model.User: java.lang.String getId()>();
+
+        if this$id != null goto label07;
+
+        if other$id == null goto label09;
+
+        goto label08;
+
+     label07:
+        $stack18 = virtualinvoke this$id.<java.lang.Object: boolean equals(java.lang.Object)>(other$id);
+
+        if $stack18 != 0 goto label09;
+
+     label08:
+        return 0;
+
+     label09:
+        this$name = virtualinvoke this.<com.example.demo.model.User: java.lang.String getName()>();
+
+        other$name = virtualinvoke other.<com.example.demo.model.User: java.lang.String getName()>();
+
+        if this$name != null goto label10;
+
+        if other$name == null goto label12;
+
+        goto label11;
+
+     label10:
+        $stack21 = virtualinvoke this$name.<java.lang.Object: boolean equals(java.lang.Object)>(other$name);
+
+        if $stack21 != 0 goto label12;
+
+     label11:
+        return 0;
+
+     label12:
+        this$password = virtualinvoke this.<com.example.demo.model.User: java.lang.String getPassword()>();
+
+        other$password = virtualinvoke other.<com.example.demo.model.User: java.lang.String getPassword()>();
+
+        if this$password != null goto label13;
+
+        if other$password == null goto label15;
+
+        goto label14;
+
+     label13:
+        $stack24 = virtualinvoke this$password.<java.lang.Object: boolean equals(java.lang.Object)>(other$password);
+
+        if $stack24 != 0 goto label15;
+
+     label14:
+        return 0;
+
+     label15:
+        return 1;
+    }
+
+    protected boolean canEqual(java.lang.Object)
+    {
+        java.lang.Object other;
+        boolean $stack2;
+        com.example.demo.model.User this;
+
+        this := @this: com.example.demo.model.User;
+
+        other := @parameter0: java.lang.Object;
+
+        $stack2 = other instanceof com.example.demo.model.User;
+
+        return $stack2;
+    }
+
+    public int hashCode()
+    {
+        byte PRIME, result;
+        com.example.demo.model.User this;
+        java.lang.Integer $age;
+        int $stack8, $stack11, $stack14, $stack17, $stack9, result#3, $stack12, $stack15, $stack18, $stack9_1, $stack9_2, $stack12_1, $stack12_2, result#3_1, $stack15_1, $stack15_2, result#3_2, $stack18_1, $stack18_2, result#3_3;
+        java.lang.String $id, $name, $password;
+
+        this := @this: com.example.demo.model.User;
+
+        PRIME = 59;
+
+        result = 1;
+
+        $age = virtualinvoke this.<com.example.demo.model.User: java.lang.Integer getAge()>();
+
+        $stack8 = result * 59;
+
+        if $age != null goto label1;
+
+        $stack9 = 43;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack9_1 = virtualinvoke $age.<java.lang.Object: int hashCode()>();
+
+     label2:
+        $stack9_2 = Phi($stack9 #0, $stack9_1 #1);
+
+        result#3 = $stack8 + $stack9_2;
+
+        $id = virtualinvoke this.<com.example.demo.model.User: java.lang.String getId()>();
+
+        $stack11 = result#3 * 59;
+
+        if $id != null goto label3;
+
+        $stack12 = 43;
+
+(2)     goto label4;
+
+     label3:
+(3)     $stack12_1 = virtualinvoke $id.<java.lang.Object: int hashCode()>();
+
+     label4:
+        $stack12_2 = Phi($stack12 #2, $stack12_1 #3);
+
+        result#3_1 = $stack11 + $stack12_2;
+
+        $name = virtualinvoke this.<com.example.demo.model.User: java.lang.String getName()>();
+
+        $stack14 = result#3_1 * 59;
+
+        if $name != null goto label5;
+
+        $stack15 = 43;
+
+(4)     goto label6;
+
+     label5:
+(5)     $stack15_1 = virtualinvoke $name.<java.lang.Object: int hashCode()>();
+
+     label6:
+        $stack15_2 = Phi($stack15 #4, $stack15_1 #5);
+
+        result#3_2 = $stack14 + $stack15_2;
+
+        $password = virtualinvoke this.<com.example.demo.model.User: java.lang.String getPassword()>();
+
+        $stack17 = result#3_2 * 59;
+
+        if $password != null goto label7;
+
+        $stack18 = 43;
+
+(6)     goto label8;
+
+     label7:
+(7)     $stack18_1 = virtualinvoke $password.<java.lang.Object: int hashCode()>();
+
+     label8:
+        $stack18_2 = Phi($stack18 #6, $stack18_1 #7);
+
+        result#3_3 = $stack17 + $stack18_2;
+
+        return result#3_3;
+    }
+}

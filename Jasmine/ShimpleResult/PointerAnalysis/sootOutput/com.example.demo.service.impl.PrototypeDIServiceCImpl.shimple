@@ -1,0 +1,28 @@
+public class com.example.demo.service.impl.PrototypeDIServiceCImpl extends java.lang.Object implements com.example.demo.service.PrototypeDIServiceC
+{
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.PrototypeDIServiceCImpl this;
+
+        this := @this: com.example.demo.service.impl.PrototypeDIServiceCImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void print()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.service.impl.PrototypeDIServiceCImpl this;
+
+        this := @this: com.example.demo.service.impl.PrototypeDIServiceCImpl;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("PrototypeDIServiceCImpl.print()");
+
+        return;
+    }
+}

@@ -1,0 +1,76 @@
+public class com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB extends com.example.demo.controller.EntryPointWithAOPController
+{
+    com.example.demo.controller.EntryPointWithAOPController target;
+
+    public void <init>()
+    {
+        com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB this;
+        com.example.demo.controller.EntryPointWithAOPController entrypointwithaopcontroller;
+
+        this := @this: com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB;
+
+        specialinvoke this.<com.example.demo.controller.EntryPointWithAOPController: void <init>()>();
+
+        entrypointwithaopcontroller = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.controller.EntryPointWithAOPController getEntryPointWithAOPController()>();
+
+        this.<com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB: com.example.demo.controller.EntryPointWithAOPController target> = entrypointwithaopcontroller;
+
+        return;
+    }
+
+    public void entryPoint3()
+    {
+        com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB this;
+        com.example.demo.controller.EntryPointWithAOPController localTarget;
+        synthetic.method.ProceedingJoinPointImpl ProceedingJoinPointImpl;
+        java.lang.Object[] paramArray;
+        com.example.demo.aspect.EntryPointAspect entrypointaspect;
+
+        entrypointaspect = new com.example.demo.aspect.EntryPointAspect;
+
+        specialinvoke entrypointaspect.<com.example.demo.aspect.EntryPointAspect: void <init>()>();
+
+        this := @this: com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB: com.example.demo.controller.EntryPointWithAOPController target>;
+
+        ProceedingJoinPointImpl = new synthetic.method.ProceedingJoinPointImpl;
+
+        specialinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void <init>()>();
+
+        paramArray = newarray (java.lang.Object)[0];
+
+        virtualinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void setArgs_synthetic(java.lang.Object[])>(paramArray);
+
+        virtualinvoke entrypointaspect.<com.example.demo.aspect.EntryPointAspect: void doBefore(org.aspectj.lang.JoinPoint)>(ProceedingJoinPointImpl);
+
+        virtualinvoke localTarget.<com.example.demo.controller.EntryPointWithAOPController: void entryPoint3()>();
+
+        return;
+    }
+
+    public void FakeEntryPoint3()
+    {
+        com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB this;
+        com.example.demo.controller.EntryPointWithAOPController localTarget;
+
+        this := @this: com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB: com.example.demo.controller.EntryPointWithAOPController target>;
+
+        virtualinvoke localTarget.<com.example.demo.controller.EntryPointWithAOPController: void FakeEntryPoint3()>();
+
+        return;
+    }
+
+    public void callEntry_synthetic()
+    {
+        com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB this;
+
+        this := @this: com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB;
+
+        specialinvoke this.<com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB: void entryPoint3()>();
+
+        return;
+    }
+}

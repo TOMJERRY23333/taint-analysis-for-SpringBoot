@@ -1,0 +1,250 @@
+public class com.example.demo.aspect.AOPAspectA extends java.lang.Object
+{
+    private static final org.slf4j.Logger LOGGER;
+
+    public void <init>()
+    {
+        com.example.demo.aspect.AOPAspectA this;
+
+        this := @this: com.example.demo.aspect.AOPAspectA;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void webLog1()
+    {
+        com.example.demo.aspect.AOPAspectA this;
+
+        this := @this: com.example.demo.aspect.AOPAspectA;
+
+        return;
+    }
+
+    public java.lang.Object aroundMethod(org.aspectj.lang.ProceedingJoinPoint)
+    {
+        java.io.PrintStream $stack4, $stack6;
+        org.aspectj.lang.ProceedingJoinPoint pdj;
+        java.lang.Throwable $stack7, throwable;
+        com.example.demo.aspect.AOPAspectA this;
+        java.lang.Object result, result_1, result_2, result_3;
+
+        this := @this: com.example.demo.aspect.AOPAspectA;
+
+        pdj := @parameter0: org.aspectj.lang.ProceedingJoinPoint;
+
+        $stack4 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack4.<java.io.PrintStream: void println(java.lang.String)>("AOPAspectA @Around2 Before");
+
+(0)     result = null;
+
+     label1:
+(1)     result_1 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed()>();
+
+     label2:
+(2)     goto label4;
+
+     label3:
+        $stack7 := @caughtexception;
+
+        result_2 = Phi(result #0, result_1 #1);
+
+        throwable = $stack7;
+
+(3)     virtualinvoke throwable.<java.lang.Throwable: void printStackTrace()>();
+
+     label4:
+        result_3 = Phi(result_1 #2, result_2 #3);
+
+        $stack6 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack6.<java.io.PrintStream: void println(java.lang.String)>("AOPAspectA @Around2 After");
+
+        return result_3;
+
+        catch java.lang.Throwable from label1 to label2 with label3;
+    }
+
+    public void doBefore(org.aspectj.lang.JoinPoint)
+    {
+        java.io.PrintStream $stack2;
+        com.example.demo.aspect.AOPAspectA this;
+        org.aspectj.lang.JoinPoint joinPoint;
+
+        this := @this: com.example.demo.aspect.AOPAspectA;
+
+        joinPoint := @parameter0: org.aspectj.lang.JoinPoint;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>("AOPAspectA @Before");
+
+        return;
+    }
+
+    public void doAfter(org.aspectj.lang.JoinPoint)
+    {
+        java.io.PrintStream $stack2;
+        com.example.demo.aspect.AOPAspectA this;
+        org.aspectj.lang.JoinPoint joinPoint;
+
+        this := @this: com.example.demo.aspect.AOPAspectA;
+
+        joinPoint := @parameter0: org.aspectj.lang.JoinPoint;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>("AOPAspectA @After");
+
+        return;
+    }
+
+    public void afterReturning(org.aspectj.lang.JoinPoint, java.lang.Object)
+    {
+        java.io.PrintStream $stack3;
+        com.example.demo.aspect.AOPAspectA this;
+        org.aspectj.lang.JoinPoint point;
+        java.lang.Object result;
+
+        this := @this: com.example.demo.aspect.AOPAspectA;
+
+        point := @parameter0: org.aspectj.lang.JoinPoint;
+
+        result := @parameter1: java.lang.Object;
+
+        $stack3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack3.<java.io.PrintStream: void println(java.lang.String)>("AOPAspectA @AfterReturning");
+
+        return;
+    }
+
+    static void <clinit>()
+    {
+        org.slf4j.Logger $stack0;
+
+        $stack0 = staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class "Lcom/example/demo/aspect/AOPAspectA;");
+
+        <com.example.demo.aspect.AOPAspectA: org.slf4j.Logger LOGGER> = $stack0;
+
+        return;
+    }
+
+    public java.lang.Object aroundMethod_testAOPAnno2(org.aspectj.lang.ProceedingJoinPoint, java.lang.String, com.example.demo.service.impl.AOPServiceImpl)
+    {
+        java.io.PrintStream $stack4, $stack6;
+        org.aspectj.lang.ProceedingJoinPoint pdj;
+        java.lang.Throwable $stack7, throwable;
+        com.example.demo.aspect.AOPAspectA this;
+        java.lang.Object result, result_1, result_2, result_3, result_4;
+        com.example.demo.service.impl.AOPServiceImpl param2;
+        java.lang.String param1;
+        com.example.demo.aspect.AOPAspectB aopaspectb;
+
+        aopaspectb = new com.example.demo.aspect.AOPAspectB;
+
+        specialinvoke aopaspectb.<com.example.demo.aspect.AOPAspectB: void <init>()>();
+
+        this := @this: com.example.demo.aspect.AOPAspectA;
+
+        pdj := @parameter0: org.aspectj.lang.ProceedingJoinPoint;
+
+        param1 := @parameter1: java.lang.String;
+
+        param2 := @parameter2: com.example.demo.service.impl.AOPServiceImpl;
+
+        $stack4 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack4.<java.io.PrintStream: void println(java.lang.String)>("AOPAspectA @Around2 Before");
+
+(0)     result = null;
+
+     label1:
+        specialinvoke this.<com.example.demo.aspect.AOPAspectA: void doBefore(org.aspectj.lang.JoinPoint)>(pdj);
+
+(1)     result_1 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed()>();
+
+(2)     result_2 = virtualinvoke aopaspectb.<com.example.demo.aspect.AOPAspectB: java.lang.Object aroundMethod_testAOPAnno2(org.aspectj.lang.ProceedingJoinPoint,java.lang.String,com.example.demo.service.impl.AOPServiceImpl)>(pdj, param1, param2);
+
+     label2:
+(3)     goto label4;
+
+     label3:
+        $stack7 := @caughtexception;
+
+        result_3 = Phi(result #0, result_1 #1, result_2 #2);
+
+        virtualinvoke aopaspectb.<com.example.demo.aspect.AOPAspectB: void doAfter(org.aspectj.lang.JoinPoint)>(pdj);
+
+        virtualinvoke aopaspectb.<com.example.demo.aspect.AOPAspectB: void afterReturning(org.aspectj.lang.JoinPoint,java.lang.Object)>(pdj, null);
+
+        throwable = $stack7;
+
+(4)     virtualinvoke throwable.<java.lang.Throwable: void printStackTrace()>();
+
+     label4:
+        result_4 = Phi(result_2 #3, result_3 #4);
+
+        $stack6 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack6.<java.io.PrintStream: void println(java.lang.String)>("AOPAspectA @Around2 After");
+
+        return result_4;
+
+        catch java.lang.Throwable from label1 to label2 with label3;
+    }
+
+    public java.lang.Object aroundMethod_testAOPAnno1(org.aspectj.lang.ProceedingJoinPoint, com.example.demo.service.impl.AOPServiceImpl)
+    {
+        java.io.PrintStream $stack4, $stack6;
+        org.aspectj.lang.ProceedingJoinPoint pdj;
+        java.lang.Throwable $stack7, throwable;
+        com.example.demo.aspect.AOPAspectA this;
+        java.lang.Object result, result_1, result_2, result_3;
+        com.example.demo.service.impl.AOPServiceImpl param1;
+
+        this := @this: com.example.demo.aspect.AOPAspectA;
+
+        pdj := @parameter0: org.aspectj.lang.ProceedingJoinPoint;
+
+        param1 := @parameter1: com.example.demo.service.impl.AOPServiceImpl;
+
+        $stack4 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack4.<java.io.PrintStream: void println(java.lang.String)>("AOPAspectA @Around2 Before");
+
+(0)     result = null;
+
+     label1:
+        specialinvoke this.<com.example.demo.aspect.AOPAspectA: void doBefore(org.aspectj.lang.JoinPoint)>(pdj);
+
+(1)     result_1 = interfaceinvoke pdj.<org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed()>();
+
+        virtualinvoke param1.<com.example.demo.service.impl.AOPServiceImpl: void testAOPAnno1()>();
+
+     label2:
+(2)     goto label4;
+
+     label3:
+        $stack7 := @caughtexception;
+
+        result_2 = Phi(result #0, result_1 #1);
+
+        throwable = $stack7;
+
+(3)     virtualinvoke throwable.<java.lang.Throwable: void printStackTrace()>();
+
+     label4:
+        result_3 = Phi(result_1 #2, result_2 #3);
+
+        $stack6 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack6.<java.io.PrintStream: void println(java.lang.String)>("AOPAspectA @Around2 After");
+
+        return result_3;
+
+        catch java.lang.Throwable from label1 to label2 with label3;
+    }
+}

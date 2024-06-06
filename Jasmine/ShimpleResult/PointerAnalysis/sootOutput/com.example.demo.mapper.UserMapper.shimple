@@ -1,0 +1,33 @@
+public interface  com.example.demo.mapper.UserMapper extends java.lang.Object implements com.baomidou.mybatisplus.core.mapper.BaseMapper
+{
+
+    public abstract int deleteByPrimaryKey(java.lang.Integer);
+
+    public abstract int insert(com.example.demo.model.User);
+
+    public abstract int insertSelective(com.example.demo.model.User);
+
+    public abstract com.example.demo.model.User selectByPrimaryKey(java.lang.Integer);
+
+    public abstract int updateByPrimaryKey(com.example.demo.model.User);
+
+    public abstract com.example.demo.model.User selectLastId(java.lang.Integer);
+
+    public volatile int insert(java.lang.Object)
+    {
+        com.example.demo.mapper.UserMapper this;
+        java.lang.Object l1;
+        com.example.demo.model.User $stack2;
+        int $stack3;
+
+        this := @this: com.example.demo.mapper.UserMapper;
+
+        l1 := @parameter0: java.lang.Object;
+
+        $stack2 = (com.example.demo.model.User) l1;
+
+        $stack3 = interfaceinvoke this.<com.example.demo.mapper.UserMapper: int insert(com.example.demo.model.User)>($stack2);
+
+        return $stack3;
+    }
+}

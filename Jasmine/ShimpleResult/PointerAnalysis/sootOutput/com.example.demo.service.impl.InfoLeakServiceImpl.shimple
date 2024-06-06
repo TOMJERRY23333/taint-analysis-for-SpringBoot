@@ -1,0 +1,119 @@
+public class com.example.demo.service.impl.InfoLeakServiceImpl extends java.lang.Object implements com.example.demo.service.InfoLeakService
+{
+    private static final org.slf4j.Logger LOGGER;
+    private static final java.lang.String FILE_NAME;
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.InfoLeakServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.InfoLeakServiceImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void infoLeakMethod(java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.example.demo.model.ModelOne $stack8, modelOne;
+        java.lang.String token, password, id;
+        java.io.ObjectOutputStream $stack9, out, out_1, out_2, out_3, out_4;
+        java.io.FileOutputStream $stack10;
+        java.io.File $stack11;
+        org.slf4j.Logger $stack12, $stack15;
+        java.lang.Throwable $stack13, l7, $stack14, e;
+        com.example.demo.service.impl.InfoLeakServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.InfoLeakServiceImpl;
+
+        token := @parameter0: java.lang.String;
+
+        password := @parameter1: java.lang.String;
+
+        id := @parameter2: java.lang.String;
+
+        $stack8 = new com.example.demo.model.ModelOne;
+
+        specialinvoke $stack8.<com.example.demo.model.ModelOne: void <init>(java.lang.String,java.lang.String,java.lang.String)>(token, password, id);
+
+        modelOne = $stack8;
+
+(0)     out = null;
+
+     label1:
+        $stack9 = new java.io.ObjectOutputStream;
+
+        $stack10 = new java.io.FileOutputStream;
+
+(1)     $stack11 = new java.io.File;
+
+        specialinvoke $stack11.<java.io.File: void <init>(java.lang.String)>("ModelOne.txt");
+
+        specialinvoke $stack10.<java.io.FileOutputStream: void <init>(java.io.File)>($stack11);
+
+        specialinvoke $stack9.<java.io.ObjectOutputStream: void <init>(java.io.OutputStream)>($stack10);
+
+(2)     out_1 = $stack9;
+
+        virtualinvoke out_1.<java.io.ObjectOutputStream: void writeObject(java.lang.Object)>(modelOne);
+
+        $stack12 = <com.example.demo.service.impl.InfoLeakServiceImpl: org.slf4j.Logger LOGGER>;
+
+        interfaceinvoke $stack12.<org.slf4j.Logger: void info(java.lang.String)>("ModelOne Object Serializable sucess");
+
+     label2:
+        staticinvoke <org.apache.tomcat.util.http.fileupload.IOUtils: void closeQuietly(java.io.Closeable)>(out_1);
+
+(3)     goto label7;
+
+     label3:
+        $stack14 := @caughtexception;
+
+(4)     out_2 = Phi(out #1, out_1 #2);
+
+        e = $stack14;
+
+        $stack15 = <com.example.demo.service.impl.InfoLeakServiceImpl: org.slf4j.Logger LOGGER>;
+
+        interfaceinvoke $stack15.<org.slf4j.Logger: void info(java.lang.String)>("IOException");
+
+     label4:
+        staticinvoke <org.apache.tomcat.util.http.fileupload.IOUtils: void closeQuietly(java.io.Closeable)>(out_2);
+
+(5)     goto label7;
+
+     label5:
+        $stack13 := @caughtexception;
+
+(6)     out_4 = Phi(out_1 #2, out #0, out_2 #4, out_4 #6);
+
+        l7 = $stack13;
+
+     label6:
+        staticinvoke <org.apache.tomcat.util.http.fileupload.IOUtils: void closeQuietly(java.io.Closeable)>(out_4);
+
+        throw l7;
+
+     label7:
+        out_3 = Phi(out_1 #3, out_2 #5);
+
+        return;
+
+        catch java.io.IOException from label1 to label2 with label3;
+        catch java.lang.Throwable from label1 to label2 with label5;
+        catch java.lang.Throwable from label3 to label4 with label5;
+        catch java.lang.Throwable from label5 to label6 with label5;
+    }
+
+    static void <clinit>()
+    {
+        org.slf4j.Logger $stack0;
+
+        $stack0 = staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class "Lcom/example/demo/service/impl/InfoLeakServiceImpl;");
+
+        <com.example.demo.service.impl.InfoLeakServiceImpl: org.slf4j.Logger LOGGER> = $stack0;
+
+        return;
+    }
+}

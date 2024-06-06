@@ -1,0 +1,289 @@
+public class com.example.demo.model.Student extends java.lang.Object
+{
+    java.lang.String name;
+    int age;
+    java.lang.String gender;
+
+    public void <init>()
+    {
+        com.example.demo.model.Student this;
+
+        this := @this: com.example.demo.model.Student;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public java.lang.String getName()
+    {
+        com.example.demo.model.Student this;
+        java.lang.String $stack1;
+
+        this := @this: com.example.demo.model.Student;
+
+        $stack1 = this.<com.example.demo.model.Student: java.lang.String name>;
+
+        return $stack1;
+    }
+
+    public int getAge()
+    {
+        com.example.demo.model.Student this;
+        int $stack1;
+
+        this := @this: com.example.demo.model.Student;
+
+        $stack1 = this.<com.example.demo.model.Student: int age>;
+
+        return $stack1;
+    }
+
+    public java.lang.String getGender()
+    {
+        com.example.demo.model.Student this;
+        java.lang.String $stack1;
+
+        this := @this: com.example.demo.model.Student;
+
+        $stack1 = this.<com.example.demo.model.Student: java.lang.String gender>;
+
+        return $stack1;
+    }
+
+    public void setName(java.lang.String)
+    {
+        com.example.demo.model.Student this;
+        java.lang.String name;
+
+        this := @this: com.example.demo.model.Student;
+
+        name := @parameter0: java.lang.String;
+
+        this.<com.example.demo.model.Student: java.lang.String name> = name;
+
+        return;
+    }
+
+    public void setAge(int)
+    {
+        com.example.demo.model.Student this;
+        int age;
+
+        this := @this: com.example.demo.model.Student;
+
+        age := @parameter0: int;
+
+        this.<com.example.demo.model.Student: int age> = age;
+
+        return;
+    }
+
+    public void setGender(java.lang.String)
+    {
+        com.example.demo.model.Student this;
+        java.lang.String gender;
+
+        this := @this: com.example.demo.model.Student;
+
+        gender := @parameter0: java.lang.String;
+
+        this.<com.example.demo.model.Student: java.lang.String gender> = gender;
+
+        return;
+    }
+
+    public boolean equals(java.lang.Object)
+    {
+        java.lang.Object o;
+        com.example.demo.model.Student this, other;
+        boolean $stack7, $stack8, $stack13, $stack16;
+        int $stack9, $stack10;
+        java.lang.String this$name, other$name, this$gender, other$gender;
+
+        this := @this: com.example.demo.model.Student;
+
+        o := @parameter0: java.lang.Object;
+
+        if o != this goto label01;
+
+        return 1;
+
+     label01:
+        $stack7 = o instanceof com.example.demo.model.Student;
+
+        if $stack7 != 0 goto label02;
+
+        return 0;
+
+     label02:
+        other = (com.example.demo.model.Student) o;
+
+        $stack8 = virtualinvoke other.<com.example.demo.model.Student: boolean canEqual(java.lang.Object)>(this);
+
+        if $stack8 != 0 goto label03;
+
+        return 0;
+
+     label03:
+        $stack9 = virtualinvoke this.<com.example.demo.model.Student: int getAge()>();
+
+        $stack10 = virtualinvoke other.<com.example.demo.model.Student: int getAge()>();
+
+        if $stack9 == $stack10 goto label04;
+
+        return 0;
+
+     label04:
+        this$name = virtualinvoke this.<com.example.demo.model.Student: java.lang.String getName()>();
+
+        other$name = virtualinvoke other.<com.example.demo.model.Student: java.lang.String getName()>();
+
+        if this$name != null goto label05;
+
+        if other$name == null goto label07;
+
+        goto label06;
+
+     label05:
+        $stack13 = virtualinvoke this$name.<java.lang.Object: boolean equals(java.lang.Object)>(other$name);
+
+        if $stack13 != 0 goto label07;
+
+     label06:
+        return 0;
+
+     label07:
+        this$gender = virtualinvoke this.<com.example.demo.model.Student: java.lang.String getGender()>();
+
+        other$gender = virtualinvoke other.<com.example.demo.model.Student: java.lang.String getGender()>();
+
+        if this$gender != null goto label08;
+
+        if other$gender == null goto label10;
+
+        goto label09;
+
+     label08:
+        $stack16 = virtualinvoke this$gender.<java.lang.Object: boolean equals(java.lang.Object)>(other$gender);
+
+        if $stack16 != 0 goto label10;
+
+     label09:
+        return 0;
+
+     label10:
+        return 1;
+    }
+
+    protected boolean canEqual(java.lang.Object)
+    {
+        java.lang.Object other;
+        boolean $stack2;
+        com.example.demo.model.Student this;
+
+        this := @this: com.example.demo.model.Student;
+
+        other := @parameter0: java.lang.Object;
+
+        $stack2 = other instanceof com.example.demo.model.Student;
+
+        return $stack2;
+    }
+
+    public int hashCode()
+    {
+        byte PRIME, result;
+        com.example.demo.model.Student this;
+        int $stack5, $stack6, $stack8, $stack11, result#2, $stack9, $stack12, $stack9_1, $stack9_2, result#2_1, $stack12_1, $stack12_2, result#2_2;
+        java.lang.String $name, $gender;
+
+        this := @this: com.example.demo.model.Student;
+
+        PRIME = 59;
+
+        result = 1;
+
+        $stack5 = result * 59;
+
+        $stack6 = virtualinvoke this.<com.example.demo.model.Student: int getAge()>();
+
+        result#2 = $stack5 + $stack6;
+
+        $name = virtualinvoke this.<com.example.demo.model.Student: java.lang.String getName()>();
+
+        $stack8 = result#2 * 59;
+
+        if $name != null goto label1;
+
+        $stack9 = 43;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack9_1 = virtualinvoke $name.<java.lang.Object: int hashCode()>();
+
+     label2:
+        $stack9_2 = Phi($stack9 #0, $stack9_1 #1);
+
+        result#2_1 = $stack8 + $stack9_2;
+
+        $gender = virtualinvoke this.<com.example.demo.model.Student: java.lang.String getGender()>();
+
+        $stack11 = result#2_1 * 59;
+
+        if $gender != null goto label3;
+
+        $stack12 = 43;
+
+(2)     goto label4;
+
+     label3:
+(3)     $stack12_1 = virtualinvoke $gender.<java.lang.Object: int hashCode()>();
+
+     label4:
+        $stack12_2 = Phi($stack12 #2, $stack12_1 #3);
+
+        result#2_2 = $stack11 + $stack12_2;
+
+        return result#2_2;
+    }
+
+    public java.lang.String toString()
+    {
+        java.lang.StringBuilder $stack1, $stack2, $stack4, $stack5, $stack7, $stack8, $stack10, $stack11;
+        com.example.demo.model.Student this;
+        java.lang.String $stack3, $stack9, $stack12;
+        int $stack6;
+
+        this := @this: com.example.demo.model.Student;
+
+        $stack1 = new java.lang.StringBuilder;
+
+        specialinvoke $stack1.<java.lang.StringBuilder: void <init>()>();
+
+        $stack2 = virtualinvoke $stack1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Student(name=");
+
+        $stack3 = virtualinvoke this.<com.example.demo.model.Student: java.lang.String getName()>();
+
+        $stack4 = virtualinvoke $stack2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack3);
+
+        $stack5 = virtualinvoke $stack4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", age=");
+
+        $stack6 = virtualinvoke this.<com.example.demo.model.Student: int getAge()>();
+
+        $stack7 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($stack6);
+
+        $stack8 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", gender=");
+
+        $stack9 = virtualinvoke this.<com.example.demo.model.Student: java.lang.String getGender()>();
+
+        $stack10 = virtualinvoke $stack8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($stack9);
+
+        $stack11 = virtualinvoke $stack10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(")");
+
+        $stack12 = virtualinvoke $stack11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $stack12;
+    }
+}

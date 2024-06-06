@@ -1,0 +1,70 @@
+public class com.example.demo.service.impl.EntryPointServiceImpl extends java.lang.Object implements com.example.demo.service.EntryPointService
+{
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.EntryPointServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.EntryPointServiceImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void invokeMethod1()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.service.impl.EntryPointServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.EntryPointServiceImpl;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("call invokeMethod1");
+
+        return;
+    }
+
+    public void invokeMethod2()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.service.impl.EntryPointServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.EntryPointServiceImpl;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("call invokeMethod2");
+
+        return;
+    }
+
+    public void invokeMethod3()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.service.impl.EntryPointServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.EntryPointServiceImpl;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("call invokeMethod3");
+
+        return;
+    }
+
+    public void invokeMethod4()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.service.impl.EntryPointServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.EntryPointServiceImpl;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("call invokeMethod4");
+
+        return;
+    }
+}

@@ -1,0 +1,42 @@
+public class com.example.demo.aspect.AopXmlAspect extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.example.demo.aspect.AopXmlAspect this;
+
+        this := @this: com.example.demo.aspect.AopXmlAspect;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void doBefore()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.aspect.AopXmlAspect this;
+
+        this := @this: com.example.demo.aspect.AopXmlAspect;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("before AopXmlTestBean doSomething");
+
+        return;
+    }
+
+    public void doAfter()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.aspect.AopXmlAspect this;
+
+        this := @this: com.example.demo.aspect.AopXmlAspect;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("after AopXmlTestBean doSomething");
+
+        return;
+    }
+}

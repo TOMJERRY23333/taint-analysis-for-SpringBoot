@@ -1,0 +1,265 @@
+public class com.example.demo.controller.PrototypeDIController extends java.lang.Object
+{
+    private com.example.demo.service.PrototypeDIServiceC prototypeDIServiceC_1;
+    private com.example.demo.service.PrototypeDIServiceC prototypeDIServiceC_2;
+    private com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_1_1;
+    private com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_1_2;
+    private com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_2_1;
+    private com.example.demo.model.Student student_prototype1;
+    private com.example.demo.model.Student student_prototype2;
+
+    public void <init>()
+    {
+        com.example.demo.controller.PrototypeDIController this;
+        com.example.demo.service.PrototypeDIServiceC prototypediservicec, prototypediservicec_1;
+        com.example.demo.service.PrototypeDIServiceD prototypediserviced, prototypediserviced_1, prototypediserviced_2;
+        com.example.demo.model.Student student, student_1;
+
+        this := @this: com.example.demo.controller.PrototypeDIController;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        prototypediservicec = new com.example.demo.service.impl.PrototypeDIServiceCImpl;
+
+        specialinvoke prototypediservicec.<com.example.demo.service.impl.PrototypeDIServiceCImpl: void <init>()>();
+
+        this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceC prototypeDIServiceC_1> = prototypediservicec;
+
+        prototypediservicec_1 = new com.example.demo.service.impl.PrototypeDIServiceCImpl;
+
+        specialinvoke prototypediservicec_1.<com.example.demo.service.impl.PrototypeDIServiceCImpl: void <init>()>();
+
+        this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceC prototypeDIServiceC_2> = prototypediservicec_1;
+
+        prototypediserviced = new com.example.demo.service.impl.PrototypeDIServiceDImpl;
+
+        specialinvoke prototypediserviced.<com.example.demo.service.impl.PrototypeDIServiceDImpl: void <init>()>();
+
+        this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_1_1> = prototypediserviced;
+
+        prototypediserviced_1 = new com.example.demo.service.impl.PrototypeDIServiceDImpl;
+
+        specialinvoke prototypediserviced_1.<com.example.demo.service.impl.PrototypeDIServiceDImpl: void <init>()>();
+
+        this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_1_2> = prototypediserviced_1;
+
+        prototypediserviced_2 = new com.example.demo.service.impl.PrototypeDIServiceDImpl;
+
+        specialinvoke prototypediserviced_2.<com.example.demo.service.impl.PrototypeDIServiceDImpl: void <init>()>();
+
+        this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_2_1> = prototypediserviced_2;
+
+        student = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.model.Student getStudent()>();
+
+        this.<com.example.demo.controller.PrototypeDIController: com.example.demo.model.Student student_prototype1> = student;
+
+        student_1 = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.model.Student getStudent()>();
+
+        this.<com.example.demo.controller.PrototypeDIController: com.example.demo.model.Student student_prototype2> = student_1;
+
+        return;
+    }
+
+    public void prototype1()
+    {
+        com.example.demo.controller.PrototypeDIController this;
+        com.example.demo.service.PrototypeDIServiceC $stack1, $stack2, $stack3, $stack4;
+        java.io.PrintStream $stack5;
+        boolean $stack6, $stack6_1, $stack6_2;
+
+        this := @this: com.example.demo.controller.PrototypeDIController;
+
+        $stack1 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceC prototypeDIServiceC_1>;
+
+        interfaceinvoke $stack1.<com.example.demo.service.PrototypeDIServiceC: void print()>();
+
+        $stack2 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceC prototypeDIServiceC_2>;
+
+        interfaceinvoke $stack2.<com.example.demo.service.PrototypeDIServiceC: void print()>();
+
+        $stack5 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack4 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceC prototypeDIServiceC_1>;
+
+        $stack3 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceC prototypeDIServiceC_2>;
+
+        if $stack4 != $stack3 goto label1;
+
+        $stack6 = 1;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack6_1 = 0;
+
+     label2:
+        $stack6_2 = Phi($stack6 #0, $stack6_1 #1);
+
+        virtualinvoke $stack5.<java.io.PrintStream: void println(boolean)>($stack6_2);
+
+        return;
+    }
+
+    public void prototype2()
+    {
+        com.example.demo.controller.PrototypeDIController this;
+        com.example.demo.service.PrototypeDIServiceD $stack1, $stack2, $stack3, $stack4;
+        java.io.PrintStream $stack5;
+        boolean $stack6, $stack6_1, $stack6_2;
+
+        this := @this: com.example.demo.controller.PrototypeDIController;
+
+        $stack1 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_1_1>;
+
+        interfaceinvoke $stack1.<com.example.demo.service.PrototypeDIServiceD: void print()>();
+
+        $stack2 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_1_2>;
+
+        interfaceinvoke $stack2.<com.example.demo.service.PrototypeDIServiceD: void print()>();
+
+        $stack5 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack4 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_1_1>;
+
+        $stack3 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_1_2>;
+
+        if $stack4 != $stack3 goto label1;
+
+        $stack6 = 1;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack6_1 = 0;
+
+     label2:
+        $stack6_2 = Phi($stack6 #0, $stack6_1 #1);
+
+        virtualinvoke $stack5.<java.io.PrintStream: void println(boolean)>($stack6_2);
+
+        return;
+    }
+
+    public void prototype3()
+    {
+        com.example.demo.controller.PrototypeDIController this;
+        com.example.demo.service.PrototypeDIServiceD $stack1, $stack2, $stack3, $stack4;
+        java.io.PrintStream $stack5;
+        boolean $stack6, $stack6_1, $stack6_2;
+
+        this := @this: com.example.demo.controller.PrototypeDIController;
+
+        $stack1 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_1_1>;
+
+        interfaceinvoke $stack1.<com.example.demo.service.PrototypeDIServiceD: void print()>();
+
+        $stack2 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_2_1>;
+
+        interfaceinvoke $stack2.<com.example.demo.service.PrototypeDIServiceD: void print()>();
+
+        $stack5 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack4 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_1_1>;
+
+        $stack3 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.service.PrototypeDIServiceD prototypeDIServiceDName_2_1>;
+
+        if $stack4 != $stack3 goto label1;
+
+        $stack6 = 1;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack6_1 = 0;
+
+     label2:
+        $stack6_2 = Phi($stack6 #0, $stack6_1 #1);
+
+        virtualinvoke $stack5.<java.io.PrintStream: void println(boolean)>($stack6_2);
+
+        return;
+    }
+
+    public void prototype4()
+    {
+        java.lang.StringBuilder $stack1, $stack3, $stack5, $stack7, $stack9, $stack11;
+        java.io.PrintStream $stack2, $stack8, $stack15;
+        com.example.demo.controller.PrototypeDIController this;
+        com.example.demo.model.Student $stack4, $stack10, $stack13, $stack14;
+        java.lang.String $stack6, $stack12;
+        boolean $stack16, $stack16_1, $stack16_2;
+
+        this := @this: com.example.demo.controller.PrototypeDIController;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack1 = new java.lang.StringBuilder;
+
+        specialinvoke $stack1.<java.lang.StringBuilder: void <init>()>();
+
+        $stack3 = virtualinvoke $stack1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("student_prototype1 = ");
+
+        $stack4 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.model.Student student_prototype1>;
+
+        $stack5 = virtualinvoke $stack3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack4);
+
+        $stack6 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>($stack6);
+
+        $stack8 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack7 = new java.lang.StringBuilder;
+
+        specialinvoke $stack7.<java.lang.StringBuilder: void <init>()>();
+
+        $stack9 = virtualinvoke $stack7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("student_prototype2 = ");
+
+        $stack10 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.model.Student student_prototype2>;
+
+        $stack11 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($stack10);
+
+        $stack12 = virtualinvoke $stack11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack8.<java.io.PrintStream: void println(java.lang.String)>($stack12);
+
+        $stack15 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack14 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.model.Student student_prototype1>;
+
+        $stack13 = this.<com.example.demo.controller.PrototypeDIController: com.example.demo.model.Student student_prototype2>;
+
+        if $stack14 != $stack13 goto label1;
+
+        $stack16 = 1;
+
+(0)     goto label2;
+
+     label1:
+(1)     $stack16_1 = 0;
+
+     label2:
+        $stack16_2 = Phi($stack16 #0, $stack16_1 #1);
+
+        virtualinvoke $stack15.<java.io.PrintStream: void println(boolean)>($stack16_2);
+
+        return;
+    }
+
+    public void callEntry_synthetic()
+    {
+        com.example.demo.controller.PrototypeDIController this;
+
+        this := @this: com.example.demo.controller.PrototypeDIController;
+
+        specialinvoke this.<com.example.demo.controller.PrototypeDIController: void prototype1()>();
+
+        specialinvoke this.<com.example.demo.controller.PrototypeDIController: void prototype2()>();
+
+        specialinvoke this.<com.example.demo.controller.PrototypeDIController: void prototype3()>();
+
+        specialinvoke this.<com.example.demo.controller.PrototypeDIController: void prototype4()>();
+
+        return;
+    }
+}

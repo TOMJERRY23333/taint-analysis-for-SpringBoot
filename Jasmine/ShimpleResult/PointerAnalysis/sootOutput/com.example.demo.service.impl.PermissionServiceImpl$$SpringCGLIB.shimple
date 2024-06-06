@@ -1,0 +1,122 @@
+public class com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB extends com.example.demo.service.impl.PermissionServiceImpl
+{
+    com.example.demo.service.impl.PermissionServiceImpl target;
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.PermissionServiceImpl permissionserviceimpl;
+
+        this := @this: com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB;
+
+        specialinvoke this.<com.example.demo.service.impl.PermissionServiceImpl: void <init>()>();
+
+        permissionserviceimpl = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.PermissionServiceImpl getPermissionServiceImpl()>();
+
+        this.<com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB: com.example.demo.service.impl.PermissionServiceImpl target> = permissionserviceimpl;
+
+        return;
+    }
+
+    public void accessSuccess(java.lang.String)
+    {
+        java.lang.String auth;
+        com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.PermissionServiceImpl localTarget;
+
+        auth := @parameter0: java.lang.String;
+
+        this := @this: com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB: com.example.demo.service.impl.PermissionServiceImpl target>;
+
+        virtualinvoke localTarget.<com.example.demo.service.impl.PermissionServiceImpl: void accessSuccess(java.lang.String)>(auth);
+
+        return;
+    }
+
+    public void accessFail(java.lang.String)
+    {
+        java.lang.String auth;
+        com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.PermissionServiceImpl localTarget;
+
+        auth := @parameter0: java.lang.String;
+
+        this := @this: com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB: com.example.demo.service.impl.PermissionServiceImpl target>;
+
+        virtualinvoke localTarget.<com.example.demo.service.impl.PermissionServiceImpl: void accessFail(java.lang.String)>(auth);
+
+        return;
+    }
+
+    public void permissionAdmin(java.lang.String)
+    {
+        java.lang.String auth;
+        com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.PermissionServiceImpl localTarget;
+        synthetic.method.ProceedingJoinPointImpl ProceedingJoinPointImpl;
+        java.lang.Object[] paramArray;
+        com.example.demo.aspect.PermissionAspect permissionaspect;
+
+        permissionaspect = new com.example.demo.aspect.PermissionAspect;
+
+        specialinvoke permissionaspect.<com.example.demo.aspect.PermissionAspect: void <init>()>();
+
+        auth := @parameter0: java.lang.String;
+
+        this := @this: com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB: com.example.demo.service.impl.PermissionServiceImpl target>;
+
+        ProceedingJoinPointImpl = new synthetic.method.ProceedingJoinPointImpl;
+
+        specialinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void <init>()>();
+
+        paramArray = newarray (java.lang.Object)[1];
+
+        paramArray[0] = auth;
+
+        virtualinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void setArgs_synthetic(java.lang.Object[])>(paramArray);
+
+        virtualinvoke permissionaspect.<com.example.demo.aspect.PermissionAspect: java.lang.Object aroundMethod_permissionAdmin(org.aspectj.lang.ProceedingJoinPoint,java.lang.String,com.example.demo.service.impl.PermissionServiceImpl)>(ProceedingJoinPointImpl, auth, localTarget);
+
+        return;
+    }
+
+    public void permissionUser(java.lang.String)
+    {
+        java.lang.String auth;
+        com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB this;
+        com.example.demo.service.impl.PermissionServiceImpl localTarget;
+        synthetic.method.ProceedingJoinPointImpl ProceedingJoinPointImpl;
+        java.lang.Object[] paramArray;
+        com.example.demo.aspect.PermissionAspect permissionaspect;
+
+        permissionaspect = new com.example.demo.aspect.PermissionAspect;
+
+        specialinvoke permissionaspect.<com.example.demo.aspect.PermissionAspect: void <init>()>();
+
+        auth := @parameter0: java.lang.String;
+
+        this := @this: com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB;
+
+        localTarget = this.<com.example.demo.service.impl.PermissionServiceImpl$$SpringCGLIB: com.example.demo.service.impl.PermissionServiceImpl target>;
+
+        ProceedingJoinPointImpl = new synthetic.method.ProceedingJoinPointImpl;
+
+        specialinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void <init>()>();
+
+        paramArray = newarray (java.lang.Object)[1];
+
+        paramArray[0] = auth;
+
+        virtualinvoke ProceedingJoinPointImpl.<synthetic.method.ProceedingJoinPointImpl: void setArgs_synthetic(java.lang.Object[])>(paramArray);
+
+        virtualinvoke permissionaspect.<com.example.demo.aspect.PermissionAspect: java.lang.Object aroundMethod_permissionUser(org.aspectj.lang.ProceedingJoinPoint,java.lang.String,com.example.demo.service.impl.PermissionServiceImpl)>(ProceedingJoinPointImpl, auth, localTarget);
+
+        return;
+    }
+}

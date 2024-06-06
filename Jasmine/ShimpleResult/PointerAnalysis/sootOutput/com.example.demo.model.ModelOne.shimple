@@ -1,0 +1,30 @@
+public class com.example.demo.model.ModelOne extends java.lang.Object implements java.io.Serializable
+{
+    private java.lang.String token;
+    private java.lang.String password;
+    private java.lang.String id;
+
+    public void <init>(java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.example.demo.model.ModelOne this;
+        java.lang.String token, password, id;
+
+        this := @this: com.example.demo.model.ModelOne;
+
+        token := @parameter0: java.lang.String;
+
+        password := @parameter1: java.lang.String;
+
+        id := @parameter2: java.lang.String;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        this.<com.example.demo.model.ModelOne: java.lang.String token> = token;
+
+        this.<com.example.demo.model.ModelOne: java.lang.String password> = password;
+
+        this.<com.example.demo.model.ModelOne: java.lang.String id> = id;
+
+        return;
+    }
+}

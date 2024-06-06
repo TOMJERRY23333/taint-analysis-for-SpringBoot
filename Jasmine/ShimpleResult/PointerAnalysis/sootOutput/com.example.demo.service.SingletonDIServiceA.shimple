@@ -1,0 +1,5 @@
+public interface  com.example.demo.service.SingletonDIServiceA extends java.lang.Object
+{
+
+    public abstract void print();
+}

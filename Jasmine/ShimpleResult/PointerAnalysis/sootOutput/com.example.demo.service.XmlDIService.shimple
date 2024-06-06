@@ -1,0 +1,5 @@
+public interface  com.example.demo.service.XmlDIService extends java.lang.Object
+{
+
+    public abstract void xmlDITest();
+}

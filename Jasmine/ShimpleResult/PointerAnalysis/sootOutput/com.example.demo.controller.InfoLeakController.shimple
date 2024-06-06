@@ -1,0 +1,100 @@
+public class com.example.demo.controller.InfoLeakController extends java.lang.Object
+{
+    private static final org.slf4j.Logger LOGGER;
+    private com.example.demo.service.InfoLeakService infoLeakService;
+    private java.lang.String tokenDefault;
+    private java.lang.String passwordDefault;
+    private java.lang.String idDefault;
+
+    public void <init>()
+    {
+        com.example.demo.controller.InfoLeakController this;
+        com.example.demo.service.InfoLeakService infoleakservice;
+
+        this := @this: com.example.demo.controller.InfoLeakController;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        infoleakservice = new com.example.demo.service.impl.InfoLeakServiceImpl$$SpringCGLIB;
+
+        specialinvoke infoleakservice.<com.example.demo.service.impl.InfoLeakServiceImpl$$SpringCGLIB: void <init>()>();
+
+        this.<com.example.demo.controller.InfoLeakController: com.example.demo.service.InfoLeakService infoLeakService> = infoleakservice;
+
+        return;
+    }
+
+    private void infoLeak1(javax.servlet.http.HttpServletRequest)
+    {
+        javax.servlet.http.HttpServletRequest request;
+        java.lang.String token, password, id;
+        com.example.demo.controller.InfoLeakController this;
+        com.example.demo.service.InfoLeakService $stack8;
+
+        this := @this: com.example.demo.controller.InfoLeakController;
+
+        request := @parameter0: javax.servlet.http.HttpServletRequest;
+
+        token = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("token");
+
+        password = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("password");
+
+        id = interfaceinvoke request.<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>("id");
+
+        $stack8 = this.<com.example.demo.controller.InfoLeakController: com.example.demo.service.InfoLeakService infoLeakService>;
+
+        interfaceinvoke $stack8.<com.example.demo.service.InfoLeakService: void infoLeakMethod(java.lang.String,java.lang.String,java.lang.String)>(token, password, id);
+
+        return;
+    }
+
+    private void infoLeak2()
+    {
+        com.example.demo.controller.InfoLeakController this;
+        java.lang.String token, password, id;
+        com.example.demo.service.InfoLeakService $stack4;
+
+        this := @this: com.example.demo.controller.InfoLeakController;
+
+        token = this.<com.example.demo.controller.InfoLeakController: java.lang.String tokenDefault>;
+
+        password = this.<com.example.demo.controller.InfoLeakController: java.lang.String passwordDefault>;
+
+        id = this.<com.example.demo.controller.InfoLeakController: java.lang.String idDefault>;
+
+        $stack4 = this.<com.example.demo.controller.InfoLeakController: com.example.demo.service.InfoLeakService infoLeakService>;
+
+        interfaceinvoke $stack4.<com.example.demo.service.InfoLeakService: void infoLeakMethod(java.lang.String,java.lang.String,java.lang.String)>(token, password, id);
+
+        return;
+    }
+
+    static void <clinit>()
+    {
+        org.slf4j.Logger $stack0;
+
+        $stack0 = staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class "Lcom/example/demo/controller/InfoLeakController;");
+
+        <com.example.demo.controller.InfoLeakController: org.slf4j.Logger LOGGER> = $stack0;
+
+        return;
+    }
+
+    public void callEntry_synthetic()
+    {
+        com.example.demo.controller.InfoLeakController this;
+        javax.servlet.http.HttpServletRequest infoLeak1HttpServletRequest;
+
+        this := @this: com.example.demo.controller.InfoLeakController;
+
+        infoLeak1HttpServletRequest = new synthetic.method.HttpServletRequestImpl;
+
+        specialinvoke infoLeak1HttpServletRequest.<synthetic.method.HttpServletRequestImpl: void <init>()>();
+
+        specialinvoke this.<com.example.demo.controller.InfoLeakController: void infoLeak1(javax.servlet.http.HttpServletRequest)>(infoLeak1HttpServletRequest);
+
+        specialinvoke this.<com.example.demo.controller.InfoLeakController: void infoLeak2()>();
+
+        return;
+    }
+}

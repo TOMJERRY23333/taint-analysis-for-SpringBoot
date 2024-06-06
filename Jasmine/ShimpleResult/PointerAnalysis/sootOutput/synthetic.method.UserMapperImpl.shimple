@@ -1,0 +1,299 @@
+public class synthetic.method.UserMapperImpl extends java.lang.Object implements com.example.demo.mapper.UserMapper
+{
+
+    public void <init>()
+    {
+        synthetic.method.UserMapperImpl this;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public int deleteByPrimaryKey(java.lang.Integer)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.lang.Integer param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.lang.Integer;
+
+        return 0;
+    }
+
+    public int insert(com.example.demo.model.User)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.example.demo.model.User param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.example.demo.model.User;
+
+        return 0;
+    }
+
+    public int insertSelective(com.example.demo.model.User)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.example.demo.model.User param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.example.demo.model.User;
+
+        return 0;
+    }
+
+    public com.example.demo.model.User selectByPrimaryKey(java.lang.Integer)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.lang.Integer param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.lang.Integer;
+
+        return null;
+    }
+
+    public int updateByPrimaryKey(com.example.demo.model.User)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.example.demo.model.User param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.example.demo.model.User;
+
+        return 0;
+    }
+
+    public com.example.demo.model.User selectLastId(java.lang.Integer)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.lang.Integer param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.lang.Integer;
+
+        return null;
+    }
+
+    public int insert(java.lang.Object)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.lang.Object param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.lang.Object;
+
+        return 0;
+    }
+
+    public int deleteById(java.io.Serializable)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.io.Serializable param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.io.Serializable;
+
+        return 0;
+    }
+
+    public int deleteByMap(java.util.Map)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.util.Map param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.util.Map;
+
+        return 0;
+    }
+
+    public int delete(com.baomidou.mybatisplus.core.conditions.Wrapper)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.baomidou.mybatisplus.core.conditions.Wrapper param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.baomidou.mybatisplus.core.conditions.Wrapper;
+
+        return 0;
+    }
+
+    public int deleteBatchIds(java.util.Collection)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.util.Collection param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.util.Collection;
+
+        return 0;
+    }
+
+    public int updateById(java.lang.Object)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.lang.Object param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.lang.Object;
+
+        return 0;
+    }
+
+    public int update(java.lang.Object, com.baomidou.mybatisplus.core.conditions.Wrapper)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.lang.Object param0;
+        com.baomidou.mybatisplus.core.conditions.Wrapper param1;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.lang.Object;
+
+        param1 := @parameter1: com.baomidou.mybatisplus.core.conditions.Wrapper;
+
+        return 0;
+    }
+
+    public java.lang.Object selectById(java.io.Serializable)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.io.Serializable param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.io.Serializable;
+
+        return null;
+    }
+
+    public java.util.List selectBatchIds(java.util.Collection)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.util.Collection param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.util.Collection;
+
+        return null;
+    }
+
+    public java.util.List selectByMap(java.util.Map)
+    {
+        synthetic.method.UserMapperImpl this;
+        java.util.Map param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: java.util.Map;
+
+        return null;
+    }
+
+    public java.lang.Object selectOne(com.baomidou.mybatisplus.core.conditions.Wrapper)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.baomidou.mybatisplus.core.conditions.Wrapper param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.baomidou.mybatisplus.core.conditions.Wrapper;
+
+        return null;
+    }
+
+    public java.lang.Integer selectCount(com.baomidou.mybatisplus.core.conditions.Wrapper)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.baomidou.mybatisplus.core.conditions.Wrapper param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.baomidou.mybatisplus.core.conditions.Wrapper;
+
+        return null;
+    }
+
+    public java.util.List selectList(com.baomidou.mybatisplus.core.conditions.Wrapper)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.baomidou.mybatisplus.core.conditions.Wrapper param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.baomidou.mybatisplus.core.conditions.Wrapper;
+
+        return null;
+    }
+
+    public java.util.List selectMaps(com.baomidou.mybatisplus.core.conditions.Wrapper)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.baomidou.mybatisplus.core.conditions.Wrapper param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.baomidou.mybatisplus.core.conditions.Wrapper;
+
+        return null;
+    }
+
+    public java.util.List selectObjs(com.baomidou.mybatisplus.core.conditions.Wrapper)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.baomidou.mybatisplus.core.conditions.Wrapper param0;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.baomidou.mybatisplus.core.conditions.Wrapper;
+
+        return null;
+    }
+
+    public com.baomidou.mybatisplus.core.metadata.IPage selectPage(com.baomidou.mybatisplus.core.metadata.IPage, com.baomidou.mybatisplus.core.conditions.Wrapper)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.baomidou.mybatisplus.core.metadata.IPage param0;
+        com.baomidou.mybatisplus.core.conditions.Wrapper param1;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.baomidou.mybatisplus.core.metadata.IPage;
+
+        param1 := @parameter1: com.baomidou.mybatisplus.core.conditions.Wrapper;
+
+        return null;
+    }
+
+    public com.baomidou.mybatisplus.core.metadata.IPage selectMapsPage(com.baomidou.mybatisplus.core.metadata.IPage, com.baomidou.mybatisplus.core.conditions.Wrapper)
+    {
+        synthetic.method.UserMapperImpl this;
+        com.baomidou.mybatisplus.core.metadata.IPage param0;
+        com.baomidou.mybatisplus.core.conditions.Wrapper param1;
+
+        this := @this: synthetic.method.UserMapperImpl;
+
+        param0 := @parameter0: com.baomidou.mybatisplus.core.metadata.IPage;
+
+        param1 := @parameter1: com.baomidou.mybatisplus.core.conditions.Wrapper;
+
+        return null;
+    }
+}

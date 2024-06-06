@@ -1,0 +1,736 @@
+public class synthetic.method.HttpServletRequestImpl extends java.lang.Object implements javax.servlet.http.HttpServletRequest
+{
+
+    public void <init>()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public java.lang.String getAuthType()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public javax.servlet.http.Cookie[] getCookies()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public long getDateHeader(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return 0L;
+    }
+
+    public java.lang.String getHeader(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return null;
+    }
+
+    public java.util.Enumeration getHeaders(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return null;
+    }
+
+    public java.util.Enumeration getHeaderNames()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public int getIntHeader(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return 0;
+    }
+
+    public javax.servlet.http.HttpServletMapping getHttpServletMapping()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getMethod()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getPathInfo()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getPathTranslated()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public javax.servlet.http.PushBuilder newPushBuilder()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getContextPath()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getQueryString()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getRemoteUser()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public boolean isUserInRole(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return 0;
+    }
+
+    public java.security.Principal getUserPrincipal()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getRequestedSessionId()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getRequestURI()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.StringBuffer getRequestURL()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getServletPath()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public javax.servlet.http.HttpSession getSession(boolean)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        boolean param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: boolean;
+
+        return null;
+    }
+
+    public javax.servlet.http.HttpSession getSession()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String changeSessionId()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public boolean isRequestedSessionIdValid()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public boolean isRequestedSessionIdFromCookie()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public boolean isRequestedSessionIdFromURL()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public boolean isRequestedSessionIdFromUrl()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public boolean authenticate(javax.servlet.http.HttpServletResponse)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        javax.servlet.http.HttpServletResponse param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: javax.servlet.http.HttpServletResponse;
+
+        return 0;
+    }
+
+    public void login(java.lang.String, java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0, param1;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        param1 := @parameter1: java.lang.String;
+
+        return;
+    }
+
+    public void logout()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return;
+    }
+
+    public java.util.Collection getParts()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public javax.servlet.http.Part getPart(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return null;
+    }
+
+    public javax.servlet.http.HttpUpgradeHandler upgrade(java.lang.Class)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.Class param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.Class;
+
+        return null;
+    }
+
+    public java.util.Map getTrailerFields()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public boolean isTrailerFieldsReady()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public java.lang.Object getAttribute(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return null;
+    }
+
+    public java.util.Enumeration getAttributeNames()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getCharacterEncoding()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public void setCharacterEncoding(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return;
+    }
+
+    public int getContentLength()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public long getContentLengthLong()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0L;
+    }
+
+    public java.lang.String getContentType()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public javax.servlet.ServletInputStream getInputStream()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getParameter(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return null;
+    }
+
+    public java.util.Enumeration getParameterNames()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String[] getParameterValues(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return null;
+    }
+
+    public java.util.Map getParameterMap()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getProtocol()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getScheme()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getServerName()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public int getServerPort()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public java.io.BufferedReader getReader()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getRemoteAddr()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getRemoteHost()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public void setAttribute(java.lang.String, java.lang.Object)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+        java.lang.Object param1;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        param1 := @parameter1: java.lang.Object;
+
+        return;
+    }
+
+    public void removeAttribute(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return;
+    }
+
+    public java.util.Locale getLocale()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.util.Enumeration getLocales()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public boolean isSecure()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return null;
+    }
+
+    public java.lang.String getRealPath(java.lang.String)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        java.lang.String param0;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: java.lang.String;
+
+        return null;
+    }
+
+    public int getRemotePort()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public java.lang.String getLocalName()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public java.lang.String getLocalAddr()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public int getLocalPort()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public javax.servlet.ServletContext getServletContext()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public javax.servlet.AsyncContext startAsync()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public javax.servlet.AsyncContext startAsync(javax.servlet.ServletRequest, javax.servlet.ServletResponse)
+    {
+        synthetic.method.HttpServletRequestImpl this;
+        javax.servlet.ServletRequest param0;
+        javax.servlet.ServletResponse param1;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        param0 := @parameter0: javax.servlet.ServletRequest;
+
+        param1 := @parameter1: javax.servlet.ServletResponse;
+
+        return null;
+    }
+
+    public boolean isAsyncStarted()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public boolean isAsyncSupported()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return 0;
+    }
+
+    public javax.servlet.AsyncContext getAsyncContext()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+
+    public javax.servlet.DispatcherType getDispatcherType()
+    {
+        synthetic.method.HttpServletRequestImpl this;
+
+        this := @this: synthetic.method.HttpServletRequestImpl;
+
+        return null;
+    }
+}

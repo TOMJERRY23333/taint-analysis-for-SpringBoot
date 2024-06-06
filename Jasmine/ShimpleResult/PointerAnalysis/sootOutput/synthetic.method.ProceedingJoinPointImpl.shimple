@@ -1,0 +1,167 @@
+public class synthetic.method.ProceedingJoinPointImpl extends java.lang.Object implements org.aspectj.lang.ProceedingJoinPoint, org.aspectj.lang.JoinPoint
+{
+    java.lang.Object[] args;
+
+    public void <init>()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void set$AroundClosure(org.aspectj.runtime.internal.AroundClosure)
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+        org.aspectj.runtime.internal.AroundClosure param0;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        param0 := @parameter0: org.aspectj.runtime.internal.AroundClosure;
+
+        return;
+    }
+
+    public void stack$AroundClosure(org.aspectj.runtime.internal.AroundClosure)
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+        org.aspectj.runtime.internal.AroundClosure param0;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        param0 := @parameter0: org.aspectj.runtime.internal.AroundClosure;
+
+        return;
+    }
+
+    public java.lang.Object proceed()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        return null;
+    }
+
+    public java.lang.Object proceed(java.lang.Object[])
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+        java.lang.Object[] param0;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        param0 := @parameter0: java.lang.Object[];
+
+        return null;
+    }
+
+    public java.lang.String toString()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        return null;
+    }
+
+    public java.lang.String toShortString()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        return null;
+    }
+
+    public java.lang.String toLongString()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        return null;
+    }
+
+    public java.lang.Object getThis()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        return null;
+    }
+
+    public java.lang.Object getTarget()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        return null;
+    }
+
+    public java.lang.Object[] getArgs()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+        java.lang.Object[] returnRef;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        returnRef = this.<synthetic.method.ProceedingJoinPointImpl: java.lang.Object[] args>;
+
+        return returnRef;
+    }
+
+    public org.aspectj.lang.Signature getSignature()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        return null;
+    }
+
+    public org.aspectj.lang.reflect.SourceLocation getSourceLocation()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        return null;
+    }
+
+    public java.lang.String getKind()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        return null;
+    }
+
+    public org.aspectj.lang.JoinPoint$StaticPart getStaticPart()
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        return null;
+    }
+
+    public void setArgs_synthetic(java.lang.Object[])
+    {
+        synthetic.method.ProceedingJoinPointImpl this;
+        java.lang.Object[] param0;
+
+        this := @this: synthetic.method.ProceedingJoinPointImpl;
+
+        param0 := @parameter0: java.lang.Object[];
+
+        this.<synthetic.method.ProceedingJoinPointImpl: java.lang.Object[] args> = param0;
+
+        return;
+    }
+}

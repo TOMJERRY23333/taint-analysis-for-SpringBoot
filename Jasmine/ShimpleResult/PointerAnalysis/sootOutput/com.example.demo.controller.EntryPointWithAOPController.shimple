@@ -1,0 +1,86 @@
+public class com.example.demo.controller.EntryPointWithAOPController extends java.lang.Object
+{
+    private com.example.demo.service.EntryPointService entryPointService;
+
+    public void <init>()
+    {
+        com.example.demo.controller.EntryPointWithAOPController this;
+        com.example.demo.service.EntryPointService entrypointservice;
+
+        this := @this: com.example.demo.controller.EntryPointWithAOPController;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        entrypointservice = staticinvoke <synthetic.method.SingletonFactory: com.example.demo.service.impl.EntryPointServiceImpl getEntryPointServiceImpl()>();
+
+        this.<com.example.demo.controller.EntryPointWithAOPController: com.example.demo.service.EntryPointService entryPointService> = entrypointservice;
+
+        return;
+    }
+
+    public void entryPoint3()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.controller.EntryPointWithAOPController this;
+        com.example.demo.service.EntryPointService $stack2;
+
+        this := @this: com.example.demo.controller.EntryPointWithAOPController;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("entryPoint1");
+
+        $stack2 = this.<com.example.demo.controller.EntryPointWithAOPController: com.example.demo.service.EntryPointService entryPointService>;
+
+        interfaceinvoke $stack2.<com.example.demo.service.EntryPointService: void invokeMethod3()>();
+
+        return;
+    }
+
+    private void entryPoint4()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.controller.EntryPointWithAOPController this;
+        com.example.demo.service.EntryPointService $stack2;
+
+        this := @this: com.example.demo.controller.EntryPointWithAOPController;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("entryPoint2");
+
+        $stack2 = this.<com.example.demo.controller.EntryPointWithAOPController: com.example.demo.service.EntryPointService entryPointService>;
+
+        interfaceinvoke $stack2.<com.example.demo.service.EntryPointService: void invokeMethod4()>();
+
+        return;
+    }
+
+    public void FakeEntryPoint3()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.controller.EntryPointWithAOPController this;
+
+        this := @this: com.example.demo.controller.EntryPointWithAOPController;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("FakeEntryPoint3");
+
+        return;
+    }
+
+    private void FakeEntryPoint4()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.controller.EntryPointWithAOPController this;
+
+        this := @this: com.example.demo.controller.EntryPointWithAOPController;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("FakeEntryPoint4");
+
+        return;
+    }
+}

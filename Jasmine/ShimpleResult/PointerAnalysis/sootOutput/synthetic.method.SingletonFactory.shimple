@@ -1,0 +1,632 @@
+public class synthetic.method.SingletonFactory extends java.lang.Object
+{
+    public static com.example.demo.service.impl.SingletonDIServiceBImpl SingletonDIServiceBImpl;
+    public static com.example.demo.controller.SSMController SSMController;
+    public static com.example.demo.aspect.PermissionAspect PermissionAspect;
+    public static synthetic.method.UserMapperImpl UserMapperImpl;
+    public static com.example.demo.aspect.InfoLeakAspect InfoLeakAspect;
+    public static com.example.demo.controller.GetFieldController GetFieldController;
+    public static com.example.demo.controller.InfoLeakController InfoLeakController;
+    public static com.example.demo.controller.EntryPointController EntryPointController;
+    public static com.example.demo.service.impl.SingletonDIServiceAImpl SingletonDIServiceAImpl;
+    public static com.example.demo.service.impl.GetFieldServiceImpl GetFieldServiceImpl;
+    public static com.example.demo.service.impl.PermissionServiceImpl PermissionServiceImpl;
+    public static com.example.demo.controller.PermissionController PermissionController;
+    public static com.example.demo.controller.GetFieldWithAOPController GetFieldWithAOPController;
+    public static com.example.demo.controller.AOPController AOPController;
+    public static com.example.demo.controller.SingletonDIController SingletonDIController;
+    public static com.example.demo.aspect.AOPAspectA AOPAspectA;
+    public static com.example.demo.config.ConfigClass ConfigClass;
+    public static com.example.demo.aspect.GetFieldAspect GetFieldAspect;
+    public static com.example.demo.model.Student Student;
+    public static com.example.demo.service.impl.XmlDIServiceImpl XmlDIServiceImpl;
+    public static com.example.demo.aop.BeforeLog BeforeLog;
+    public static com.example.demo.service.impl.AOPServiceImpl AOPServiceImpl;
+    public static com.example.demo.service.impl.EntryPointServiceImpl EntryPointServiceImpl;
+    public static com.example.demo.controller.PrototypeDIController PrototypeDIController;
+    public static com.example.demo.aspect.EntryPointAspect EntryPointAspect;
+    public static com.example.demo.service.impl.SSMServiceImpl SSMServiceImpl;
+    public static com.example.demo.model.XmlBaseBean XmlBaseBean;
+    public static com.example.demo.controller.EntryPointWithAOPController EntryPointWithAOPController;
+    public static com.example.demo.model.XmlDIServiceProvider XmlDIServiceProvider;
+    public static com.example.demo.aspect.AOPAspectB AOPAspectB;
+    public static com.example.demo.aop.AfterLog AfterLog;
+    public static com.example.demo.model.AopXmlTestBean AopXmlTestBean;
+    public static com.example.demo.service.impl.GetFieldWithAOPServiceImpl GetFieldWithAOPServiceImpl;
+    public static com.example.demo.aspect.AopXmlAspect AopXmlAspect;
+    public static com.example.demo.service.impl.InfoLeakServiceImpl InfoLeakServiceImpl;
+    public static com.example.demo.config.StudentConfig StudentConfig;
+
+    public static com.example.demo.service.impl.SingletonDIServiceBImpl getSingletonDIServiceBImpl()
+    {
+        com.example.demo.service.impl.SingletonDIServiceBImpl singletondiservicebimpl;
+
+        singletondiservicebimpl = <synthetic.method.SingletonFactory: com.example.demo.service.impl.SingletonDIServiceBImpl SingletonDIServiceBImpl>;
+
+        return singletondiservicebimpl;
+    }
+
+    public static com.example.demo.controller.SSMController getSSMController()
+    {
+        com.example.demo.controller.SSMController ssmcontroller;
+
+        ssmcontroller = <synthetic.method.SingletonFactory: com.example.demo.controller.SSMController SSMController>;
+
+        return ssmcontroller;
+    }
+
+    public static com.example.demo.aspect.PermissionAspect getPermissionAspect()
+    {
+        com.example.demo.aspect.PermissionAspect permissionaspect;
+
+        permissionaspect = <synthetic.method.SingletonFactory: com.example.demo.aspect.PermissionAspect PermissionAspect>;
+
+        return permissionaspect;
+    }
+
+    public static synthetic.method.UserMapperImpl getUserMapperImpl()
+    {
+        synthetic.method.UserMapperImpl usermapperimpl;
+
+        usermapperimpl = <synthetic.method.SingletonFactory: synthetic.method.UserMapperImpl UserMapperImpl>;
+
+        return usermapperimpl;
+    }
+
+    public static com.example.demo.aspect.InfoLeakAspect getInfoLeakAspect()
+    {
+        com.example.demo.aspect.InfoLeakAspect infoleakaspect;
+
+        infoleakaspect = <synthetic.method.SingletonFactory: com.example.demo.aspect.InfoLeakAspect InfoLeakAspect>;
+
+        return infoleakaspect;
+    }
+
+    public static com.example.demo.controller.GetFieldController getGetFieldController()
+    {
+        com.example.demo.controller.GetFieldController getfieldcontroller;
+
+        getfieldcontroller = <synthetic.method.SingletonFactory: com.example.demo.controller.GetFieldController GetFieldController>;
+
+        return getfieldcontroller;
+    }
+
+    public static com.example.demo.controller.InfoLeakController getInfoLeakController()
+    {
+        com.example.demo.controller.InfoLeakController infoleakcontroller;
+
+        infoleakcontroller = <synthetic.method.SingletonFactory: com.example.demo.controller.InfoLeakController InfoLeakController>;
+
+        return infoleakcontroller;
+    }
+
+    public static com.example.demo.controller.EntryPointController getEntryPointController()
+    {
+        com.example.demo.controller.EntryPointController entrypointcontroller;
+
+        entrypointcontroller = <synthetic.method.SingletonFactory: com.example.demo.controller.EntryPointController EntryPointController>;
+
+        return entrypointcontroller;
+    }
+
+    public static com.example.demo.service.impl.SingletonDIServiceAImpl getSingletonDIServiceAImpl()
+    {
+        com.example.demo.service.impl.SingletonDIServiceAImpl singletondiserviceaimpl;
+
+        singletondiserviceaimpl = <synthetic.method.SingletonFactory: com.example.demo.service.impl.SingletonDIServiceAImpl SingletonDIServiceAImpl>;
+
+        return singletondiserviceaimpl;
+    }
+
+    public static com.example.demo.service.impl.GetFieldServiceImpl getGetFieldServiceImpl()
+    {
+        com.example.demo.service.impl.GetFieldServiceImpl getfieldserviceimpl;
+
+        getfieldserviceimpl = <synthetic.method.SingletonFactory: com.example.demo.service.impl.GetFieldServiceImpl GetFieldServiceImpl>;
+
+        return getfieldserviceimpl;
+    }
+
+    public static com.example.demo.service.impl.PermissionServiceImpl getPermissionServiceImpl()
+    {
+        com.example.demo.service.impl.PermissionServiceImpl permissionserviceimpl;
+
+        permissionserviceimpl = <synthetic.method.SingletonFactory: com.example.demo.service.impl.PermissionServiceImpl PermissionServiceImpl>;
+
+        return permissionserviceimpl;
+    }
+
+    public static com.example.demo.controller.PermissionController getPermissionController()
+    {
+        com.example.demo.controller.PermissionController permissioncontroller;
+
+        permissioncontroller = <synthetic.method.SingletonFactory: com.example.demo.controller.PermissionController PermissionController>;
+
+        return permissioncontroller;
+    }
+
+    public static com.example.demo.controller.GetFieldWithAOPController getGetFieldWithAOPController()
+    {
+        com.example.demo.controller.GetFieldWithAOPController getfieldwithaopcontroller;
+
+        getfieldwithaopcontroller = <synthetic.method.SingletonFactory: com.example.demo.controller.GetFieldWithAOPController GetFieldWithAOPController>;
+
+        return getfieldwithaopcontroller;
+    }
+
+    public static com.example.demo.controller.AOPController getAOPController()
+    {
+        com.example.demo.controller.AOPController aopcontroller;
+
+        aopcontroller = <synthetic.method.SingletonFactory: com.example.demo.controller.AOPController AOPController>;
+
+        return aopcontroller;
+    }
+
+    public static com.example.demo.controller.SingletonDIController getSingletonDIController()
+    {
+        com.example.demo.controller.SingletonDIController singletondicontroller;
+
+        singletondicontroller = <synthetic.method.SingletonFactory: com.example.demo.controller.SingletonDIController SingletonDIController>;
+
+        return singletondicontroller;
+    }
+
+    public static com.example.demo.aspect.AOPAspectA getAOPAspectA()
+    {
+        com.example.demo.aspect.AOPAspectA aopaspecta;
+
+        aopaspecta = <synthetic.method.SingletonFactory: com.example.demo.aspect.AOPAspectA AOPAspectA>;
+
+        return aopaspecta;
+    }
+
+    public static com.example.demo.config.ConfigClass getConfigClass()
+    {
+        com.example.demo.config.ConfigClass configclass;
+
+        configclass = <synthetic.method.SingletonFactory: com.example.demo.config.ConfigClass ConfigClass>;
+
+        return configclass;
+    }
+
+    public static com.example.demo.aspect.GetFieldAspect getGetFieldAspect()
+    {
+        com.example.demo.aspect.GetFieldAspect getfieldaspect;
+
+        getfieldaspect = <synthetic.method.SingletonFactory: com.example.demo.aspect.GetFieldAspect GetFieldAspect>;
+
+        return getfieldaspect;
+    }
+
+    public static com.example.demo.model.Student getStudent()
+    {
+        com.example.demo.model.Student student;
+
+        student = <synthetic.method.SingletonFactory: com.example.demo.model.Student Student>;
+
+        return student;
+    }
+
+    public static com.example.demo.service.impl.XmlDIServiceImpl getXmlDIServiceImpl()
+    {
+        com.example.demo.service.impl.XmlDIServiceImpl xmldiserviceimpl;
+
+        xmldiserviceimpl = <synthetic.method.SingletonFactory: com.example.demo.service.impl.XmlDIServiceImpl XmlDIServiceImpl>;
+
+        return xmldiserviceimpl;
+    }
+
+    public static com.example.demo.aop.BeforeLog getBeforeLog()
+    {
+        com.example.demo.aop.BeforeLog beforelog;
+
+        beforelog = <synthetic.method.SingletonFactory: com.example.demo.aop.BeforeLog BeforeLog>;
+
+        return beforelog;
+    }
+
+    public static com.example.demo.service.impl.AOPServiceImpl getAOPServiceImpl()
+    {
+        com.example.demo.service.impl.AOPServiceImpl aopserviceimpl;
+
+        aopserviceimpl = <synthetic.method.SingletonFactory: com.example.demo.service.impl.AOPServiceImpl AOPServiceImpl>;
+
+        return aopserviceimpl;
+    }
+
+    public static com.example.demo.service.impl.EntryPointServiceImpl getEntryPointServiceImpl()
+    {
+        com.example.demo.service.impl.EntryPointServiceImpl entrypointserviceimpl;
+
+        entrypointserviceimpl = <synthetic.method.SingletonFactory: com.example.demo.service.impl.EntryPointServiceImpl EntryPointServiceImpl>;
+
+        return entrypointserviceimpl;
+    }
+
+    public static com.example.demo.controller.PrototypeDIController getPrototypeDIController()
+    {
+        com.example.demo.controller.PrototypeDIController prototypedicontroller;
+
+        prototypedicontroller = <synthetic.method.SingletonFactory: com.example.demo.controller.PrototypeDIController PrototypeDIController>;
+
+        return prototypedicontroller;
+    }
+
+    public static com.example.demo.aspect.EntryPointAspect getEntryPointAspect()
+    {
+        com.example.demo.aspect.EntryPointAspect entrypointaspect;
+
+        entrypointaspect = <synthetic.method.SingletonFactory: com.example.demo.aspect.EntryPointAspect EntryPointAspect>;
+
+        return entrypointaspect;
+    }
+
+    public static com.example.demo.service.impl.SSMServiceImpl getSSMServiceImpl()
+    {
+        com.example.demo.service.impl.SSMServiceImpl ssmserviceimpl;
+
+        ssmserviceimpl = <synthetic.method.SingletonFactory: com.example.demo.service.impl.SSMServiceImpl SSMServiceImpl>;
+
+        return ssmserviceimpl;
+    }
+
+    public static com.example.demo.model.XmlBaseBean getXmlBaseBean()
+    {
+        com.example.demo.model.XmlBaseBean xmlbasebean;
+
+        xmlbasebean = <synthetic.method.SingletonFactory: com.example.demo.model.XmlBaseBean XmlBaseBean>;
+
+        return xmlbasebean;
+    }
+
+    public static com.example.demo.controller.EntryPointWithAOPController getEntryPointWithAOPController()
+    {
+        com.example.demo.controller.EntryPointWithAOPController entrypointwithaopcontroller;
+
+        entrypointwithaopcontroller = <synthetic.method.SingletonFactory: com.example.demo.controller.EntryPointWithAOPController EntryPointWithAOPController>;
+
+        return entrypointwithaopcontroller;
+    }
+
+    public static com.example.demo.model.XmlDIServiceProvider getXmlDIServiceProvider()
+    {
+        com.example.demo.model.XmlDIServiceProvider xmldiserviceprovider;
+
+        xmldiserviceprovider = <synthetic.method.SingletonFactory: com.example.demo.model.XmlDIServiceProvider XmlDIServiceProvider>;
+
+        return xmldiserviceprovider;
+    }
+
+    public static com.example.demo.aspect.AOPAspectB getAOPAspectB()
+    {
+        com.example.demo.aspect.AOPAspectB aopaspectb;
+
+        aopaspectb = <synthetic.method.SingletonFactory: com.example.demo.aspect.AOPAspectB AOPAspectB>;
+
+        return aopaspectb;
+    }
+
+    public static com.example.demo.aop.AfterLog getAfterLog()
+    {
+        com.example.demo.aop.AfterLog afterlog;
+
+        afterlog = <synthetic.method.SingletonFactory: com.example.demo.aop.AfterLog AfterLog>;
+
+        return afterlog;
+    }
+
+    public static com.example.demo.model.AopXmlTestBean getAopXmlTestBean()
+    {
+        com.example.demo.model.AopXmlTestBean aopxmltestbean;
+
+        aopxmltestbean = <synthetic.method.SingletonFactory: com.example.demo.model.AopXmlTestBean AopXmlTestBean>;
+
+        return aopxmltestbean;
+    }
+
+    public static com.example.demo.service.impl.GetFieldWithAOPServiceImpl getGetFieldWithAOPServiceImpl()
+    {
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl getfieldwithaopserviceimpl;
+
+        getfieldwithaopserviceimpl = <synthetic.method.SingletonFactory: com.example.demo.service.impl.GetFieldWithAOPServiceImpl GetFieldWithAOPServiceImpl>;
+
+        return getfieldwithaopserviceimpl;
+    }
+
+    public static com.example.demo.aspect.AopXmlAspect getAopXmlAspect()
+    {
+        com.example.demo.aspect.AopXmlAspect aopxmlaspect;
+
+        aopxmlaspect = <synthetic.method.SingletonFactory: com.example.demo.aspect.AopXmlAspect AopXmlAspect>;
+
+        return aopxmlaspect;
+    }
+
+    public static com.example.demo.service.impl.InfoLeakServiceImpl getInfoLeakServiceImpl()
+    {
+        com.example.demo.service.impl.InfoLeakServiceImpl infoleakserviceimpl;
+
+        infoleakserviceimpl = <synthetic.method.SingletonFactory: com.example.demo.service.impl.InfoLeakServiceImpl InfoLeakServiceImpl>;
+
+        return infoleakserviceimpl;
+    }
+
+    public static com.example.demo.config.StudentConfig getStudentConfig()
+    {
+        com.example.demo.config.StudentConfig studentconfig;
+
+        studentconfig = <synthetic.method.SingletonFactory: com.example.demo.config.StudentConfig StudentConfig>;
+
+        return studentconfig;
+    }
+
+    public void <init>()
+    {
+        synthetic.method.SingletonFactory this;
+
+        this := @this: synthetic.method.SingletonFactory;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    static void <clinit>()
+    {
+        com.example.demo.aspect.AOPAspectA aopaspecta;
+        com.example.demo.service.impl.SingletonDIServiceAImpl singletondiserviceaimpl;
+        com.example.demo.controller.InfoLeakController infoleakcontroller;
+        com.example.demo.service.impl.InfoLeakServiceImpl infoleakserviceimpl;
+        com.example.demo.aop.BeforeLog beforelog;
+        com.example.demo.aspect.InfoLeakAspect infoleakaspect;
+        com.example.demo.controller.PermissionController permissioncontroller;
+        com.example.demo.service.impl.GetFieldServiceImpl getfieldserviceimpl;
+        com.example.demo.aspect.AopXmlAspect aopxmlaspect;
+        com.example.demo.aspect.PermissionAspect permissionaspect;
+        com.example.demo.model.XmlDIServiceProvider xmldiserviceprovider;
+        com.example.demo.service.impl.PermissionServiceImpl permissionserviceimpl;
+        com.example.demo.aspect.GetFieldAspect getfieldaspect;
+        com.example.demo.controller.SingletonDIController singletondicontroller;
+        com.example.demo.service.impl.XmlDIServiceImpl xmldiserviceimpl;
+        synthetic.method.UserMapperImpl usermapperimpl;
+        com.example.demo.model.AopXmlTestBean aopxmltestbean;
+        com.example.demo.aspect.AOPAspectB aopaspectb;
+        com.example.demo.service.impl.GetFieldWithAOPServiceImpl getfieldwithaopserviceimpl;
+        com.example.demo.controller.EntryPointController entrypointcontroller;
+        com.example.demo.config.ConfigClass configclass;
+        com.example.demo.config.StudentConfig studentconfig;
+        com.example.demo.aspect.EntryPointAspect entrypointaspect;
+        com.example.demo.model.XmlBaseBean xmlbasebean;
+        com.example.demo.controller.GetFieldController getfieldcontroller;
+        com.example.demo.controller.AOPController aopcontroller;
+        com.example.demo.controller.EntryPointWithAOPController entrypointwithaopcontroller;
+        com.example.demo.model.Student student;
+        com.example.demo.service.impl.AOPServiceImpl aopserviceimpl;
+        com.example.demo.controller.SSMController ssmcontroller;
+        com.example.demo.service.impl.EntryPointServiceImpl entrypointserviceimpl;
+        com.example.demo.controller.GetFieldWithAOPController getfieldwithaopcontroller;
+        com.example.demo.controller.PrototypeDIController prototypedicontroller;
+        com.example.demo.service.impl.SSMServiceImpl ssmserviceimpl;
+        com.example.demo.aop.AfterLog afterlog;
+        com.example.demo.service.impl.SingletonDIServiceBImpl singletondiservicebimpl;
+
+        aopaspecta = new com.example.demo.aspect.AOPAspectA;
+
+        specialinvoke aopaspecta.<com.example.demo.aspect.AOPAspectA: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.aspect.AOPAspectA AOPAspectA> = aopaspecta;
+
+        singletondiserviceaimpl = new com.example.demo.service.impl.SingletonDIServiceAImpl;
+
+        specialinvoke singletondiserviceaimpl.<com.example.demo.service.impl.SingletonDIServiceAImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.service.impl.SingletonDIServiceAImpl SingletonDIServiceAImpl> = singletondiserviceaimpl;
+
+        infoleakcontroller = new com.example.demo.controller.InfoLeakController;
+
+        specialinvoke infoleakcontroller.<com.example.demo.controller.InfoLeakController: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.controller.InfoLeakController InfoLeakController> = infoleakcontroller;
+
+        infoleakserviceimpl = new com.example.demo.service.impl.InfoLeakServiceImpl;
+
+        specialinvoke infoleakserviceimpl.<com.example.demo.service.impl.InfoLeakServiceImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.service.impl.InfoLeakServiceImpl InfoLeakServiceImpl> = infoleakserviceimpl;
+
+        beforelog = new com.example.demo.aop.BeforeLog;
+
+        specialinvoke beforelog.<com.example.demo.aop.BeforeLog: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.aop.BeforeLog BeforeLog> = beforelog;
+
+        infoleakaspect = new com.example.demo.aspect.InfoLeakAspect;
+
+        specialinvoke infoleakaspect.<com.example.demo.aspect.InfoLeakAspect: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.aspect.InfoLeakAspect InfoLeakAspect> = infoleakaspect;
+
+        permissioncontroller = new com.example.demo.controller.PermissionController;
+
+        specialinvoke permissioncontroller.<com.example.demo.controller.PermissionController: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.controller.PermissionController PermissionController> = permissioncontroller;
+
+        getfieldserviceimpl = new com.example.demo.service.impl.GetFieldServiceImpl;
+
+        specialinvoke getfieldserviceimpl.<com.example.demo.service.impl.GetFieldServiceImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.service.impl.GetFieldServiceImpl GetFieldServiceImpl> = getfieldserviceimpl;
+
+        aopxmlaspect = new com.example.demo.aspect.AopXmlAspect;
+
+        specialinvoke aopxmlaspect.<com.example.demo.aspect.AopXmlAspect: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.aspect.AopXmlAspect AopXmlAspect> = aopxmlaspect;
+
+        permissionaspect = new com.example.demo.aspect.PermissionAspect;
+
+        specialinvoke permissionaspect.<com.example.demo.aspect.PermissionAspect: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.aspect.PermissionAspect PermissionAspect> = permissionaspect;
+
+        xmldiserviceprovider = new com.example.demo.model.XmlDIServiceProvider;
+
+        specialinvoke xmldiserviceprovider.<com.example.demo.model.XmlDIServiceProvider: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.model.XmlDIServiceProvider XmlDIServiceProvider> = xmldiserviceprovider;
+
+        permissionserviceimpl = new com.example.demo.service.impl.PermissionServiceImpl;
+
+        specialinvoke permissionserviceimpl.<com.example.demo.service.impl.PermissionServiceImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.service.impl.PermissionServiceImpl PermissionServiceImpl> = permissionserviceimpl;
+
+        getfieldaspect = new com.example.demo.aspect.GetFieldAspect;
+
+        specialinvoke getfieldaspect.<com.example.demo.aspect.GetFieldAspect: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.aspect.GetFieldAspect GetFieldAspect> = getfieldaspect;
+
+        singletondicontroller = new com.example.demo.controller.SingletonDIController;
+
+        specialinvoke singletondicontroller.<com.example.demo.controller.SingletonDIController: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.controller.SingletonDIController SingletonDIController> = singletondicontroller;
+
+        xmldiserviceimpl = new com.example.demo.service.impl.XmlDIServiceImpl;
+
+        specialinvoke xmldiserviceimpl.<com.example.demo.service.impl.XmlDIServiceImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.service.impl.XmlDIServiceImpl XmlDIServiceImpl> = xmldiserviceimpl;
+
+        usermapperimpl = new synthetic.method.UserMapperImpl;
+
+        specialinvoke usermapperimpl.<synthetic.method.UserMapperImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: synthetic.method.UserMapperImpl UserMapperImpl> = usermapperimpl;
+
+        aopxmltestbean = new com.example.demo.model.AopXmlTestBean;
+
+        specialinvoke aopxmltestbean.<com.example.demo.model.AopXmlTestBean: void <init>(java.lang.Integer,java.lang.String)>(1, "aopxmltestName");
+
+        <synthetic.method.SingletonFactory: com.example.demo.model.AopXmlTestBean AopXmlTestBean> = aopxmltestbean;
+
+        aopaspectb = new com.example.demo.aspect.AOPAspectB;
+
+        specialinvoke aopaspectb.<com.example.demo.aspect.AOPAspectB: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.aspect.AOPAspectB AOPAspectB> = aopaspectb;
+
+        getfieldwithaopserviceimpl = new com.example.demo.service.impl.GetFieldWithAOPServiceImpl;
+
+        specialinvoke getfieldwithaopserviceimpl.<com.example.demo.service.impl.GetFieldWithAOPServiceImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.service.impl.GetFieldWithAOPServiceImpl GetFieldWithAOPServiceImpl> = getfieldwithaopserviceimpl;
+
+        entrypointcontroller = new com.example.demo.controller.EntryPointController;
+
+        specialinvoke entrypointcontroller.<com.example.demo.controller.EntryPointController: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.controller.EntryPointController EntryPointController> = entrypointcontroller;
+
+        configclass = new com.example.demo.config.ConfigClass;
+
+        specialinvoke configclass.<com.example.demo.config.ConfigClass: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.config.ConfigClass ConfigClass> = configclass;
+
+        studentconfig = new com.example.demo.config.StudentConfig;
+
+        specialinvoke studentconfig.<com.example.demo.config.StudentConfig: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.config.StudentConfig StudentConfig> = studentconfig;
+
+        entrypointaspect = new com.example.demo.aspect.EntryPointAspect;
+
+        specialinvoke entrypointaspect.<com.example.demo.aspect.EntryPointAspect: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.aspect.EntryPointAspect EntryPointAspect> = entrypointaspect;
+
+        xmlbasebean = new com.example.demo.model.XmlBaseBean;
+
+        specialinvoke xmlbasebean.<com.example.demo.model.XmlBaseBean: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.model.XmlBaseBean XmlBaseBean> = xmlbasebean;
+
+        getfieldcontroller = new com.example.demo.controller.GetFieldController;
+
+        specialinvoke getfieldcontroller.<com.example.demo.controller.GetFieldController: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.controller.GetFieldController GetFieldController> = getfieldcontroller;
+
+        aopcontroller = new com.example.demo.controller.AOPController;
+
+        specialinvoke aopcontroller.<com.example.demo.controller.AOPController: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.controller.AOPController AOPController> = aopcontroller;
+
+        entrypointwithaopcontroller = new com.example.demo.controller.EntryPointWithAOPController;
+
+        specialinvoke entrypointwithaopcontroller.<com.example.demo.controller.EntryPointWithAOPController: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.controller.EntryPointWithAOPController EntryPointWithAOPController> = entrypointwithaopcontroller;
+
+        student = new com.example.demo.model.Student;
+
+        specialinvoke student.<com.example.demo.model.Student: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.model.Student Student> = student;
+
+        aopserviceimpl = new com.example.demo.service.impl.AOPServiceImpl;
+
+        specialinvoke aopserviceimpl.<com.example.demo.service.impl.AOPServiceImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.service.impl.AOPServiceImpl AOPServiceImpl> = aopserviceimpl;
+
+        ssmcontroller = new com.example.demo.controller.SSMController;
+
+        specialinvoke ssmcontroller.<com.example.demo.controller.SSMController: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.controller.SSMController SSMController> = ssmcontroller;
+
+        entrypointserviceimpl = new com.example.demo.service.impl.EntryPointServiceImpl;
+
+        specialinvoke entrypointserviceimpl.<com.example.demo.service.impl.EntryPointServiceImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.service.impl.EntryPointServiceImpl EntryPointServiceImpl> = entrypointserviceimpl;
+
+        getfieldwithaopcontroller = new com.example.demo.controller.GetFieldWithAOPController;
+
+        specialinvoke getfieldwithaopcontroller.<com.example.demo.controller.GetFieldWithAOPController: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.controller.GetFieldWithAOPController GetFieldWithAOPController> = getfieldwithaopcontroller;
+
+        prototypedicontroller = new com.example.demo.controller.PrototypeDIController;
+
+        specialinvoke prototypedicontroller.<com.example.demo.controller.PrototypeDIController: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.controller.PrototypeDIController PrototypeDIController> = prototypedicontroller;
+
+        ssmserviceimpl = new com.example.demo.service.impl.SSMServiceImpl;
+
+        specialinvoke ssmserviceimpl.<com.example.demo.service.impl.SSMServiceImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.service.impl.SSMServiceImpl SSMServiceImpl> = ssmserviceimpl;
+
+        afterlog = new com.example.demo.aop.AfterLog;
+
+        specialinvoke afterlog.<com.example.demo.aop.AfterLog: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.aop.AfterLog AfterLog> = afterlog;
+
+        singletondiservicebimpl = new com.example.demo.service.impl.SingletonDIServiceBImpl;
+
+        specialinvoke singletondiservicebimpl.<com.example.demo.service.impl.SingletonDIServiceBImpl: void <init>()>();
+
+        <synthetic.method.SingletonFactory: com.example.demo.service.impl.SingletonDIServiceBImpl SingletonDIServiceBImpl> = singletondiservicebimpl;
+
+        return;
+    }
+}

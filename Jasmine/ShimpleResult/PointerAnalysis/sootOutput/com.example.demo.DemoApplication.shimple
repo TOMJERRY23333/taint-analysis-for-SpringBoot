@@ -1,0 +1,95 @@
+public class com.example.demo.DemoApplication extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.example.demo.DemoApplication this;
+
+        this := @this: com.example.demo.DemoApplication;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        com.example.demo.controller.SSMController SSMController;
+        com.example.demo.controller.PermissionController PermissionController;
+        com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB EntryPointWithAOPController$$SpringCGLIB;
+        com.example.demo.controller.GetFieldController GetFieldController;
+        com.example.demo.controller.GetFieldWithAOPController GetFieldWithAOPController;
+        com.example.demo.controller.AOPController AOPController;
+        com.example.demo.controller.InfoLeakController InfoLeakController;
+        com.example.demo.controller.SingletonDIController SingletonDIController;
+        com.example.demo.controller.EntryPointController EntryPointController;
+        com.example.demo.controller.PrototypeDIController PrototypeDIController;
+
+        args := @parameter0: java.lang.String[];
+
+        staticinvoke <org.springframework.boot.SpringApplication: org.springframework.context.ConfigurableApplicationContext run(java.lang.Class,java.lang.String[])>(class "Lcom/example/demo/DemoApplication;", args);
+
+        SSMController = new com.example.demo.controller.SSMController;
+
+        specialinvoke SSMController.<com.example.demo.controller.SSMController: void <init>()>();
+
+        virtualinvoke SSMController.<com.example.demo.controller.SSMController: void callEntry_synthetic()>();
+
+        PermissionController = new com.example.demo.controller.PermissionController;
+
+        specialinvoke PermissionController.<com.example.demo.controller.PermissionController: void <init>()>();
+
+        virtualinvoke PermissionController.<com.example.demo.controller.PermissionController: void callEntry_synthetic()>();
+
+        EntryPointWithAOPController$$SpringCGLIB = new com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB;
+
+        specialinvoke EntryPointWithAOPController$$SpringCGLIB.<com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB: void <init>()>();
+
+        virtualinvoke EntryPointWithAOPController$$SpringCGLIB.<com.example.demo.controller.EntryPointWithAOPController$$SpringCGLIB: void callEntry_synthetic()>();
+
+        GetFieldController = new com.example.demo.controller.GetFieldController;
+
+        specialinvoke GetFieldController.<com.example.demo.controller.GetFieldController: void <init>()>();
+
+        virtualinvoke GetFieldController.<com.example.demo.controller.GetFieldController: void callEntry_synthetic()>();
+
+        GetFieldWithAOPController = new com.example.demo.controller.GetFieldWithAOPController;
+
+        specialinvoke GetFieldWithAOPController.<com.example.demo.controller.GetFieldWithAOPController: void <init>()>();
+
+        virtualinvoke GetFieldWithAOPController.<com.example.demo.controller.GetFieldWithAOPController: void callEntry_synthetic()>();
+
+        AOPController = new com.example.demo.controller.AOPController;
+
+        specialinvoke AOPController.<com.example.demo.controller.AOPController: void <init>()>();
+
+        virtualinvoke AOPController.<com.example.demo.controller.AOPController: void callEntry_synthetic()>();
+
+        InfoLeakController = new com.example.demo.controller.InfoLeakController;
+
+        specialinvoke InfoLeakController.<com.example.demo.controller.InfoLeakController: void <init>()>();
+
+        virtualinvoke InfoLeakController.<com.example.demo.controller.InfoLeakController: void callEntry_synthetic()>();
+
+        SingletonDIController = new com.example.demo.controller.SingletonDIController;
+
+        specialinvoke SingletonDIController.<com.example.demo.controller.SingletonDIController: void <init>()>();
+
+        virtualinvoke SingletonDIController.<com.example.demo.controller.SingletonDIController: void callEntry_synthetic()>();
+
+        EntryPointController = new com.example.demo.controller.EntryPointController;
+
+        specialinvoke EntryPointController.<com.example.demo.controller.EntryPointController: void <init>()>();
+
+        virtualinvoke EntryPointController.<com.example.demo.controller.EntryPointController: void callEntry_synthetic()>();
+
+        PrototypeDIController = new com.example.demo.controller.PrototypeDIController;
+
+        specialinvoke PrototypeDIController.<com.example.demo.controller.PrototypeDIController: void <init>()>();
+
+        virtualinvoke PrototypeDIController.<com.example.demo.controller.PrototypeDIController: void callEntry_synthetic()>();
+
+        return;
+    }
+}

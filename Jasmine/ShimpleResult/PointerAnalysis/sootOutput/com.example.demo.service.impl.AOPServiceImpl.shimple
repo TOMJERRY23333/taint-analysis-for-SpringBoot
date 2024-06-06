@@ -1,0 +1,70 @@
+public class com.example.demo.service.impl.AOPServiceImpl extends java.lang.Object implements com.example.demo.service.AOPService
+{
+
+    public void <init>()
+    {
+        com.example.demo.service.impl.AOPServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.AOPServiceImpl;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void testAOPAnno1()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.service.impl.AOPServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.AOPServiceImpl;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("testAOP1 do something");
+
+        return;
+    }
+
+    public java.lang.String testAOPAnno2(java.lang.String)
+    {
+        java.lang.StringBuilder $stack2, $stack4, $stack5;
+        java.io.PrintStream $stack3;
+        java.lang.String parameter, $stack6;
+        com.example.demo.service.impl.AOPServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.AOPServiceImpl;
+
+        parameter := @parameter0: java.lang.String;
+
+        $stack3 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack2 = new java.lang.StringBuilder;
+
+        specialinvoke $stack2.<java.lang.StringBuilder: void <init>()>();
+
+        $stack4 = virtualinvoke $stack2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("testAOP2 get parameter: ");
+
+        $stack5 = virtualinvoke $stack4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(parameter);
+
+        $stack6 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack3.<java.io.PrintStream: void println(java.lang.String)>($stack6);
+
+        return parameter;
+    }
+
+    public void testAOPAPI3()
+    {
+        java.io.PrintStream $stack1;
+        com.example.demo.service.impl.AOPServiceImpl this;
+
+        this := @this: com.example.demo.service.impl.AOPServiceImpl;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("testAOP3 do something");
+
+        return;
+    }
+}

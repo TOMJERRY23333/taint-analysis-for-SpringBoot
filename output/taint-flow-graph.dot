@@ -1,0 +1,14 @@
+digraph G {
+  node [];
+  edge [];
+  "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/username}" [fillcolor=gold,shape=doubleoctagon,style=filled];
+  "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r12}" [fillcolor=deepskyblue,shape=doubleoctagon,style=filled];
+  "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r8}" [fillcolor=floralwhite,shape=box,style=filled];
+  "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r10}" [fillcolor=floralwhite,shape=box,style=filled];
+  "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r11}" [fillcolor=floralwhite,shape=box,style=filled];
+  "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/username}" -> "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r8}" [color=green3,style=dashed];
+  "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/username}" -> "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r10}" [color=green3,style=dashed];
+  "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r8}" -> "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r10}" [color=green3,style=dashed];
+  "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r10}" -> "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r11}" [color=green3,style=dashed];
+  "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r11}" -> "VarNode{<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>/$r12}" [color=green3,style=dashed];
+}
