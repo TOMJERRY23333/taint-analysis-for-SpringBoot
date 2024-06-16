@@ -57,6 +57,12 @@ class SanitizerHandler extends OnFlyHandler {
      *
      * Handles parameter sanitizers.
      */
+    /*
+    * 提取方法和上下文。
+检查是否存在与方法相关的参数清理器。
+获取方法的中间表示（IR）。
+为每个参数清理器获取参数变量，并为上下文敏感的参数变量添加指针过滤器。
+这个过程确保了在方法调用时，对特定参数应用清理规则，过滤掉不需要的（即不含污点的）对象。这是污点分析中的一个关键步骤，用于增强分析的准确性和效率。*/
     @Override
     public void onNewCSMethod(CSMethod csMethod) {
         JMethod method = csMethod.getMethod();

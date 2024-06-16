@@ -61,6 +61,8 @@ public class CompositePlugin implements Plugin {
 
     private final List<Plugin> onUnresolvedCallPlugins = new ArrayList<>();
 
+    private final List<Plugin> judgeCheck = new ArrayList<>();
+
     public void addPlugin(Plugin... plugins) {
         for (Plugin plugin : plugins) {
             allPlugins.add(plugin);
@@ -72,9 +74,10 @@ public class CompositePlugin implements Plugin {
             addPlugin(plugin, onNewCSMethodPlugins, "onNewCSMethod", CSMethod.class);
             addPlugin(plugin, onUnresolvedCallPlugins,
                     "onUnresolvedCall", CSObj.class, Context.class, Invoke.class);
+            addPlugin(plugin, judgeCheck, "judgeCheck", CSMethod.class);
         }
     }
-
+    //插件是否覆盖了特定的方法，并将其添加到相应的列表中：
     private void addPlugin(Plugin plugin, List<Plugin> plugins,
                            String name, Class<?>... parameterTypes) {
         try {
@@ -84,8 +87,8 @@ public class CompositePlugin implements Plugin {
                 plugins.add(plugin);
             }
         } catch (NoSuchMethodException e) {
-            throw new RuntimeException("Can't find method '" + name +
-                    "' in " + plugin.getClass(), e);
+//            throw new RuntimeException("Can't find method '" + name +
+//                    "' in " + plugin.getClass(), e);
         }
     }
 
@@ -138,4 +141,10 @@ public class CompositePlugin implements Plugin {
     public void onUnresolvedCall(CSObj recv, Context context, Invoke invoke) {
         onUnresolvedCallPlugins.forEach(p -> p.onUnresolvedCall(recv, context, invoke));
     }
+
+    @Override
+    public boolean judgeCheck(Edge<CSCallSite, CSMethod> edge,CSVar csVar) {
+        return judgeCheck.get(0).judgeCheck(edge,csVar);
+    }
+
 }

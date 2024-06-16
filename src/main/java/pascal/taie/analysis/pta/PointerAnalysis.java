@@ -31,6 +31,7 @@ import pascal.taie.analysis.pta.core.cs.selector.ContextSelectorFactory;
 import pascal.taie.analysis.pta.core.heap.AllocationSiteBasedModel;
 import pascal.taie.analysis.pta.core.heap.HeapModel;
 import pascal.taie.analysis.pta.core.solver.DefaultSolver;
+import pascal.taie.analysis.pta.core.solver.SpringBootSolver;
 import pascal.taie.analysis.pta.core.solver.Solver;
 import pascal.taie.analysis.pta.plugin.AnalysisTimer;
 import pascal.taie.analysis.pta.plugin.ClassInitializer;
@@ -71,13 +72,17 @@ public class PointerAnalysis extends ProgramAnalysis<PointerAnalysisResult> {
 
     @Override
     public PointerAnalysisResult analyze() {
+//        从配置文件或命令行参数中读取
         AnalysisOptions options = getOptions();
+//        初始化一个基于分配点的堆模型,使用从options中获取的分析选项进行配置
         HeapModel heapModel = new AllocationSiteBasedModel(options);
+//        初始化上下文选择器selector为null
         ContextSelector selector = null;
         String advanced = options.getString("advanced");
         String cs = options.getString("cs");
         if (advanced != null) {
             if (advanced.equals("collection")) {
+                //使用选择性的上下文选择器
                 selector = ContextSelectorFactory.makeSelectiveSelector(cs,
                         new CollectionMethods(World.get().getClassHierarchy()).get());
             } else {
@@ -101,6 +106,7 @@ public class PointerAnalysis extends ProgramAnalysis<PointerAnalysisResult> {
                 }
             }
         }
+//        如果selector仍然为null，则使用ContextSelectorFactory.makePlainSelector创建一个默认的上下文选择器。
         if (selector == null) {
             selector = ContextSelectorFactory.makePlainSelector(cs);
         }
@@ -110,7 +116,8 @@ public class PointerAnalysis extends ProgramAnalysis<PointerAnalysisResult> {
     private PointerAnalysisResult runAnalysis(HeapModel heapModel,
                                               ContextSelector selector) {
         AnalysisOptions options = getOptions();
-        Solver solver = new DefaultSolver(options,
+//        Solver solver = new DefaultSolver(options,
+        Solver solver = new SpringBootSolver(options,
                 heapModel, selector, new MapBasedCSManager());
         // The initialization of some Plugins may read the fields in solver,
         // e.g., contextSelector or csManager, thus we initialize Plugins
@@ -162,7 +169,7 @@ public class PointerAnalysis extends ProgramAnalysis<PointerAnalysisResult> {
         plugin.setSolver(solver);
         solver.setPlugin(plugin);
     }
-
+    // 自定义添加的plugin
     private static void addPlugins(CompositePlugin plugin,
                                    List<String> pluginClasses) {
         for (String pluginClass : pluginClasses) {

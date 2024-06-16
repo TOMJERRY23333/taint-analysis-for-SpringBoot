@@ -90,6 +90,31 @@ public interface Solver {
     // ---------- side-effect APIs (begin) ----------
     // These side-effect APIs could be used by Plugins to update
     // points-to information.
+    default  void propagateNew(Context context, Var var,Obj obj){
+        Pointer pointer = getCSManager().getCSVar(context,var);
+        PointsToSet pts = makePointsToSet();
+        pts.addObject(getCSManager().getCSObj(getContextSelector().getEmptyContext(),obj));
+        propagateNew(pointer,pts);
+
+    }
+    default void propagateNew(Context context, Var var, CSObj csObj){
+        Pointer pointer = getCSManager().getCSVar(context,var);
+        PointsToSet pts = makePointsToSet();
+        pts.addObject(csObj);
+        propagateNew(pointer,pts);
+    }
+
+    default void propagateNew(Pointer pointer, Obj obj){
+        PointsToSet pts = makePointsToSet();
+        pts.addObject(getCSManager().getCSObj(getContextSelector().getEmptyContext(),obj));
+        propagateNew(pointer,pts);
+    }
+
+    PointsToSet propagate(Pointer pointer, Obj obj);
+
+
+
+    void propagateNew(Pointer pointer, PointsToSet pointsToSet);
 
     // APIs for adding points-to relations
     void addPointsTo(Pointer pointer, PointsToSet pts);
@@ -173,10 +198,16 @@ public interface Solver {
         addPFGEdge(edge, new TypeFilter(type, this));
     }
 
+    default void addPFGEdgeAndPropagate(PointerFlowEdge edge, Type type) {
+        addPFGEdgeAndPropagate(edge, new TypeFilter(type, this));
+    }
+
     /**
      * Adds a pointer flow edge (with edge transfer) to the PFG.
      */
     void addPFGEdge(PointerFlowEdge edge, Transfer transfer);
+
+    void addPFGEdgeAndPropagate(PointerFlowEdge edge, Transfer transfer);
 
     /**
      * Adds an entry point.

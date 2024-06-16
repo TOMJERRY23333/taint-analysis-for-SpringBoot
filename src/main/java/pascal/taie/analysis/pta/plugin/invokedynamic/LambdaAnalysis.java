@@ -180,7 +180,8 @@ public class LambdaAnalysis implements Plugin {
                 CSObj csNewObj = csManager.getCSObj(context, newObj);
                 Var result = invoke.getResult();
                 if (result != null) {
-                    solver.addVarPointsTo(context, result, csNewObj);
+//                    solver.addVarPointsTo(context, result, csNewObj);
+                    solver.propagateNew(context, result, csNewObj);
                 }
                 // add call edge to constructor
                 addLambdaCallEdge(csCallSite, csNewObj, targetRef, indy, indyCtx);
@@ -237,7 +238,8 @@ public class LambdaAnalysis implements Plugin {
             }
             calleeCtx = selector.selectContext(csCallSite, recvObj, callee);
             // pass receiver object to 'this' variable of callee
-            solver.addVarPointsTo(calleeCtx, callee.getIR().getThis(), recvObj);
+//            solver.addVarPointsTo(calleeCtx, callee.getIR().getThis(), recvObj);
+            solver.propagateNew(calleeCtx, callee.getIR().getThis(), recvObj);
         } else { // otherwise, callee is static method
             callee = targetRef.resolveNullable();
             if (callee == null) {
@@ -278,7 +280,8 @@ public class LambdaAnalysis implements Plugin {
             List<Var> targetParams = target.getIR().getParams();
             int j = 0;
             for (int i = shiftC; i < capturedArgs.size(); ++i, ++j) {
-                solver.addPFGEdge(new PointerFlowEdge(
+//                solver.addPFGEdge(new PointerFlowEdge(
+                solver.addPFGEdgeAndPropagate(new PointerFlowEdge(
                         FlowKind.PARAMETER_PASSING,
                         csManager.getCSVar(lambdaContext, capturedArgs.get(i)),
                         csManager.getCSVar(calleeContext, targetParams.get(j))),
@@ -301,7 +304,7 @@ public class LambdaAnalysis implements Plugin {
             List<Var> actualArgs = invoke.getInvokeExp().getArgs();
             Context callerContext = csCallSite.getContext();
             for (int i = shiftA; i < actualArgs.size(); ++i, ++j) {
-                solver.addPFGEdge(new PointerFlowEdge(
+                solver.addPFGEdgeAndPropagate(new PointerFlowEdge(
                         FlowKind.PARAMETER_PASSING,
                         csManager.getCSVar(callerContext, actualArgs.get(i)),
                         csManager.getCSVar(calleeContext, targetParams.get(j))),
@@ -314,7 +317,7 @@ public class LambdaAnalysis implements Plugin {
                 CSVar csResult = csManager.getCSVar(callerContext, result);
                 target.getIR().getReturnVars().forEach(ret -> {
                     CSVar csRet = csManager.getCSVar(calleeContext, ret);
-                    solver.addPFGEdge(new PointerFlowEdge(
+                    solver.addPFGEdgeAndPropagate(new PointerFlowEdge(
                             FlowKind.RETURN, csRet, csResult),
                             // filter spurious objects caused by imprecise lambda objects
                             result.getType());

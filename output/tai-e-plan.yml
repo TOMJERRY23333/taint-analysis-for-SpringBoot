@@ -17,7 +17,7 @@
     expected-file: null
     reflection-inference: string-constant
     reflection-log: null
-    taint-config: config/common/favorites-web-taint-config.yml
+    taint-config: config/common/taint-config.yml
     plugins: []
     time-limit: -1
 - id: cg

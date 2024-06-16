@@ -180,6 +180,7 @@ public class InvokeDynamicAnalysis implements Plugin {
     public void onNewStmt(Stmt stmt, JMethod container) {
 
         if (stmt instanceof Invoke invoke) {
+//            如果调用不是动态调用，委托给 methodTypeModel 和 lookupModel 来处理。
             if (!invoke.isDynamic()) {
                 methodTypeModel.onNewStmt(stmt, container);
                 lookupModel.onNewStmt(stmt, container);
@@ -188,7 +189,9 @@ public class InvokeDynamicAnalysis implements Plugin {
             if (indy != null) {
                 // if new reachable method contains invokedynamic,
                 // then we record necessary information
+//                包含动态调用的方法与当前调用语句关联起来，记录在 method2indys 中。
                 method2indys.put(container, invoke);
+//                解析动态调用的引导方法引用，获取实际的引导方法 bsm
                 JMethod bsm = indy.getBootstrapMethodRef().resolve();
                 // we associate the variables in bootstrap method to
                 // the invokedynamic, where the variables may point to
@@ -207,6 +210,8 @@ public class InvokeDynamicAnalysis implements Plugin {
     private static InvokeDynamic getInvokeDynamic(Invoke invoke) {
         InvokeExp invokeExp = invoke.getInvokeExp();
         if (invokeExp instanceof InvokeDynamic) {
+//            如果调用表达式是 InvokeDynamic 类型，并
+//            且不是 Lambda 或字符串连接工厂方法（这些由特定插件处理），则返回 InvokeDynamic 对象。
             if (!LambdaAnalysis.isLambdaMetaFactory(invoke) &&
                     !Java9StringConcatHandler.isStringConcatFactoryMake(invoke)) {
                 // ignore lambda functions and string concat which
@@ -228,10 +233,11 @@ public class InvokeDynamicAnalysis implements Plugin {
      * thus we connect variables to invokedynamic.
      */
     private Stream<Var> extractMHVars(JMethod bsm) {
+//        从引导方法的中间表示（IR）中提取所有调用语句，
         return bsm.getIR()
                 .invokes(true)
                 .map(Invoke::getInvokeExp)
-                .map(ie -> {
+                .map(ie -> { // 并检查调用的表达式
                     MethodRef ref = ie.getMethodRef();
                     ClassType declType = ref.getDeclaringClass().getType();
                     if (typeSystem.isSubtype(callSite, declType)) {

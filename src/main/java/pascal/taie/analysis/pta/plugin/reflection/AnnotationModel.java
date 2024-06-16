@@ -88,7 +88,8 @@ class AnnotationModel implements Plugin {
             if (a != null) {
                 JClass annoType = hierarchy.getClass(a.getType());
                 Obj annoTypeObj = helper.getMetaObj(annoType);
-                solver.addVarPointsTo(context, result, annoTypeObj);
+//                solver.addVarPointsTo(context, result, annoTypeObj);
+                solver.propagateNew(context, result, annoTypeObj);
             }
         }
     }
@@ -106,7 +107,8 @@ class AnnotationModel implements Plugin {
                 if (elem instanceof ClassElement classElem) {
                     JClass clazz = hierarchy.getClass(classElem.classDescriptor());
                     Obj classObj = helper.getMetaObj(clazz);
-                    solver.addVarPointsTo(context, result, classObj);
+//                    solver.addVarPointsTo(context, result, classObj);
+                    solver.propagateNew(context, result, classObj);
                 }
             }
         }

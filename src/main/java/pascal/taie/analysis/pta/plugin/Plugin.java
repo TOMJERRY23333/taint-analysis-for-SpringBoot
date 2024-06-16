@@ -44,7 +44,8 @@ import pascal.taie.language.classes.JMethod;
  */
 public interface Plugin {
 
-    Plugin DUMMY = new Plugin() {};
+    Plugin DUMMY = new Plugin() {
+    };
 
     /**
      * Sets pointer analysis solver which will be used later by the plugin.
@@ -129,4 +130,10 @@ public interface Plugin {
      */
     default void onUnresolvedCall(CSObj recv, Context context, Invoke invoke) {
     }
+
+    default boolean judgeCheck(Edge<CSCallSite, CSMethod> edge, CSVar csVar) {
+        return false;
+    }
+
+
 }

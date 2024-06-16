@@ -55,6 +55,8 @@ public class TaintAnalysis extends CompositePlugin {
 
     }
 
+
+
     @Override
     public void onFinish() {
         Set<TaintFlow> taintFlows = new SinkHandler(context).collectTaintFlows();

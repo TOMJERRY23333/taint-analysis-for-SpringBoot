@@ -1,11 +1,10 @@
 optionsFile: null
 printHelp: false
 classPath:
-- java-benchmarks/favorites-web-1.0.0/BOOT-INF/lib/spring-context-support-5.1.4.RELEASE.jar
-- java-benchmarks/favorites-web-1.0.0/BOOT-INF/lib/spring-boot-autoconfigure-2.1.2.RELEASE.jar
+- java-benchmarks/java-sec-code/spring-web-6.1.4.jar
 appClassPath:
-- java-benchmarks/favorites-web-1.0.0/BOOT-INF/classes
-mainClass: com.favorites.FavoritesApplication
+- java-benchmarks/java-sec-code-4/target/classes
+mainClass: org.joychou.Application
 inputClasses: []
 javaVersion: 8
 prependJVM: false
@@ -18,7 +17,7 @@ scope: REACHABLE
 nativeModel: true
 planFile: null
 analyses:
-  pta: cs:ci;taint-config:config/common/favorites-web-taint-config.yml;
+  pta: cs:ci;taint-config:config/common/taint-config.yml;
 onlyGenPlan: false
 keepResult:
 - $KEEP-ALL

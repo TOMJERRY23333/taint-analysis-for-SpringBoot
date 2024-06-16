@@ -248,6 +248,22 @@ public class DefaultSolver implements Solver {
         analyze();
     }
 
+    @Override
+    public void propagateNew(Pointer pointer, Obj obj) {
+
+    }
+
+    @Override
+    public PointsToSet propagate(Pointer pointer, Obj obj) {
+        return null;
+    }
+
+    @Override
+    public void propagateNew(Pointer pointer, PointsToSet pointsToSet) {
+
+    }
+
+
     /**
      * Initializes pointer analysis.
      */
@@ -322,6 +338,7 @@ public class DefaultSolver implements Solver {
                         plugin.onNewPointsToSet(v, diff);
                     }
                 } else if (entry instanceof WorkList.CallEdgeEntry eEntry) {
+                    // 专门处理调用语句的参数、this、return传递，对方法的stmt语句进行处理
                     processCallEdge(eEntry.edge());
                 }
             }
@@ -467,9 +484,10 @@ public class DefaultSolver implements Solver {
     private void processCall(CSVar recv, PointsToSet pts) {
         Context context = recv.getContext();
         Var var = recv.getVar();
+        // 遍历所有关于var调用语句
         for (Invoke callSite : var.getInvokes()) {
             pts.forEach(recvObj -> {
-                // resolve callee
+                // resolve callee(dispatch方法）
                 JMethod callee = CallGraphs.resolveCallee(
                         recvObj.getObject().getType(), callSite);
                 if (callee != null) {
@@ -483,6 +501,7 @@ public class DefaultSolver implements Solver {
                             csCallSite, csCallee));
                     // pass receiver object to *this* variable
                     if (!isIgnored(callee)) {
+                        // add <c:M_this,{c:recvObj}
                         addVarPointsTo(calleeContext, callee.getIR().getThis(),
                                 recvObj);
                     }
@@ -495,17 +514,23 @@ public class DefaultSolver implements Solver {
 
     private void processCallEdge(Edge<CSCallSite, CSMethod> edge) {
         if (callGraph.addEdge(edge)) {
+            //处理新调用边
             // process new call edge
+            //csCallee为被调用的方法
             CSMethod csCallee = edge.getCallee();
+            //对stmt语句进行处理
             addCSMethod(csCallee);
             if (edge.getKind() != CallKind.OTHER
                     && !isIgnored(csCallee.getMethod())) {
+                // 调用点所在的上下文
                 Context callerCtx = edge.getCallSite().getContext();
                 Invoke callSite = edge.getCallSite().getCallSite();
+                //调用点所产生的上下文
                 Context calleeCtx = csCallee.getContext();
                 JMethod callee = csCallee.getMethod();
                 InvokeExp invokeExp = callSite.getInvokeExp();
                 // pass arguments to parameters
+                // 参数传递arg-param
                 for (int i = 0; i < invokeExp.getArgCount(); ++i) {
                     Var arg = invokeExp.getArg(i);
                     if (propTypes.isAllowed(arg)) {
@@ -657,6 +682,7 @@ public class DefaultSolver implements Solver {
                 }
             }
 
+            // 处理statement that assigns literals, e.g., a = 10.语句
             @Override
             public Void visit(AssignLiteral stmt) {
                 Literal literal = stmt.getRValue();
@@ -670,7 +696,7 @@ public class DefaultSolver implements Solver {
                 }
                 return null;
             }
-
+            // 处理 Representation of copy statement, e.g., a = b.语句
             @Override
             public Void visit(Copy stmt) {
                 Var rvalue = stmt.getRValue();
@@ -788,11 +814,17 @@ public class DefaultSolver implements Solver {
     }
 
     @Override
+    public void addPFGEdgeAndPropagate(PointerFlowEdge edge, Transfer transfer) {
+
+    }
+
+    @Override
     public void addEntryPoint(EntryPoint entryPoint) {
         Context entryCtx = contextSelector.getEmptyContext();
         JMethod entryMethod = entryPoint.method();
         CSMethod csEntryMethod = csManager.getCSMethod(entryCtx, entryMethod);
         callGraph.addEntryMethod(csEntryMethod);
+        //处理方法的STMT
         addCSMethod(csEntryMethod);
         IR ir = entryMethod.getIR();
         ParamProvider paramProvider = entryPoint.paramProvider();
@@ -830,6 +862,7 @@ public class DefaultSolver implements Solver {
         workList.addEntry(edge);
     }
 
+    //处理新的上下文被调用的方法
     @Override
     public void addCSMethod(CSMethod csMethod) {
         if (callGraph.addReachableMethod(csMethod)) {
@@ -839,6 +872,7 @@ public class DefaultSolver implements Solver {
                 return;
             }
             processNewMethod(method);
+            // 处理方法语句
             addStmts(csMethod, method.getIR().getStmts());
             plugin.onNewCSMethod(csMethod);
         }

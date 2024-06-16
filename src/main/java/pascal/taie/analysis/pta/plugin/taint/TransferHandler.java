@@ -126,6 +126,7 @@ class TransferHandler extends OnFlyHandler {
             Kind kind = switch (to.kind()) {
                 case VAR -> {
                     Transfer tf = getTransferFunction(transfer.type());
+//                    获取 转移函数 tf 并在求解器 solver 中添加污点转移边 TaintTransferEdge。
                     solver.addPFGEdge(
                             new TaintTransferEdge(csFrom, csTo),
                             tf);
@@ -134,6 +135,7 @@ class TransferHandler extends OnFlyHandler {
                 case ARRAY -> Kind.VAR_TO_ARRAY;
                 case FIELD -> Kind.VAR_TO_FIELD;
             };
+//            目标 to 是数组或字段，创建 TransferInfo 对象并存储在 transferInfos 中，然后调用 transferTaint 方法进行污点转移
             if (kind != null) {
                 TransferInfo info = new TransferInfo(kind, fromVar, transfer);
                 transferInfos.put(toVar, info);
@@ -145,6 +147,7 @@ class TransferHandler extends OnFlyHandler {
                 case FIELD -> Kind.FIELD_TO_VAR;
                 default -> throw new AnalysisException(); // unreachable
             };
+//            根据源的类型（数组或字段），创建 TransferInfo 对象并存储在 transferInfos 中，然后调用 transferTaint 方法进行污点转移。
             TransferInfo info = new TransferInfo(kind, toVar, transfer);
             transferInfos.put(fromVar, info);
             transferTaint(solver.getPointsToSetOf(csFrom), context, info);
@@ -160,6 +163,7 @@ class TransferHandler extends OnFlyHandler {
         // whose objects come from "to" will be naturally handled by
         // pointer analysis, and we just need to specially handle the
         // pointers whose objects flow to "to", i.e., back propagation.
+//        如果启用了反向传播 enableBackPropagate 且满足特定条件，调用 backPropagateTaint 方法进行污点反向传播。
         if (enableBackPropagate
                 && to.index() != InvokeUtils.RESULT
                 && to.kind() == IndexRef.Kind.VAR
@@ -169,11 +173,20 @@ class TransferHandler extends OnFlyHandler {
         }
     }
 
+/*    根据 TransferInfo 的类型，将污点转移添加到求解器 solver 中：
+    VAR_TO_ARRAY：变量转移到数组。
+    VAR_TO_FIELD：变量转移到字段。
+    ARRAY_TO_VAR：数组转移到变量。
+    FIELD_TO_VAR：字段转移到变量。*/
+               //transferTaint(solver.getPointsToSetOf(csFrom), context, info);
     private void transferTaint(PointsToSet baseObjs, Context ctx, TransferInfo info) {
         CSVar csVar = csManager.getCSVar(ctx, info.var());
         Transfer tf = getTransferFunction(info.transfer().type());
+//        将污点转移添加到求解器 solver 中
         switch (info.kind()) {
+//            VAR_TO_ARRAY：变量转移到数组。
             case VAR_TO_ARRAY -> {
+                // 遍历from的指向集的每个污点对象,并转换成相应的数组索引,最后通过solver的addPFGEdge添加到PFG,入WL
                 baseObjs.objects()
                         .map(csManager::getArrayIndex)
                         .forEach(arrayIndex ->
@@ -211,17 +224,18 @@ class TransferHandler extends OnFlyHandler {
     }
 
     private Transfer getTransferFunction(Type toType) {
+//        computeIfAbsent 方法的作用是，如果 toType 对应的值不存在，则计算一个新的值并存储在 Map 中，否则返回已存在的值。
         return transferFunctions.computeIfAbsent(toType,
-                type -> ((edge, input) -> {
-                    PointsToSet newTaints = solver.makePointsToSet();
-                    input.objects()
-                            .map(CSObj::getObject)
-                            .filter(manager::isTaint)
-                            .map(manager::getSourcePoint)
-                            .map(source -> manager.makeTaint(source, type))
-                            .map(taint -> csManager.getCSObj(emptyContext, taint))
-                            .forEach(newTaints::addObject);
-                    return newTaints;
+                type -> ((edge, input) -> { // / 这里的 lambda 表达式定义了一个 Transfer 对象
+                    PointsToSet newTaints = solver.makePointsToSet(); //// 创建一个新的 PointsToSet 对象来存储新传播的污点
+                    input.objects()  // 遍历输入的 PointsToSet 对象
+                            .map(CSObj::getObject)  // 映射到 CSObj 对象
+                            .filter(manager::isTaint)// 过滤出污点对象
+                            .map(manager::getSourcePoint)   // 获取污点source
+                            .map(source -> manager.makeTaint(source, type))  // 创建新的污点对象
+                            .map(taint -> csManager.getCSObj(emptyContext, taint))  // 获取上下文敏感的污点对象
+                            .forEach(newTaints::addObject); // 将新的污点对象添加到 newTaints 中
+                    return newTaints;  // 返回新的污点集合
                 }));
     }
 
@@ -276,12 +290,14 @@ class TransferHandler extends OnFlyHandler {
 
     @Override
     public void onNewCallEdge(Edge<CSCallSite, CSMethod> edge) {
+//        如果调用边的类型是 CallKind.OTHER（例如反射调用），当前不处理这些调用边，直接返回。
         if (edge.getKind() == CallKind.OTHER) {
             // skip other call edges, e.g., reflective call edges,
             // which currently cannot be handled for transfer methods
             // TODO: handle OTHER call edges
             return;
         }
+//        获取被调用方法的污点转移集合 tfs
         Set<TaintTransfer> tfs = transfers.get(edge.getCallee().getMethod());
         if (!tfs.isEmpty()) {
             Context context = edge.getCallSite().getContext();

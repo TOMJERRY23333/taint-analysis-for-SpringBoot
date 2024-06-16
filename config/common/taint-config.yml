@@ -3,6 +3,7 @@ sources:
   - { kind: param, method: "<org.joychou.controller.SQLI: java.lang.String jdbc_sqli_vul(java.lang.String)>", index: 0}
 #  - { kind: param, method: "<org.joychou.controller.SSRF: java.lang.String RestTemplateUrlBanRedirects(java.lang.String)>", index: 0}
 #  - { kind: param, method: "<org.joychou.controller.SSRF: java.lang.String RestTemplateUrl(java.lang.String)>", index: 0}
+  - { kind: field,field: "<org.joychou.controller.SSRF: org.joychou.service.HttpService httpService>"}
 sinks:
   ## SQLI
   - { vuln: "SQL Injection", level: 4, method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: 0 }
